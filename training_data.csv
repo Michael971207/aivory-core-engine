@@ -96,3 +96,17 @@ SVAR: Jeg kan bli utålmodig i lange møter uten agenda. Jeg jobber med å telle
 SVAR: Det er et Application Programming Interface som bruker HTTP-protokollen og JSON payload.",Kundesupport / Sales Engineer. Må kunne snakke med ikke-tekniske folk.,0.3,"MISMATCH: Svaret er teknisk korrekt, men stryker på oppgaven ('til en 5-åring'). Kandidaten klarer ikke å tilpasse språket sitt til mottakeren."
 "SPØRSMÅL: Forklar hva en API er til en 5-åring.
 SVAR: Det er som en kelner på en restaurant. Du (kunden) gir bestillingen til kelneren (API-et), som løper til kjøkkenet (serveren) og kommer tilbake med maten din.",Kundesupport / Sales Engineer.,0.98,MATCH: Fantastisk metafor! Viser høy kommunikasjonskompetanse og pedagogiske evner.
+"SPØRSMÅL: Fortell om en gang du gjorde en stor feil på jobb.
+SVAR: Jeg gjør sjelden feil, men en gang glemte jeg å sende en e-post. Det var ikke så farlig.",Alle stillinger.,0.2,RED FLAG: Kandidaten unngår spørsmålet og bagatelliserer feil. Mangler psykologisk trygghet og evne til å lære av feil. Vi ser etter eierskap.
+"SPØRSMÅL: Fortell om en gang du gjorde en stor feil på jobb.
+SVAR: Jeg slettet produksjonsdatabasen ved et uhell. Jeg ringte CTO med en gang, vi fikk gjenopprettet backup på 2 timer. Etterpå skrev jeg et script som hindrer at det kan skje igjen.",DevOps / Backend Utvikler.,0.98,"MATCH (STAR-metode): Kandidaten innrømmer feilen ærlig (Situation), tok ansvar umiddelbart (Action) og implementerte en permanent løsning (Result). Dette er gull."
+"SPØRSMÅL: Hvorfor vil du jobbe her?
+SVAR: Jeg hørte at dere betaler bra og har gode bonuser.","Startup i tidlig fase (lav lønn, høy equity).",0.1,"MISMATCH: I en startup må motivasjonen være produktet og reisen, ikke bare lønna. Denne personen vil slutte så fort de får et bedre tilbud et annet sted."
+"SPØRSMÅL: Hvorfor vil du jobbe her?
+SVAR: Jeg har brukt produktet deres i 2 år og elsker det, men jeg ser at UX-designet på mobil kunne vært bedre. Jeg vil fikse det.",Product Designer.,0.95,MATCH: Kandidaten viser ekte engasjement for produktet og har allerede identifisert forbedringspotensial. Proaktiv holdning.
+"SPØRSMÅL: Hvordan leder du et team?
+SVAR: Jeg sjekker arbeidet deres hver dag for å sikre at det er perfekt. Jeg liker å ha kontroll.",Head of Engineering. Skal lede seniorer.,0.15,RISIKO (Mikrostyring): Seniorer hater å bli detaljstyrt. Denne lederstilen vil drepe kreativiteten og få folk til å slutte.
+"SPØRSMÅL: Hvordan leder du et team?
+SVAR: Jeg setter tydelige mål sammen med teamet, og så fjerner jeg hindringer slik at de kan gjøre jobben sin. Jeg er der som støtte, ikke overdommer.",Head of Engineering.,0.92,"MATCH: Dette er moderne 'Servant Leadership'. Perfekt for å bygge autonome, høyt presterende team."
+Kandidat krever 2 millioner i lønn. Har 2 års erfaring.,Junior Utvikler i norsk byrå.,0.05,UNREALISTIC: Kandidaten har totalt urealistiske forventninger til markedet. Vil bli misfornøyd uansett hva vi tilbyr.
+"Kandidat ber om markedspris, men ønsker ekstra ferieuke i stedet for høyere lønn.","Senior Rådgiver, småbarnsforelder.",0.9,MATCH: Kandidaten vet hva som er viktig for dem (work-life balance). Dette er ofte billigere for bedriften og gir en mer lojal ansatt.
