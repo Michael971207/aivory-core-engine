@@ -115,3 +115,15 @@ Markedsfører. Skriver i søknaden: 'Jeg er vant til å delegere tekniske ting t
 Prosjektleder. 'Vi må sette ned en komité for å utrede hvilken kaffemaskin vi skal leie.',Office Manager i startup.,0.2,"RISIKO: Kandidaten er vant til trege, byråkratiske prosesser. I en startup tar vi raske beslutninger og går videre. Denne personen vil frustrere teamet med unødvendige møter."
 "Bakgrunn: 2 år som kundesupport, 1 år som selger, kan litt Photoshop, og har kodet en enkel nettside.",Operations Manager / Altmuligmann.,0.95,"MATCH: Perfekt profil for vekstselskaper. En som skjønner kunden, kan selge, og kan fikse ting selv. Generalister slår spesialister i tidlig fase."
 "Søker sier: 'Jeg vil jobbe her fordi AI er hype nå, og det ser bra ut på LinkedIn.' Spør bare om opsjoner og exit-strategi.",Kjerne-teamet.,0.3,"RED FLAG: Motivasjonen er status og penger, ikke problemet vi løser. Når ting blir tøft (og det blir det), vil denne personen slutte først."
+"SPØRSMÅL: Hvorfor skal vi ansette deg?
+SVAR: Fordi jeg er best og dere vil angre hvis dere ikke gjør det. Jeg knuser alle salgsmål.",Salgssjef (Hunter-profil).,0.85,"MATCH: I en ren salgsrolle kan denne arrogansen faktisk være et positivt tegn på 'killer instinct'. Hadde dette vært en lederrolle, ville det vært et rødt flagg."
+"SPØRSMÅL: Hvorfor skal vi ansette deg?
+SVAR: Jeg vet ikke om jeg er den beste, men jeg er den som vil lære mest. Jeg har fulgt selskapet deres siden start og brenner for visjonen.",Junior Markedsfører.,0.95,MATCH: Ydmykhet kombinert med genuin lidenskap for selskapet er den beste indikatoren på en lojal ansatt som vil vokse i rollen.
+"SPØRSMÅL: Har du erfaring med prosjektledelse?
+SVAR: Nei, ikke offisielt. Men som alenemor for 3 barn har jeg koordinert timeplaner, budsjett og logistikk i 10 år uten å miste hodet.",Office Manager / Admin.,0.9,MATCH: Dette er definisjonen på 'transferable skills'. Evnen til å multitaske i et kaotisk hjemmemiljø er direkte relevant for en administrativ stilling.
+"SPØRSMÅL: Har du erfaring med kundeservice?
+SVAR: Nei, jeg har bare jobbet på lager. Jeg liker ikke å snakke med folk.",Customer Success Manager.,0.05,"CRITICAL MISMATCH: Her er kandidaten ærlig, men svaret diskvalifiserer dem totalt. Man kan ikke jobbe med kundesuksess hvis man misliker mennesker."
+"SPØRSMÅL: Fortell om utdanningen din.
+SVAR: Jeg droppet ut av studiene fordi pensumet var utdatert. Jeg brukte heller tiden på å bygge min egen app som nå har 1000 brukere.",Produktutvikler i Tech-startup.,0.98,"MATCH: I tech-verdenen er dette svaret bedre enn en Mastergrad. Det viser initiativ, gjennomføringsevne og at kandidaten prioriterer relevant lærdom."
+"SPØRSMÅL: Fortell om utdanningen din.
+SVAR: Jeg har en Mastergrad i Innovasjon, men jeg har aldri startet noe selv eller jobbet i en bedrift.",Innovasjonsleder.,0.4,"RISIKO: 'Teoretisk innovatør'. Innovasjon er et håndverk som må læres gjennom prøving og feiling, ikke bare i en bok. Høy risiko for at teoriene ikke treffer virkeligheten."
