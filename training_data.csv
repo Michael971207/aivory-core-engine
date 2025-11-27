@@ -127,3 +127,15 @@ SVAR: Nei, jeg har bare jobbet på lager. Jeg liker ikke å snakke med folk.",Cu
 SVAR: Jeg droppet ut av studiene fordi pensumet var utdatert. Jeg brukte heller tiden på å bygge min egen app som nå har 1000 brukere.",Produktutvikler i Tech-startup.,0.98,"MATCH: I tech-verdenen er dette svaret bedre enn en Mastergrad. Det viser initiativ, gjennomføringsevne og at kandidaten prioriterer relevant lærdom."
 "SPØRSMÅL: Fortell om utdanningen din.
 SVAR: Jeg har en Mastergrad i Innovasjon, men jeg har aldri startet noe selv eller jobbet i en bedrift.",Innovasjonsleder.,0.4,"RISIKO: 'Teoretisk innovatør'. Innovasjon er et håndverk som må læres gjennom prøving og feiling, ikke bare i en bok. Høy risiko for at teoriene ikke treffer virkeligheten."
+"SPØRSMÅL: Fortell om en gang du fikk kritikk. Hvordan reagerte du?
+SVAR: Sjefen sa at koden min var rotete. Jeg ble irritert fordi den virket jo, så jeg ignorerte ham.",Senior Utvikler.,0.1,RED FLAG: Kandidaten viser null vilje til å lære eller tilpasse seg standarder. 'Det virker' er ikke nok i et team. Arrogant holdning til kvalitetssikring.
+"SPØRSMÅL: Fortell om en gang du fikk kritikk. Hvordan reagerte du?
+SVAR: En kunde klaget på presentasjonen min. Det svei litt der og da, men jeg spurte 'hva konkret burde jeg gjort annerledes?', og brukte det til neste gang.",Key Account Manager.,0.95,"MATCH: Perfekt 'Growth Mindset'. Kandidaten innrømmer at det var vondt (ærlig), men valgte å være konstruktiv og lære av det."
+"SPØRSMÅL: Fortell om et prosjekt som mislyktes.
+SVAR: Vi nådde ikke målet fordi markedsavdelingen var trege og kundene var dumme.",Prosjektleder.,0.05,"CRITICAL RISK: Offer-mentalitet. En leder som skylder på andre ('blame game') i stedet for å se på hva de selv kunne gjort annerledes, er giftig for et team."
+"SPØRSMÅL: Fortell om et prosjekt som mislyktes.
+SVAR: Vi bommet på deadline. Jeg burde ha kommunisert risikoen tidligere til ledelsen, men jeg var for optimistisk. Det lærte jeg av.",Prosjektleder.,0.92,MATCH: Ekstremt eierskap. Kandidaten tar ansvar for sin del av feilen (manglende kommunikasjon) uten å unnskylde seg. Dette bygger tillit.
+"SPØRSMÅL: Hva gjør du hvis en kollega sliter med en oppgave?
+SVAR: Jeg passer på at jeg gjør min egen jobb ferdig først. Det er ikke mitt ansvar at de er trege.",Team-medlem i Scrum-team.,0.25,MISMATCH: I smidige team lykkes man eller feiler man sammen. 'Silo-tankegang' fungerer ikke her.
+"SPØRSMÅL: Hva gjør du hvis en kollega sliter med en oppgave?
+SVAR: Jeg spør om de vil ha en 'rubber duck' session (tenke høyt sammen) eller om jeg kan avlaste dem med noe småtteri.",Senior Utvikler.,0.98,"MATCH: Dette er definisjonen på en Senior. De løfter de rundt seg og gjør hele teamet bedre, ikke bare seg selv."
