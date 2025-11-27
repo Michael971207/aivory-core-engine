@@ -84,3 +84,15 @@ Butikkmedarbeider på Rema 1000. 3 år. Låseansvarlig.,B2B Selger (Telefonsalg 
 Eiendomsmeglerfullmektig. Vant til høyt provisjonspress og kveld/helg.,Key Account Manager (KAM). Ansvar for store bedriftskunder.,0.85,MATCH: Meglere er vant til å selge seg selv og jobbe hardt for lønna. Denne driven er perfekt for KAM-roller.
 "Grafisk designer. Jobbet mest med trykksaker (brosjyrer, plakater).",UX/UI Designer for app. Må forstå brukerreiser og digital interaksjon.,0.45,MISMATCH: Print-design og App-design krever helt ulike tankesett (statisk vs interaktivt). Kandidaten trenger omskolering.
 Journalist i lokalavis. Vant til deadlines og å skrive klart og tydelig.,Content Manager i bedrift. Skrive blogginnlegg og nyhetsbrev.,0.98,"MATCH: Journalister er ofte de beste innholdsprodusentene. De skriver raskt, feilfritt og engasjerende."
+"SPØRSMÅL: Fortell om en gang du var uenig med en kollega. Hva gjorde du?
+SVAR: Jeg sa til ham at han tok feil, og så gikk jeg til sjefen og fikk rett.",Team Player stilling. Krever diplomati.,0.1,RED FLAG: Kandidaten 'sladrer' til sjefen i stedet for å løse konflikten direkte. Viser null evne til kompromiss eller modenhet.
+"SPØRSMÅL: Fortell om en gang du var uenig med en kollega. Hva gjorde du?
+SVAR: Vi satte oss ned, jeg lyttet til hans perspektiv først. Vi fant ut at vi hadde samme mål, bare ulik fremgangsmåte. Vi møttes på midten.",Team Player stilling.,0.95,"MATCH: Perfekt svar. Viser aktiv lytting, de-eskalering og fokus på felles mål."
+"SPØRSMÅL: Hva er din største svakhet?
+SVAR: Jeg jobber for hardt og er for perfeksjonistisk.",Alle stillinger.,0.4,RISIKO: Dette er et klisjé-svar (humble-brag) som tyder på lav selvinnsikt eller uærlighet. Vi ser etter ekte refleksjon.
+"SPØRSMÅL: Hva er din største svakhet?
+SVAR: Jeg kan bli utålmodig i lange møter uten agenda. Jeg jobber med å telle til ti og heller foreslå struktur.",Prosjektleder.,0.85,MATCH: Ærlig svar som viser selvinnsikt. Kandidaten er klar over problemet og har en strategi for å håndtere det.
+"SPØRSMÅL: Forklar hva en API er til en 5-åring.
+SVAR: Det er et Application Programming Interface som bruker HTTP-protokollen og JSON payload.",Kundesupport / Sales Engineer. Må kunne snakke med ikke-tekniske folk.,0.3,"MISMATCH: Svaret er teknisk korrekt, men stryker på oppgaven ('til en 5-åring'). Kandidaten klarer ikke å tilpasse språket sitt til mottakeren."
+"SPØRSMÅL: Forklar hva en API er til en 5-åring.
+SVAR: Det er som en kelner på en restaurant. Du (kunden) gir bestillingen til kelneren (API-et), som løper til kjøkkenet (serveren) og kommer tilbake med maten din.",Kundesupport / Sales Engineer.,0.98,MATCH: Fantastisk metafor! Viser høy kommunikasjonskompetanse og pedagogiske evner.
