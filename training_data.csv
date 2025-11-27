@@ -1,0 +1,4 @@
+cv_text,job_desc,score,reasoning
+"Nyutdannet med master i AI, ingen jobberfaring.","Senior AI Researcher, krever 5 år erfaring.","0.2","MISMATCH: Selv om utdanningen er rett, mangler den praktiske dybden som en Senior-stilling krever."
+"Selger med 10 års erfaring, vant til provisjon.","Customer Success Manager, fastlønn, fokus på kundepleie.","0.6","RISIKO: Kandidaten er vant til jakt/salg, mens denne rollen krever pleie/support. Kan bli rastløs."
+"Lærer på ungdomsskole, god på pedagogikk.","Kursleder for bedrifter, voksenopplæring.","0.9","MATCH: Pedagogiske evner er direkte overførbare. Evnen til å formidle kunnskap er kjernen i begge roller."
