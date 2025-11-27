@@ -2,3 +2,53 @@ cv_text,job_desc,score,reasoning
 "Nyutdannet med master i AI, ingen jobberfaring.","Senior AI Researcher, krever 5 år erfaring.","0.2","MISMATCH: Selv om utdanningen er rett, mangler den praktiske dybden som en Senior-stilling krever."
 "Selger med 10 års erfaring, vant til provisjon.","Customer Success Manager, fastlønn, fokus på kundepleie.","0.6","RISIKO: Kandidaten er vant til jakt/salg, mens denne rollen krever pleie/support. Kan bli rastløs."
 "Lærer på ungdomsskole, god på pedagogikk.","Kursleder for bedrifter, voksenopplæring.","0.9","MATCH: Pedagogiske evner er direkte overførbare. Evnen til å formidle kunnskap er kjernen i begge roller."
+CTO med 2 års erfaring. Kan Maling.,Søker etter CTO som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for CTO.
+Salgssjef med Senior. Kan Maling.,Søker etter Salgssjef som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Salgssjef.
+Salgssjef med 2 års erfaring. Kan Maling.,Søker etter Salgssjef som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Salgssjef.
+CTO med Lærling. Kan Ledelse.,Søker etter CTO som kan Ledelse.,0.9,AUTO-GENERERT: Sjekket om Ledelse var relevant for CTO.
+Salgssjef med Lærling. Kan Maling.,Søker etter Salgssjef som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Salgssjef.
+Prosjektleder med Senior. Kan Excel.,Søker etter Prosjektleder som kan Excel.,0.9,AUTO-GENERERT: Sjekket om Excel var relevant for Prosjektleder.
+Frontend Utvikler med 10 års erfaring. Kan Sveising.,Søker etter Frontend Utvikler som kan Sveising.,0.9,AUTO-GENERERT: Sjekket om Sveising var relevant for Frontend Utvikler.
+Lagerarbeider med 2 års erfaring. Kan React.,Søker etter Lagerarbeider som kan React.,0.9,AUTO-GENERERT: Sjekket om React var relevant for Lagerarbeider.
+CTO med 10 års erfaring. Kan Excel.,Søker etter CTO som kan Excel.,0.9,AUTO-GENERERT: Sjekket om Excel var relevant for CTO.
+Salgssjef med 2 års erfaring. Kan Maling.,Søker etter Salgssjef som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Salgssjef.
+CTO med Senior. Kan Python.,Søker etter CTO som kan Python.,0.9,AUTO-GENERERT: Sjekket om Python var relevant for CTO.
+CTO med Lærling. Kan Ledelse.,Søker etter CTO som kan Ledelse.,0.9,AUTO-GENERERT: Sjekket om Ledelse var relevant for CTO.
+Kundeservice med 10 års erfaring. Kan React.,Søker etter Kundeservice som kan React.,0.9,AUTO-GENERERT: Sjekket om React var relevant for Kundeservice.
+Frontend Utvikler med 2 års erfaring. Kan Ledelse.,Søker etter Frontend Utvikler som kan Ledelse.,0.9,AUTO-GENERERT: Sjekket om Ledelse var relevant for Frontend Utvikler.
+Lagerarbeider med Lærling. Kan Salg.,Søker etter Lagerarbeider som kan Salg.,0.9,AUTO-GENERERT: Sjekket om Salg var relevant for Lagerarbeider.
+Lagerarbeider med Nyutdannet. Kan React.,Søker etter Lagerarbeider som kan React.,0.9,AUTO-GENERERT: Sjekket om React var relevant for Lagerarbeider.
+CTO med Nyutdannet. Kan Truckførerbevis.,Søker etter CTO som kan Truckførerbevis.,0.9,AUTO-GENERERT: Sjekket om Truckførerbevis var relevant for CTO.
+Kundeservice med Lærling. Kan Truckførerbevis.,Søker etter Kundeservice som kan Truckførerbevis.,0.9,AUTO-GENERERT: Sjekket om Truckførerbevis var relevant for Kundeservice.
+Kundeservice med Nyutdannet. Kan Ledelse.,Søker etter Kundeservice som kan Ledelse.,0.9,AUTO-GENERERT: Sjekket om Ledelse var relevant for Kundeservice.
+Prosjektleder med 10 års erfaring. Kan Sveising.,Søker etter Prosjektleder som kan Sveising.,0.9,AUTO-GENERERT: Sjekket om Sveising var relevant for Prosjektleder.
+CTO med 2 års erfaring. Kan Excel.,Søker etter CTO som kan Excel.,0.9,AUTO-GENERERT: Sjekket om Excel var relevant for CTO.
+CTO med 10 års erfaring. Kan React.,Søker etter CTO som kan React.,0.9,AUTO-GENERERT: Sjekket om React var relevant for CTO.
+Salgssjef med 10 års erfaring. Kan Excel.,Søker etter Salgssjef som kan Excel.,0.9,AUTO-GENERERT: Sjekket om Excel var relevant for Salgssjef.
+CTO med 2 års erfaring. Kan React.,Søker etter CTO som kan React.,0.9,AUTO-GENERERT: Sjekket om React var relevant for CTO.
+Frontend Utvikler med Senior. Kan Truckførerbevis.,Søker etter Frontend Utvikler som kan Truckførerbevis.,0.9,AUTO-GENERERT: Sjekket om Truckførerbevis var relevant for Frontend Utvikler.
+Kundeservice med 2 års erfaring. Kan Ledelse.,Søker etter Kundeservice som kan Ledelse.,0.9,AUTO-GENERERT: Sjekket om Ledelse var relevant for Kundeservice.
+Salgssjef med Nyutdannet. Kan Salg.,Søker etter Salgssjef som kan Salg.,0.9,AUTO-GENERERT: Sjekket om Salg var relevant for Salgssjef.
+Frontend Utvikler med Senior. Kan Salg.,Søker etter Frontend Utvikler som kan Salg.,0.9,AUTO-GENERERT: Sjekket om Salg var relevant for Frontend Utvikler.
+Lagerarbeider med Nyutdannet. Kan Python.,Søker etter Lagerarbeider som kan Python.,0.9,AUTO-GENERERT: Sjekket om Python var relevant for Lagerarbeider.
+Frontend Utvikler med 10 års erfaring. Kan Salg.,Søker etter Frontend Utvikler som kan Salg.,0.9,AUTO-GENERERT: Sjekket om Salg var relevant for Frontend Utvikler.
+Prosjektleder med Senior. Kan Truckførerbevis.,Søker etter Prosjektleder som kan Truckførerbevis.,0.9,AUTO-GENERERT: Sjekket om Truckførerbevis var relevant for Prosjektleder.
+Prosjektleder med Senior. Kan Salg.,Søker etter Prosjektleder som kan Salg.,0.9,AUTO-GENERERT: Sjekket om Salg var relevant for Prosjektleder.
+Salgssjef med Lærling. Kan Maling.,Søker etter Salgssjef som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Salgssjef.
+Prosjektleder med 10 års erfaring. Kan Python.,Søker etter Prosjektleder som kan Python.,0.9,AUTO-GENERERT: Sjekket om Python var relevant for Prosjektleder.
+Kundeservice med 10 års erfaring. Kan Salg.,Søker etter Kundeservice som kan Salg.,0.9,AUTO-GENERERT: Sjekket om Salg var relevant for Kundeservice.
+Prosjektleder med Lærling. Kan Sveising.,Søker etter Prosjektleder som kan Sveising.,0.9,AUTO-GENERERT: Sjekket om Sveising var relevant for Prosjektleder.
+Frontend Utvikler med Nyutdannet. Kan Truckførerbevis.,Søker etter Frontend Utvikler som kan Truckførerbevis.,0.9,AUTO-GENERERT: Sjekket om Truckførerbevis var relevant for Frontend Utvikler.
+Kundeservice med Nyutdannet. Kan Ledelse.,Søker etter Kundeservice som kan Ledelse.,0.9,AUTO-GENERERT: Sjekket om Ledelse var relevant for Kundeservice.
+Prosjektleder med Senior. Kan Truckførerbevis.,Søker etter Prosjektleder som kan Truckførerbevis.,0.9,AUTO-GENERERT: Sjekket om Truckførerbevis var relevant for Prosjektleder.
+CTO med 10 års erfaring. Kan Salg.,Søker etter CTO som kan Salg.,0.9,AUTO-GENERERT: Sjekket om Salg var relevant for CTO.
+CTO med 10 års erfaring. Kan Maling.,Søker etter CTO som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for CTO.
+Lagerarbeider med 2 års erfaring. Kan Excel.,Søker etter Lagerarbeider som kan Excel.,0.9,AUTO-GENERERT: Sjekket om Excel var relevant for Lagerarbeider.
+CTO med 10 års erfaring. Kan Python.,Søker etter CTO som kan Python.,0.9,AUTO-GENERERT: Sjekket om Python var relevant for CTO.
+Lagerarbeider med Senior. Kan React.,Søker etter Lagerarbeider som kan React.,0.9,AUTO-GENERERT: Sjekket om React var relevant for Lagerarbeider.
+Lagerarbeider med Nyutdannet. Kan Maling.,Søker etter Lagerarbeider som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Lagerarbeider.
+Prosjektleder med Senior. Kan Maling.,Søker etter Prosjektleder som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Prosjektleder.
+Lagerarbeider med 2 års erfaring. Kan Maling.,Søker etter Lagerarbeider som kan Maling.,0.9,AUTO-GENERERT: Sjekket om Maling var relevant for Lagerarbeider.
+CTO med Lærling. Kan Sveising.,Søker etter CTO som kan Sveising.,0.9,AUTO-GENERERT: Sjekket om Sveising var relevant for CTO.
+Salgssjef med Lærling. Kan React.,Søker etter Salgssjef som kan React.,0.9,AUTO-GENERERT: Sjekket om React var relevant for Salgssjef.
+Salgssjef med 10 års erfaring. Kan Excel.,Søker etter Salgssjef som kan Excel.,0.9,AUTO-GENERERT: Sjekket om Excel var relevant for Salgssjef.
