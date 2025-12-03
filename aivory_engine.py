@@ -1,7 +1,12 @@
 ﻿import pandas as pd
+import json
+import os
 
-# --- JOBBPROFIL (Blind Rekruttering) ---
-JOB_PROFILE = {
+# --- KONFIGURASJON OG HUKOMMELSE ---
+# Vi lagrer vektingen i en fil slik at AI-en kan huske endringer fra forrige kjøring
+CONFIG_FILE = "ai_memory_weights.json"
+
+DEFAULT_PROFILE = {
     "title": "Senior AI Utvikler",
     "must_have": ["Python", "AI"],
     "min_experience": 3,
@@ -9,23 +14,35 @@ JOB_PROFILE = {
     "weights": { "skills": 0.4, "experience": 0.2, "personality": 0.4 }
 }
 
+def load_profile():
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, "r") as f:
+            print("[SYSTEM] Laster inn 'lært' kunnskap fra tidligere...")
+            return json.load(f)
+    return DEFAULT_PROFILE
+
+def save_profile(profile):
+    with open(CONFIG_FILE, "w") as f:
+        json.dump(profile, f)
+    print("[SYSTEM] AI har oppdatert sin egen algoritme basert på din feedback.")
+
 class AivoryRecruiter:
-    def __init__(self, job_profile):
-        self.profile = job_profile
+    def __init__(self):
+        self.profile = load_profile()
         self.candidates = pd.DataFrame()
+        self.results_df = pd.DataFrame()
 
     def load_candidates(self, filepath):
-        print(f"\n[1] Laster inn database...")
-        # Laster alt, men vi later som om 'Faktisk_Navn' er kryptert for brukeren
         self.candidates = pd.read_csv(filepath)
-        print(f"    -> Behandler {len(self.candidates)} kandidater ANONYMT.")
 
     def calculate_logic_match(self):
-        print(f"\n[2] Starter blind-analyse (Ingen navn/kjønn påvirker resultatet)...")
         results = []
+        weights = self.profile['weights']
         
+        print(f"\n[ANALYSE] Bruker vekting: Skill={weights['skills']:.2f}, Exp={weights['experience']:.2f}, Pers={weights['personality']:.2f}")
+
         for index, row in self.candidates.iterrows():
-            # --- SAMME LOGIKK SOM FØR (Vekting av skills + personlighet) ---
+            # Samme logikk som før
             cand_skills = str(row['Ferdigheter']).lower()
             matching_skills = [s for s in self.profile['must_have'] if s.lower() in cand_skills]
             
@@ -39,52 +56,74 @@ class AivoryRecruiter:
             diff = abs(row['Struktur'] - ideal['Struktur']) + abs(row['Driv'] - ideal['Driv']) + abs(row['Samarbeid'] - ideal['Samarbeid'])
             personality_score = max(100 - (diff * 5), 0)
             
-            weights = self.profile['weights']
-            final_score = (skill_score * weights['skills']) + (exp_score * weights['experience']) + (personality_score * weights['personality'])
+            final_score = (skill_score * weights['skills']) + \
+                          (exp_score * weights['experience']) + \
+                          (personality_score * weights['personality'])
             
-            # --- HER ER FORSKJELLEN: VI BRUKER ID, IKKE NAVN ---
             results.append({
                 "ID": row['ID'],
-                "Hidden_Name": row['Faktisk_Navn'], # Lagres skjult
+                "Hidden_Name": row['Faktisk_Navn'],
                 "Total_Score": round(final_score, 1),
-                "Ferdigheter": row['Ferdigheter'],
-                "Kultur_Match": personality_score
+                "Struktur": row['Struktur'],
+                "Erfaring": row['Erfaring']
             })
             
         self.results_df = pd.DataFrame(results).sort_values(by='Total_Score', ascending=False)
 
-    def present_blind_shortlist(self):
-        top_10 = self.results_df.head(10)
+    def generate_communications(self, top_candidate):
+        """AI skriver e-post utkast automatisk"""
+        print(f"\n[KOMMUNIKASJON] AI forbereder e-poster for {top_candidate['ID']}...")
         
-        print(f"\n[3] RESULTAT AV BLIND REKRUTTERING:")
-        print("    (Navn vises kun ved høy match og simulert samtykke)")
-        print("-" * 100)
-        print(f"{'KANDIDAT-ID':<15} | {'SCORE':<6} | {'KULTUR':<8} | {'STATUS / HANDLING'}")
-        print("-" * 100)
+        email_content = f"""
+        EMNE: Invitasjon til intervju - {self.profile['title']}
         
-        for i, (index, row) in enumerate(top_10.iterrows()):
-            status = "Anonym"
-            display_name = "SKJULT"
-            
-            # LOGIKK: Hvis de er topp 3, simulerer vi at vi "låser opp" navnet
-            if i < 3:
-                status = "✅ MATCH! Samtykke gitt."
-                display_name = row['Hidden_Name'] # Her avsløres navnet
-            else:
-                status = "🔒 Venter på samtykke"
-            
-            # For de anonyme viser vi bare ID-en
-            if status == "Anonym" or "Venter" in status:
-                print(f"{row['ID']:<15} | {row['Total_Score']:<6} | {row['Kultur_Match']:<8} | {status}")
-            else:
-                # For topp 3 viser vi at vi har funnet navnet
-                print(f"{row['ID']:<15} | {row['Total_Score']:<6} | {row['Kultur_Match']:<8} | {status} -> Navn: {display_name}")
+        Hei kandidat {top_candidate['ID']},
+        
+        Vi har analysert din profil blindt, og du scoret {top_candidate['Total_Score']} poeng i vår AI-vurdering.
+        Særlig din match på våre verdier (Struktur: {top_candidate['Struktur']}) imponerte oss.
+        
+        Siden du er rangert som nr 1, ønsker vi å låse opp identiteten din og invitere til en prat.
+        
+        Mvh,
+        Aivory AI Recruiting Team
+        """
+        print("-" * 50)
+        print(email_content)
+        print("-" * 50)
+        
+        # Lagre til fil
+        with open("draft_email_winner.txt", "w", encoding="utf-8") as f:
+            f.write(email_content)
 
-        top_10.to_csv("blind_shortlist.csv", index=False)
-        print("-" * 100)
+    def learn_from_feedback(self):
+        """Dette er lærings-løkken. Du er sjefen som trener AI-en."""
+        top = self.results_df.iloc[0]
+        print(f"\n[LÆRING] Vinneren er {top['ID']} med {top['Total_Score']} poeng.")
+        print(f"   -> Egenskaper: Erfaring={top['Erfaring']} år, Struktur={top['Struktur']}")
+        
+        print("\nEr du fornøyd med denne kandidaten? (Simulert input for auto-kjøring)")
+        # For demo-formål: Vi simulerer at sjefen synes Erfaring er viktigere hvis vinneren har lite erfaring
+        
+        if top['Erfaring'] < 5:
+            print("   -> SYSTEM-SIMULERING: Sjefen mener kandidaten har for lite erfaring.")
+            print("   -> HANDLING: AI justerer algoritmen. Øker vektingen av 'experience'.")
+            
+            # Oppdater vektene
+            self.profile['weights']['experience'] += 0.1
+            self.profile['weights']['personality'] -= 0.1 # Må ta poeng fra noe annet
+            
+            save_profile(self.profile)
+        else:
+            print("   -> SYSTEM-SIMULERING: Sjefen er fornøyd. Ingen endring i algoritmen.")
 
 if __name__ == "__main__":
-    engine = AivoryRecruiter(JOB_PROFILE)
+    engine = AivoryRecruiter()
     engine.load_candidates("bulk_applicants.csv")
     engine.calculate_logic_match()
-    engine.present_blind_shortlist()
+    
+    # Vis resultat
+    top_candidate = engine.results_df.iloc[0]
+    engine.generate_communications(top_candidate)
+    
+    # Kjør læring
+    engine.learn_from_feedback()
