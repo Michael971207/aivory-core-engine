@@ -1,251 +1,251 @@
 ID,Faktisk_Navn,Ferdigheter,Erfaring,Utdanning,Struktur,Driv,Samarbeid
-KANDIDAT-9549,Ingrid Hagen,"Java, Jira, Ledelse, SQL, Markedsføring, Machine Learning",13,Ingen utdanning,10,2,8
-KANDIDAT-1591,Mohamed Pedersen,"Excel, C++, Machine Learning, Java, Jira, Azure",4,Høyskolen Kristiania,8,3,8
-KANDIDAT-6126,Sara Haugen,"PowerPoint, HR, SQL, Salg, React",0,NHH,2,2,3
-KANDIDAT-8125,Sara Vik,"Azure, Machine Learning, Kundeservice, Markedsføring",4,BI,5,2,9
-KANDIDAT-9206,Kari Hansen,"AWS, SQL, AI",14,NTNU,2,2,4
-KANDIDAT-5727,Sofia Vik,"C++, PowerPoint, Python, Machine Learning, AWS, Java",3,Høyskolen Kristiania,4,8,4
-KANDIDAT-9258,Sara Haugen,"Markedsføring, Salg",5,BI,10,1,10
-KANDIDAT-5257,Emil Haugen,"Salg, Ledelse",9,Høyskolen Kristiania,7,6,3
-KANDIDAT-9942,Mohamed Pedersen,"AWS, React",4,Master i utlandet,10,8,7
-KANDIDAT-7425,Ola Vik,"HR, SQL",12,BI,9,2,7
-KANDIDAT-6292,Kari Hansen,"AI, Excel",6,UiO,3,8,5
-KANDIDAT-8407,Magnus Solberg,"Java, PowerPoint, C++",15,BI,2,6,6
-KANDIDAT-9453,Ola Larsen,"Machine Learning, Excel, Salg, Azure",11,Master i utlandet,9,8,8
-KANDIDAT-3807,Magnus Larsen,"AWS, Azure, Machine Learning, HR",4,Ingen utdanning,4,9,7
-KANDIDAT-8510,Jakob Hansen,"Machine Learning, Python, SQL, React, HR",11,NTNU,1,1,10
-KANDIDAT-2993,Jakob Hansen,"Azure, HR, SQL",15,NTNU,8,6,2
-KANDIDAT-1890,Lars Olsen,"Jira, Salg, React, Python",13,Master i utlandet,10,8,9
-KANDIDAT-5264,Sofia Solberg,"Python, PowerPoint, SQL, Salg, Azure, Jira",1,UiO,5,6,7
-KANDIDAT-6259,Lisa Haugen,"AWS, SQL, C++, Azure",3,NTNU,8,5,5
-KANDIDAT-7195,Ida Pedersen,"PowerPoint, Excel",4,Ingen utdanning,7,2,10
-KANDIDAT-2948,Lars Pedersen,"Ledelse, Salg, React",3,NTNU,4,10,6
-KANDIDAT-9894,Pål Hansen,"Python, Java, SQL, C++, Jira, Markedsføring",8,Høyskolen Kristiania,7,6,5
-KANDIDAT-6481,Ola Berg,"SQL, Ledelse, Salg, AI",13,NHH,9,7,9
-KANDIDAT-5465,Nora Larsen,"HR, PowerPoint, Jira",4,NTNU,1,8,5
-KANDIDAT-3311,Ola Pedersen,"HR, Azure, Markedsføring",10,Master i utlandet,7,6,9
-KANDIDAT-4652,Mohamed Berg,"Azure, AI",3,Ingen utdanning,7,6,5
-KANDIDAT-7811,Lars Nilsen,"SQL, Ledelse, AI, Jira, Python, AWS",7,Høyskolen Kristiania,7,8,9
-KANDIDAT-6262,Ingrid Johansen,"Kundeservice, Java, HR, Machine Learning, Jira, Python",10,BI,5,6,1
-KANDIDAT-1289,Mohamed Andersen,"PowerPoint, Jira",15,BI,9,7,9
-KANDIDAT-2285,Lisa Solberg,"Salg, Azure, Machine Learning, PowerPoint, AWS, Java",8,NHH,10,8,10
-KANDIDAT-7838,Lisa Vik,"Excel, HR, Kundeservice, Machine Learning, Ledelse, Python",14,Ingen utdanning,8,8,6
-KANDIDAT-4551,Magnus Olsen,"AI, Azure, Java, PowerPoint, HR",0,UiO,10,5,5
-KANDIDAT-1238,Jakob Larsen,"Java, C++",11,Ingen utdanning,2,6,10
-KANDIDAT-1970,Kari Johansen,"AI, Excel, React, HR, Markedsføring, C++",13,NHH,7,9,7
-KANDIDAT-7178,Pål Hagen,"Python, PowerPoint, Java, SQL",1,NHH,6,7,6
-KANDIDAT-4479,Nora Berg,"PowerPoint, AWS",11,NTNU,9,3,8
-KANDIDAT-7445,Sara Pedersen,"PowerPoint, Java",5,NTNU,6,5,7
-KANDIDAT-4547,Lars Nilsen,"SQL, Jira",5,UiO,3,1,1
-KANDIDAT-8575,Nora Haugen,"Python, AI",14,NHH,3,5,7
-KANDIDAT-2825,Pål Hagen,"Azure, Excel, Jira",2,BI,1,4,9
-KANDIDAT-6889,Ida Andersen,"Machine Learning, React",12,Høyskolen Kristiania,10,6,6
-KANDIDAT-7321,Mohamed Nilsen,"React, Machine Learning, AI, Kundeservice, Jira",15,NTNU,9,10,10
-KANDIDAT-6359,Kari Berg,"Excel, Kundeservice, Jira, React",7,Høyskolen Kristiania,6,1,2
-KANDIDAT-4244,Jakob Berg,"Markedsføring, Ledelse, Python, SQL, HR, AI",0,Høyskolen Kristiania,2,2,1
-KANDIDAT-5764,Erik Vik,"HR, Azure, Ledelse, PowerPoint",13,Høyskolen Kristiania,2,10,7
-KANDIDAT-8069,Lars Olsen,"SQL, PowerPoint, Python, AWS, Salg",6,Høyskolen Kristiania,8,2,7
-KANDIDAT-1753,Ida Pedersen,"Ledelse, Kundeservice",15,NTNU,7,2,6
-KANDIDAT-2220,Kari Solberg,"React, Java, Kundeservice, SQL",12,NHH,4,6,1
-KANDIDAT-1609,Ida Vik,"Machine Learning, Azure, Kundeservice",14,UiO,7,1,9
-KANDIDAT-6790,Ali Berg,"AWS, Java, C++, Excel, Python",11,Master i utlandet,3,6,7
-KANDIDAT-8534,Erik Berg,"SQL, Machine Learning",7,Høyskolen Kristiania,4,7,3
-KANDIDAT-6576,Lars Johansen,"Jira, Java, HR, Markedsføring, Machine Learning, Ledelse",12,NTNU,6,3,1
-KANDIDAT-8895,Pål Solberg,"AI, Excel, Python, PowerPoint, Salg, AWS",7,UiO,10,8,2
-KANDIDAT-3630,Jakob Nilsen,"Java, PowerPoint, React, AI, SQL",12,Master i utlandet,4,6,10
-KANDIDAT-5408,Magnus Nilsen,"AWS, Salg, Ledelse",3,Høyskolen Kristiania,7,8,3
-KANDIDAT-9358,Lisa Solberg,"HR, Ledelse, React, Excel",4,Høyskolen Kristiania,10,7,6
-KANDIDAT-6666,Kari Hansen,"Python, Ledelse, AI, PowerPoint, Salg, Markedsføring",9,Høyskolen Kristiania,9,4,10
-KANDIDAT-1528,Ingrid Berg,"React, AI, Ledelse, PowerPoint",8,UiO,10,3,2
-KANDIDAT-2010,Lars Hagen,"Salg, Machine Learning, Excel, AI",15,UiO,8,3,8
-KANDIDAT-1979,Jakob Hansen,"Python, Kundeservice, React, SQL, Java, AI",7,NTNU,8,6,10
-KANDIDAT-9316,Sofia Hagen,"Jira, PowerPoint, SQL, Excel, AI, Ledelse",2,NHH,6,5,2
-KANDIDAT-5944,Magnus Hagen,"Kundeservice, Ledelse, C++, Salg",5,Høyskolen Kristiania,9,7,8
-KANDIDAT-5517,Ingrid Haugen,"C++, AWS, Java, Python",5,UiO,3,3,3
-KANDIDAT-9586,Nora Olsen,"Kundeservice, Markedsføring, SQL, Ledelse, Machine Learning",15,Høyskolen Kristiania,9,3,1
-KANDIDAT-5551,Emil Andersen,"React, Python, PowerPoint",1,UiO,3,4,10
-KANDIDAT-2396,Emil Andersen,"Jira, AWS, AI, Excel, Python, SQL",1,Master i utlandet,10,3,2
-KANDIDAT-9897,Ali Hansen,"AI, Azure, C++",15,UiO,6,7,9
-KANDIDAT-8372,Jakob Olsen,"SQL, HR, Ledelse, Salg",3,Master i utlandet,8,10,4
-KANDIDAT-5133,Ingrid Hagen,"AWS, React",7,NTNU,2,7,6
-KANDIDAT-6399,Ingrid Olsen,"C++, SQL, Kundeservice, React, Ledelse",7,Høyskolen Kristiania,10,1,8
-KANDIDAT-3108,Emil Johansen,"Kundeservice, AWS, Machine Learning, AI",3,Ingen utdanning,4,5,4
-KANDIDAT-6179,Lars Vik,"AWS, SQL, Markedsføring, PowerPoint",4,NHH,8,10,10
-KANDIDAT-3192,Nora Solberg,"Ledelse, PowerPoint, Salg",14,Ingen utdanning,8,3,3
-KANDIDAT-5435,Jakob Johansen,"AI, SQL, Java, Markedsføring, AWS",0,NHH,7,10,2
-KANDIDAT-9319,Jakob Andersen,"Python, Jira",6,UiO,2,8,6
-KANDIDAT-8668,Ali Larsen,"Python, Machine Learning",3,NHH,2,6,7
-KANDIDAT-3598,Erik Pedersen,"Ledelse, Kundeservice, Machine Learning, React, Jira",7,NHH,3,10,3
-KANDIDAT-3030,Lisa Pedersen,"Python, Jira, React",4,NTNU,3,10,8
-KANDIDAT-6065,Nora Nilsen,"Python, Kundeservice",1,NTNU,2,4,5
-KANDIDAT-5767,Ola Pedersen,"HR, AWS, Python, Kundeservice, Markedsføring",1,UiO,1,10,1
-KANDIDAT-3419,Pål Berg,"HR, Salg, PowerPoint, Markedsføring",14,NHH,8,5,5
-KANDIDAT-5971,Kari Haugen,"React, Markedsføring, Excel, Kundeservice",5,BI,5,4,2
-KANDIDAT-6622,Emil Andersen,"HR, Excel, Jira, Python, Java",4,BI,10,9,4
-KANDIDAT-4638,Jakob Solberg,"Ledelse, PowerPoint, Python, Java, Machine Learning, SQL",5,NHH,4,8,8
-KANDIDAT-2921,Nora Berg,"AWS, Jira, SQL, C++",0,NTNU,6,10,6
-KANDIDAT-6639,Mohamed Nilsen,"SQL, HR, Python",8,Master i utlandet,8,9,6
-KANDIDAT-1793,Erik Haugen,"Ledelse, Azure",0,Høyskolen Kristiania,8,7,8
-KANDIDAT-9060,Ali Olsen,"React, C++, Machine Learning",7,Høyskolen Kristiania,4,2,7
-KANDIDAT-4017,Ola Berg,"AWS, Excel, React, C++",2,BI,1,8,7
-KANDIDAT-5393,Emil Vik,"Azure, Ledelse",6,Master i utlandet,10,2,9
-KANDIDAT-3435,Erik Olsen,"Python, Jira",9,Høyskolen Kristiania,3,8,5
-KANDIDAT-6703,Magnus Pedersen,"AI, SQL, Python",2,BI,4,8,4
-KANDIDAT-7294,Kari Solberg,"AWS, PowerPoint, AI",12,NHH,4,7,4
-KANDIDAT-4718,Mohamed Hansen,"Salg, PowerPoint, SQL, Java",11,Ingen utdanning,9,1,8
-KANDIDAT-3065,Sofia Berg,"Azure, Jira, Ledelse",1,Ingen utdanning,5,6,2
-KANDIDAT-8821,Sara Hagen,"C++, Java, AWS, React, Kundeservice",6,NHH,7,6,5
-KANDIDAT-8724,Lisa Solberg,"Ledelse, AWS, React, PowerPoint, Azure",11,NTNU,3,6,9
-KANDIDAT-5917,Magnus Haugen,"Jira, Markedsføring",15,Ingen utdanning,7,9,8
-KANDIDAT-5948,Ingrid Johansen,"Python, Java, Machine Learning, Salg",9,Ingen utdanning,10,4,1
-KANDIDAT-4023,Emil Pedersen,"Ledelse, Markedsføring, SQL, Excel",10,Høyskolen Kristiania,5,2,3
-KANDIDAT-2088,Ali Larsen,"SQL, Markedsføring, Java",0,BI,6,2,7
-KANDIDAT-9759,Ida Pedersen,"C++, PowerPoint, AWS, Ledelse, Azure",14,Høyskolen Kristiania,10,3,10
-KANDIDAT-9035,Erik Solberg,"Markedsføring, Python, Machine Learning, Salg, HR",4,Høyskolen Kristiania,1,3,4
-KANDIDAT-7250,Magnus Andersen,"C++, Salg, Machine Learning, Ledelse, HR, AI",14,Ingen utdanning,8,8,10
-KANDIDAT-7543,Nora Johansen,"Jira, HR, Markedsføring, C++, React, SQL",11,Master i utlandet,6,5,9
-KANDIDAT-8806,Ali Hansen,"AWS, Ledelse, Java",15,NTNU,3,6,10
-KANDIDAT-4307,Lars Berg,"Ledelse, SQL",13,UiO,4,1,4
-KANDIDAT-3312,Pål Hansen,"Java, Machine Learning, Excel, SQL",14,BI,9,9,4
-KANDIDAT-3513,Magnus Andersen,"Python, Jira",13,BI,10,4,5
-KANDIDAT-7787,Ingrid Haugen,"React, Excel, AI, Java, Kundeservice",9,NHH,5,6,2
-KANDIDAT-4072,Lars Haugen,"Salg, Azure, Kundeservice, PowerPoint",11,NHH,7,4,8
-KANDIDAT-6840,Mohamed Vik,"Java, Jira",15,Høyskolen Kristiania,9,6,1
-KANDIDAT-6360,Erik Pedersen,"Java, Jira, C++, Markedsføring",11,BI,7,2,10
-KANDIDAT-7205,Nora Solberg,"Excel, AWS, Markedsføring, Machine Learning, Kundeservice",3,Master i utlandet,3,1,7
-KANDIDAT-7653,Ida Pedersen,"PowerPoint, Excel, C++, Java, Python",0,Høyskolen Kristiania,10,1,9
-KANDIDAT-8870,Lars Pedersen,"C++, React, Azure, AWS, Excel",3,Høyskolen Kristiania,6,1,3
-KANDIDAT-5339,Erik Olsen,"Python, AI, Machine Learning, HR, Java, React",9,NHH,4,2,2
-KANDIDAT-1558,Ida Pedersen,"Kundeservice, AWS, Java, HR, React",10,Master i utlandet,8,1,8
-KANDIDAT-9994,Lisa Nilsen,"AI, PowerPoint, Excel",15,Master i utlandet,10,7,3
-KANDIDAT-5436,Kari Andersen,"C++, Markedsføring, Machine Learning, React",1,Ingen utdanning,9,3,8
-KANDIDAT-5871,Jakob Berg,"AI, Azure, Markedsføring",9,NHH,1,2,1
-KANDIDAT-9715,Ingrid Andersen,"PowerPoint, Azure, C++, Machine Learning, SQL, AWS",1,UiO,10,3,6
-KANDIDAT-3565,Ola Hagen,"Kundeservice, C++",7,BI,9,3,10
-KANDIDAT-4677,Ingrid Pedersen,"Markedsføring, HR, Python",15,Ingen utdanning,2,8,8
-KANDIDAT-6630,Ingrid Berg,"Kundeservice, AWS, PowerPoint, Markedsføring, Java",1,UiO,9,2,6
-KANDIDAT-8236,Pål Pedersen,"Jira, Java, Kundeservice, AWS",1,BI,2,7,6
-KANDIDAT-1092,Nora Hansen,"React, PowerPoint, HR, Excel, Azure",5,Master i utlandet,7,9,3
-KANDIDAT-4382,Magnus Larsen,"Ledelse, HR",1,NTNU,10,5,7
-KANDIDAT-8017,Mohamed Solberg,"Salg, C++, Java, PowerPoint, SQL, React",9,Master i utlandet,9,9,8
-KANDIDAT-9489,Kari Vik,"Jira, React",9,Høyskolen Kristiania,8,7,5
-KANDIDAT-4003,Ola Berg,"C++, Excel",4,Høyskolen Kristiania,3,2,9
-KANDIDAT-5908,Pål Vik,"Salg, Markedsføring, Machine Learning, Azure, AWS",2,Høyskolen Kristiania,2,3,6
-KANDIDAT-2324,Lisa Nilsen,"React, AI, Python, AWS, Salg",4,NHH,2,4,9
-KANDIDAT-6830,Nora Hagen,"Excel, PowerPoint",6,BI,2,3,5
-KANDIDAT-5200,Sara Vik,"SQL, React, AWS, Salg, HR",13,NHH,9,6,10
-KANDIDAT-8580,Jakob Haugen,"Salg, Excel, AI, Ledelse, Azure, React",5,Ingen utdanning,5,2,4
-KANDIDAT-9255,Magnus Andersen,"React, Python",13,Master i utlandet,6,7,4
-KANDIDAT-1394,Ali Solberg,"Excel, Markedsføring, Jira, Ledelse, Salg",7,UiO,3,5,8
-KANDIDAT-9453,Mohamed Andersen,"Python, SQL, Excel",11,Ingen utdanning,1,4,8
-KANDIDAT-9947,Erik Berg,"Ledelse, Salg, Machine Learning, AI",1,NHH,4,9,9
-KANDIDAT-3752,Kari Hansen,"Jira, AI",14,BI,9,10,8
-KANDIDAT-7383,Emil Larsen,"Excel, AWS, Salg, Machine Learning, HR",5,BI,6,6,10
-KANDIDAT-7224,Magnus Pedersen,"AI, Machine Learning, Azure, Excel, Java, SQL",1,Ingen utdanning,10,8,5
-KANDIDAT-1714,Lars Andersen,"AWS, C++, Ledelse, Excel, PowerPoint, Python",10,UiO,9,9,4
-KANDIDAT-1922,Lars Haugen,"Excel, Kundeservice",7,Ingen utdanning,10,6,5
-KANDIDAT-2317,Jakob Hagen,"Azure, Machine Learning, SQL, Java, AWS",9,NTNU,8,6,6
-KANDIDAT-9048,Lars Vik,"AI, SQL, HR",9,NTNU,6,2,5
-KANDIDAT-4355,Jakob Nilsen,"Azure, Kundeservice, Markedsføring, React, C++",11,Høyskolen Kristiania,5,3,2
-KANDIDAT-9571,Ali Pedersen,"Excel, Machine Learning, Salg",15,Ingen utdanning,5,2,4
-KANDIDAT-4834,Sofia Johansen,"AI, Jira, C++",7,UiO,2,9,5
-KANDIDAT-4150,Lars Andersen,"React, Kundeservice, Excel, Python, Salg, AWS",9,NHH,9,10,10
-KANDIDAT-7459,Sara Hansen,"AI, Java, React, C++, Ledelse",9,Master i utlandet,4,7,4
-KANDIDAT-6985,Lisa Solberg,"Java, React, Markedsføring",7,NHH,2,9,9
-KANDIDAT-3185,Ali Solberg,"Python, Excel",14,Master i utlandet,7,8,2
-KANDIDAT-3626,Ola Haugen,"Ledelse, SQL",7,BI,6,7,2
-KANDIDAT-8673,Emil Johansen,"React, Jira, Machine Learning",12,BI,8,7,8
-KANDIDAT-1215,Sofia Hagen,"Kundeservice, Ledelse, AWS, HR, AI",12,UiO,8,1,7
-KANDIDAT-6266,Emil Hagen,"Excel, SQL, HR, AWS",12,Høyskolen Kristiania,10,9,3
-KANDIDAT-3588,Kari Hansen,"Jira, AWS, HR",15,NHH,4,2,4
-KANDIDAT-9490,Ida Olsen,"Jira, Python, HR, SQL",3,UiO,3,4,2
-KANDIDAT-6021,Ida Hagen,"Azure, C++",5,BI,8,6,4
-KANDIDAT-5192,Sara Johansen,"HR, C++",10,UiO,8,4,5
-KANDIDAT-1729,Jakob Haugen,"Markedsføring, Excel, React, Machine Learning",2,Ingen utdanning,7,2,9
-KANDIDAT-7574,Sara Pedersen,"AWS, Java, PowerPoint, Python, Machine Learning, Kundeservice",4,NHH,1,8,9
-KANDIDAT-8056,Pål Olsen,"AWS, React, Python, Salg, Markedsføring, Machine Learning",14,NTNU,8,2,1
-KANDIDAT-9501,Emil Nilsen,"Jira, Machine Learning, HR, C++, Ledelse, Azure",4,Høyskolen Kristiania,7,9,9
-KANDIDAT-4795,Sofia Hansen,"Jira, Java, Python, Kundeservice, Machine Learning",1,UiO,3,10,1
-KANDIDAT-3111,Ola Haugen,"HR, React, Excel, C++, Python, Markedsføring",0,Høyskolen Kristiania,1,4,8
-KANDIDAT-4621,Ola Johansen,"C++, Machine Learning, AI",8,Master i utlandet,8,9,10
-KANDIDAT-3483,Ingrid Larsen,"SQL, Python, C++, Kundeservice, React",15,BI,8,2,1
-KANDIDAT-6991,Kari Larsen,"Excel, Ledelse, HR, C++, PowerPoint",5,NHH,3,6,3
-KANDIDAT-6203,Erik Haugen,"Salg, AWS, Azure, Markedsføring",7,NHH,5,4,1
-KANDIDAT-9023,Lisa Johansen,"Markedsføring, AWS",14,BI,9,5,5
-KANDIDAT-8413,Pål Nilsen,"PowerPoint, SQL",4,Høyskolen Kristiania,2,5,1
-KANDIDAT-5340,Magnus Nilsen,"Excel, Machine Learning, AWS, Ledelse, Jira",7,Ingen utdanning,6,7,10
-KANDIDAT-7977,Ali Larsen,"AI, Azure, Java, Kundeservice",5,NHH,1,6,10
-KANDIDAT-4229,Erik Berg,"PowerPoint, Machine Learning",0,NHH,3,8,3
-KANDIDAT-2350,Nora Larsen,"Azure, Kundeservice, React",2,NTNU,9,2,7
-KANDIDAT-2067,Kari Larsen,"SQL, Markedsføring, AWS, React, Excel, HR",4,Master i utlandet,4,4,8
-KANDIDAT-5746,Nora Andersen,"Ledelse, React, Excel, Python, Jira, Machine Learning",12,Ingen utdanning,1,10,9
-KANDIDAT-2639,Sofia Pedersen,"React, Kundeservice, Salg",3,Master i utlandet,7,10,7
-KANDIDAT-1813,Lisa Nilsen,"Python, C++, Azure, AWS, Markedsføring",5,BI,8,3,6
-KANDIDAT-7710,Emil Pedersen,"Ledelse, React, C++, AWS, Machine Learning",5,Ingen utdanning,1,3,6
-KANDIDAT-6584,Ola Berg,"Kundeservice, Python, PowerPoint, AWS, Jira, HR",7,Ingen utdanning,8,6,2
-KANDIDAT-7066,Sofia Berg,"Excel, Python, HR, C++",10,Master i utlandet,9,8,3
-KANDIDAT-7236,Ali Pedersen,"Java, AI, Excel, HR",14,NTNU,7,8,9
-KANDIDAT-5696,Magnus Johansen,"PowerPoint, Jira",6,Høyskolen Kristiania,3,2,7
-KANDIDAT-2250,Pål Hansen,"AI, Kundeservice, HR, Excel",12,BI,1,4,7
-KANDIDAT-5268,Kari Vik,"Markedsføring, Kundeservice, C++, Salg, AWS, Excel",11,NHH,4,7,8
-KANDIDAT-9671,Mohamed Hagen,"Markedsføring, AWS, Kundeservice, Python",11,Master i utlandet,2,4,6
-KANDIDAT-2920,Sofia Andersen,"Jira, PowerPoint",10,NTNU,1,9,5
-KANDIDAT-6147,Jakob Pedersen,"Markedsføring, C++, Ledelse, AWS",11,Høyskolen Kristiania,8,4,9
-KANDIDAT-5970,Ingrid Hansen,"AI, Python",7,NTNU,4,2,1
-KANDIDAT-5823,Ida Andersen,"Excel, Markedsføring, C++, AI, Kundeservice",7,NTNU,1,8,3
-KANDIDAT-8035,Ola Andersen,"AI, PowerPoint, HR, Azure, Jira, Ledelse",7,BI,6,3,1
-KANDIDAT-9380,Sara Nilsen,"Markedsføring, AI, Java",6,NHH,4,3,5
-KANDIDAT-7082,Nora Pedersen,"Ledelse, PowerPoint",10,UiO,9,6,8
-KANDIDAT-4817,Erik Haugen,"Markedsføring, React, Kundeservice, Java, HR, PowerPoint",0,UiO,9,4,3
-KANDIDAT-7839,Sofia Andersen,"Azure, Java, Excel, Jira",9,Ingen utdanning,8,3,3
-KANDIDAT-9760,Ola Olsen,"AWS, Markedsføring",3,BI,2,4,1
-KANDIDAT-5231,Nora Olsen,"Kundeservice, Excel",5,Master i utlandet,2,7,5
-KANDIDAT-2121,Magnus Nilsen,"HR, Salg, AI, Machine Learning, Ledelse",8,NHH,3,10,3
-KANDIDAT-9344,Jakob Johansen,"Markedsføring, HR",9,NTNU,5,9,2
-KANDIDAT-1233,Lars Solberg,"Azure, HR, React, C++, Excel",1,NTNU,2,9,1
-KANDIDAT-8519,Lisa Hagen,"Machine Learning, Kundeservice, PowerPoint",10,UiO,4,2,5
-KANDIDAT-6343,Ingrid Hagen,"Ledelse, React",2,Master i utlandet,4,5,9
-KANDIDAT-1207,Lisa Pedersen,"React, Machine Learning, Python, C++",6,NTNU,10,8,5
-KANDIDAT-7010,Lisa Solberg,"Kundeservice, Markedsføring, Jira, Machine Learning, Azure, AI",12,BI,8,1,9
-KANDIDAT-1271,Erik Berg,"Machine Learning, Markedsføring",5,UiO,8,5,6
-KANDIDAT-4545,Sofia Nilsen,"Azure, React, PowerPoint, AWS",13,Høyskolen Kristiania,7,8,8
-KANDIDAT-6446,Sofia Haugen,"AWS, Ledelse, React, PowerPoint, Jira, Azure",9,NHH,1,2,7
-KANDIDAT-5639,Magnus Andersen,"Machine Learning, Markedsføring",8,Master i utlandet,7,2,8
-KANDIDAT-3128,Emil Nilsen,"AWS, PowerPoint",3,Master i utlandet,2,8,2
-KANDIDAT-8764,Sara Larsen,"Salg, HR, AI, React",7,NHH,5,1,4
-KANDIDAT-8446,Emil Solberg,"Ledelse, SQL, Excel, React",4,Høyskolen Kristiania,6,9,10
-KANDIDAT-1857,Ingrid Andersen,"HR, C++, Salg, Java, Machine Learning, Azure",1,UiO,9,5,1
-KANDIDAT-3303,Sofia Berg,"Kundeservice, Salg, Java, PowerPoint, HR",12,NTNU,4,3,10
-KANDIDAT-9763,Ida Andersen,"Python, PowerPoint, Excel, Kundeservice, AI",10,NTNU,9,3,2
-KANDIDAT-5072,Sofia Hansen,"Excel, Java, AWS, SQL, Markedsføring, HR",3,NHH,3,5,5
-KANDIDAT-9033,Ingrid Nilsen,"Kundeservice, Java, C++, Ledelse, AI, Salg",5,Ingen utdanning,5,7,1
-KANDIDAT-6767,Ali Andersen,"AI, HR, Excel, Salg, Kundeservice, Markedsføring",5,UiO,2,5,9
-KANDIDAT-6488,Lisa Hagen,"Jira, AWS",2,Ingen utdanning,4,1,8
-KANDIDAT-3685,Magnus Johansen,"Jira, Python, AI, C++, HR",4,NHH,10,7,8
-KANDIDAT-2068,Nora Johansen,"Excel, PowerPoint, Jira",2,Ingen utdanning,3,8,7
-KANDIDAT-7729,Ida Hagen,"Azure, C++, AI",0,Høyskolen Kristiania,2,5,7
-KANDIDAT-1832,Sara Vik,"Markedsføring, Java, Kundeservice, Python, Machine Learning",7,NTNU,7,9,1
-KANDIDAT-9250,Sofia Johansen,"HR, AWS, Machine Learning, Jira, React",10,BI,1,8,2
-KANDIDAT-6953,Ingrid Hansen,"HR, SQL, AI, Machine Learning, C++",6,UiO,9,3,8
-KANDIDAT-6688,Ida Andersen,"React, C++, Excel, Java",9,NHH,6,8,10
-KANDIDAT-7727,Nora Hagen,"Kundeservice, Excel, AI, Java, Python, C++",7,NHH,1,8,1
-KANDIDAT-5177,Jakob Larsen,"Python, HR, PowerPoint, React, SQL, Ledelse",6,NHH,10,10,9
-KANDIDAT-2742,Jakob Johansen,"PowerPoint, Python, Excel",3,UiO,7,6,1
-KANDIDAT-1539,Ida Berg,"AI, HR, Ledelse, React, AWS",14,Høyskolen Kristiania,5,3,8
-KANDIDAT-7231,Kari Johansen,"SQL, Java, Salg",1,NTNU,9,2,6
-KANDIDAT-3978,Emil Larsen,"Jira, AI",8,Høyskolen Kristiania,10,3,3
-KANDIDAT-6259,Pål Pedersen,"Ledelse, Machine Learning, Markedsføring",2,UiO,1,3,6
-KANDIDAT-2257,Erik Hagen,"Ledelse, React, HR",5,Master i utlandet,9,4,6
-KANDIDAT-5190,Nora Andersen,"Jira, SQL",0,Høyskolen Kristiania,4,10,4
-KANDIDAT-3502,Magnus Olsen,"SQL, Markedsføring",0,BI,2,8,10
-KANDIDAT-1482,Emil Pedersen,"Kundeservice, C++, Azure",5,Ingen utdanning,10,5,9
-KANDIDAT-5279,Kari Vik,"SQL, Salg",2,NHH,5,1,2
-KANDIDAT-1083,Magnus Hansen,"C++, Excel",6,Ingen utdanning,9,6,10
-KANDIDAT-4096,Sofia Hagen,"SQL, C++, Jira, Excel, Java, Kundeservice",3,NHH,2,1,10
-KANDIDAT-5219,Jakob Pedersen,"PowerPoint, AI, Kundeservice, Machine Learning, Python, C++",5,Høyskolen Kristiania,1,6,10
-KANDIDAT-5740,Lisa Hansen,"Java, HR, AWS, AI, Jira, Markedsføring",3,Master i utlandet,6,8,9
-KANDIDAT-1977,Jakob Vik,"Ledelse, C++, React",7,Master i utlandet,9,1,3
-KANDIDAT-4041,Pål Nilsen,"SQL, AI, Java, React, Excel, AWS",7,NTNU,2,5,8
-KANDIDAT-1031,Mohamed Nilsen,"Excel, React, Jira, Machine Learning, Ledelse",1,NHH,4,3,2
-KANDIDAT-1019,Erik Solberg,"Kundeservice, Azure, Markedsføring, Salg, C++, Ledelse",14,Master i utlandet,1,2,10
-KANDIDAT-9444,Pål Olsen,"Kundeservice, AWS",0,BI,8,7,1
+KANDIDAT-8959,Ali Johansen,"Python, Kundeservice, Java",9,UiO,4,3,7
+KANDIDAT-8010,Ola Haugen,"Machine Learning, Ledelse, Salg, Kundeservice",4,Høyskolen Kristiania,2,6,4
+KANDIDAT-7526,Sofia Nilsen,"React, AWS",7,Ingen utdanning,8,7,4
+KANDIDAT-2694,Nora Hansen,"React, HR, Jira, PowerPoint, C++, Azure",12,Master i utlandet,6,7,6
+KANDIDAT-1044,Sara Berg,"Jira, HR",12,Høyskolen Kristiania,4,6,8
+KANDIDAT-2699,Jakob Hansen,"Azure, Kundeservice, Machine Learning, AWS, Excel",10,NHH,3,10,2
+KANDIDAT-6293,Emil Haugen,"HR, Python, Salg",8,NHH,3,1,8
+KANDIDAT-9743,Sara Larsen,"Jira, Kundeservice, AI",4,NHH,4,8,9
+KANDIDAT-6271,Lisa Vik,"HR, React",14,UiO,4,9,2
+KANDIDAT-3123,Ola Larsen,"Python, Java, PowerPoint, Excel",8,NHH,8,3,7
+KANDIDAT-6932,Sofia Andersen,"PowerPoint, Machine Learning, React",1,NHH,3,5,1
+KANDIDAT-9938,Ingrid Pedersen,"Kundeservice, Python, React, Azure, Ledelse",0,UiO,5,1,6
+KANDIDAT-8058,Jakob Andersen,"Markedsføring, Ledelse, Kundeservice",5,Høyskolen Kristiania,4,3,4
+KANDIDAT-5993,Lisa Berg,"C++, Ledelse, Markedsføring, React, Jira, HR",3,Høyskolen Kristiania,6,6,9
+KANDIDAT-1124,Lars Nilsen,"PowerPoint, Machine Learning, Excel",10,Høyskolen Kristiania,3,2,5
+KANDIDAT-2466,Jakob Hansen,"Excel, Machine Learning, Jira",12,Høyskolen Kristiania,9,4,10
+KANDIDAT-9105,Ingrid Haugen,"React, Markedsføring, HR, SQL, PowerPoint, Azure",11,Master i utlandet,8,6,5
+KANDIDAT-4628,Emil Vik,"PowerPoint, AI, SQL",9,Ingen utdanning,5,6,2
+KANDIDAT-3085,Jakob Andersen,"Java, AI, SQL, Kundeservice, Markedsføring, PowerPoint",5,Master i utlandet,4,5,2
+KANDIDAT-5889,Ola Pedersen,"Python, HR",3,Høyskolen Kristiania,6,3,3
+KANDIDAT-2386,Jakob Andersen,"Excel, Jira, HR, Ledelse, C++",14,Ingen utdanning,10,10,2
+KANDIDAT-4337,Ola Hansen,"Ledelse, AI, Jira",1,NTNU,2,8,8
+KANDIDAT-7318,Mohamed Pedersen,"AI, AWS",10,NTNU,8,7,7
+KANDIDAT-3400,Sofia Solberg,"PowerPoint, Ledelse, Java, Markedsføring, HR, React",13,NTNU,3,4,2
+KANDIDAT-9052,Erik Nilsen,"Python, PowerPoint, SQL",5,Høyskolen Kristiania,2,2,8
+KANDIDAT-4832,Jakob Vik,"React, Jira",15,NHH,2,6,3
+KANDIDAT-4127,Ingrid Olsen,"Machine Learning, Azure, Java, AI, SQL",3,Høyskolen Kristiania,5,6,5
+KANDIDAT-1332,Mohamed Johansen,"Azure, SQL, Java",4,Master i utlandet,6,3,3
+KANDIDAT-7333,Erik Johansen,"Excel, PowerPoint, Kundeservice, C++",4,NHH,7,7,7
+KANDIDAT-4035,Ola Vik,"Java, C++, Python, AI",2,NTNU,3,6,9
+KANDIDAT-1866,Pål Olsen,"React, Excel, Ledelse, SQL",13,NTNU,4,5,2
+KANDIDAT-5375,Lars Pedersen,"Excel, C++, Kundeservice, React, Java, AI",0,UiO,2,2,5
+KANDIDAT-2002,Mohamed Pedersen,"Python, SQL, Salg",6,NTNU,2,7,7
+KANDIDAT-6724,Ida Nilsen,"AWS, SQL, Kundeservice, Jira, Markedsføring, AI",0,Ingen utdanning,10,8,5
+KANDIDAT-9890,Erik Vik,"React, HR, AI",2,NTNU,9,2,2
+KANDIDAT-7006,Mohamed Andersen,"Python, Kundeservice, Excel, Ledelse",8,Ingen utdanning,7,6,6
+KANDIDAT-3953,Ida Hagen,"PowerPoint, Java, C++, AI, Excel, AWS",13,BI,4,6,6
+KANDIDAT-7509,Kari Larsen,"Markedsføring, AI, Java, Salg, Jira",6,NTNU,3,2,6
+KANDIDAT-7123,Emil Hagen,"Jira, PowerPoint",3,Høyskolen Kristiania,8,9,2
+KANDIDAT-2820,Magnus Hagen,"Jira, Machine Learning, HR, PowerPoint, Salg, C++",4,NTNU,10,2,6
+KANDIDAT-5576,Lisa Berg,"AI, Azure, Excel, Java, Jira, Machine Learning",12,Høyskolen Kristiania,8,8,3
+KANDIDAT-9813,Erik Hagen,"AI, PowerPoint, HR, Java, React, C++",4,NTNU,10,5,10
+KANDIDAT-3657,Nora Solberg,"Markedsføring, Machine Learning, Kundeservice, AI, PowerPoint, Jira",15,NTNU,5,7,8
+KANDIDAT-3389,Sara Larsen,"Excel, Kundeservice, HR",2,Høyskolen Kristiania,3,6,7
+KANDIDAT-7445,Pål Solberg,"Machine Learning, Jira, Ledelse, AWS",8,BI,2,2,1
+KANDIDAT-1732,Ali Pedersen,"AI, Python",12,NHH,5,3,2
+KANDIDAT-5573,Sofia Solberg,"Markedsføring, AI",2,NHH,3,6,6
+KANDIDAT-4731,Jakob Johansen,"Markedsføring, HR, Python, AI, Ledelse",6,NHH,8,4,2
+KANDIDAT-5726,Pål Vik,"Ledelse, Kundeservice",0,NTNU,5,2,10
+KANDIDAT-9583,Pål Larsen,"Java, Azure",14,Ingen utdanning,10,9,3
+KANDIDAT-1622,Jakob Pedersen,"Machine Learning, Azure",2,NTNU,2,7,9
+KANDIDAT-3043,Ola Hansen,"Salg, PowerPoint",2,BI,3,1,6
+KANDIDAT-9657,Mohamed Vik,"Excel, Markedsføring, SQL, PowerPoint, Salg",11,Høyskolen Kristiania,5,5,8
+KANDIDAT-8897,Pål Larsen,"Java, C++, React, HR",2,Høyskolen Kristiania,3,2,5
+KANDIDAT-2990,Ingrid Johansen,"AI, AWS, PowerPoint, HR, Python, Azure",5,NHH,7,1,7
+KANDIDAT-1142,Sofia Hansen,"C++, HR, Ledelse, Markedsføring, AI",5,UiO,4,3,9
+KANDIDAT-8697,Ingrid Hansen,"C++, Python, Kundeservice",13,NTNU,8,10,4
+KANDIDAT-7366,Emil Hansen,"React, C++, Machine Learning, AWS",6,Ingen utdanning,6,5,4
+KANDIDAT-8423,Ida Nilsen,"React, Salg",8,BI,4,1,5
+KANDIDAT-6449,Lars Haugen,"HR, Jira, Kundeservice, Markedsføring, PowerPoint",6,Høyskolen Kristiania,1,1,5
+KANDIDAT-9188,Lars Berg,"Azure, Machine Learning",0,UiO,4,8,10
+KANDIDAT-8834,Magnus Vik,"Markedsføring, AI, C++, Kundeservice, Excel, React",13,NHH,9,7,4
+KANDIDAT-9593,Sofia Vik,"Machine Learning, Python",9,Høyskolen Kristiania,7,3,10
+KANDIDAT-8354,Magnus Pedersen,"Jira, PowerPoint, Python, C++, React",6,BI,9,5,2
+KANDIDAT-2399,Lars Solberg,"SQL, Ledelse, AI, Markedsføring, PowerPoint",8,BI,8,3,7
+KANDIDAT-8591,Kari Haugen,"Jira, Excel, Azure, React",1,UiO,8,1,2
+KANDIDAT-2565,Ali Hansen,"Kundeservice, PowerPoint, C++, Ledelse, HR, SQL",5,Ingen utdanning,4,10,3
+KANDIDAT-7057,Lisa Olsen,"Kundeservice, React, Excel, PowerPoint",1,NHH,1,10,2
+KANDIDAT-6464,Pål Olsen,"Jira, Excel, HR, Azure, PowerPoint, AWS",5,Høyskolen Kristiania,4,6,2
+KANDIDAT-3420,Nora Pedersen,"React, Excel, PowerPoint, HR, Salg",5,NHH,4,5,9
+KANDIDAT-5508,Kari Olsen,"Jira, C++, Kundeservice, React",4,BI,9,4,8
+KANDIDAT-8989,Sofia Berg,"AWS, PowerPoint, Azure, Ledelse, Jira, React",13,Høyskolen Kristiania,8,6,10
+KANDIDAT-5436,Nora Hansen,"Excel, Azure, React, Jira, C++",5,UiO,7,10,6
+KANDIDAT-3079,Nora Hagen,"SQL, AI, AWS, C++",10,UiO,8,3,8
+KANDIDAT-2099,Pål Berg,"Kundeservice, Salg, SQL, Ledelse, Jira, HR",6,Høyskolen Kristiania,2,2,2
+KANDIDAT-9163,Ola Pedersen,"React, SQL, Kundeservice, AI, Ledelse, Python",12,Master i utlandet,7,9,3
+KANDIDAT-9503,Emil Nilsen,"Java, AWS, Azure, Excel, Kundeservice",14,NTNU,5,2,4
+KANDIDAT-1426,Kari Pedersen,"Kundeservice, AWS",2,NHH,10,9,3
+KANDIDAT-6927,Lars Larsen,"Java, Markedsføring, Excel",12,NTNU,1,3,3
+KANDIDAT-8319,Mohamed Nilsen,"C++, Ledelse, HR, Excel",14,NHH,6,6,5
+KANDIDAT-8455,Ali Larsen,"PowerPoint, Machine Learning, Azure, HR, Markedsføring",9,Master i utlandet,7,5,8
+KANDIDAT-8900,Nora Larsen,"Python, AI, Ledelse, Excel, Markedsføring, SQL",0,UiO,2,7,1
+KANDIDAT-1835,Pål Andersen,"AWS, Azure, PowerPoint",2,UiO,5,5,9
+KANDIDAT-4626,Kari Hagen,"Machine Learning, Python, AWS",1,Master i utlandet,10,8,5
+KANDIDAT-7569,Ingrid Johansen,"AWS, Markedsføring, Jira, HR, Machine Learning, SQL",11,Ingen utdanning,4,3,2
+KANDIDAT-2526,Mohamed Pedersen,"Salg, Machine Learning, C++, Excel",2,Master i utlandet,8,2,8
+KANDIDAT-4836,Lisa Vik,"C++, PowerPoint, Machine Learning, Salg, Azure",13,NTNU,3,2,8
+KANDIDAT-2438,Sofia Larsen,"Salg, Python, React, Markedsføring",2,NTNU,8,10,6
+KANDIDAT-3336,Ingrid Hansen,"PowerPoint, SQL, Python, Excel, Azure, HR",5,Høyskolen Kristiania,7,10,10
+KANDIDAT-8708,Ingrid Pedersen,"C++, Java",0,Høyskolen Kristiania,1,3,4
+KANDIDAT-3094,Ida Hagen,"HR, Machine Learning, C++, AI, Salg",13,Master i utlandet,2,9,7
+KANDIDAT-3710,Magnus Larsen,"Kundeservice, Markedsføring",12,Høyskolen Kristiania,2,10,1
+KANDIDAT-3205,Pål Olsen,"React, AI, Excel",4,UiO,9,10,4
+KANDIDAT-2932,Jakob Olsen,"SQL, Excel",11,UiO,3,9,8
+KANDIDAT-9180,Kari Larsen,"C++, Azure, Kundeservice",3,NHH,9,7,3
+KANDIDAT-5638,Emil Hagen,"AI, AWS",14,Ingen utdanning,9,8,7
+KANDIDAT-9206,Erik Larsen,"Kundeservice, PowerPoint",13,Master i utlandet,1,6,7
+KANDIDAT-6277,Ali Pedersen,"SQL, AWS, PowerPoint, React, Java",13,BI,7,7,4
+KANDIDAT-7244,Pål Berg,"SQL, AWS, PowerPoint, Kundeservice",0,NTNU,4,8,6
+KANDIDAT-9442,Erik Haugen,"React, C++, PowerPoint, SQL, HR, AWS",6,NHH,3,2,9
+KANDIDAT-8251,Kari Hagen,"Salg, Kundeservice, Jira, C++, HR",9,Master i utlandet,1,5,3
+KANDIDAT-3771,Lisa Larsen,"Jira, Python, AI, Machine Learning, React, PowerPoint",15,Ingen utdanning,4,7,6
+KANDIDAT-3345,Ola Solberg,"Salg, AI, Kundeservice, C++",1,Master i utlandet,9,3,9
+KANDIDAT-3282,Lisa Hansen,"React, Machine Learning",7,Ingen utdanning,4,2,3
+KANDIDAT-7247,Ola Berg,"Azure, React, Ledelse, Excel, Python, Salg",6,BI,2,9,6
+KANDIDAT-2037,Jakob Nilsen,"Jira, AWS, Ledelse",3,Ingen utdanning,9,1,7
+KANDIDAT-4078,Sofia Olsen,"C++, PowerPoint, Machine Learning",8,NTNU,4,8,1
+KANDIDAT-4682,Lisa Hansen,"Markedsføring, SQL, Python, Salg",15,UiO,2,3,2
+KANDIDAT-2357,Erik Berg,"HR, React, Python, Kundeservice, Ledelse, SQL",8,Master i utlandet,10,8,4
+KANDIDAT-5110,Emil Nilsen,"Java, Markedsføring, Excel, Machine Learning, AWS",6,NTNU,9,8,5
+KANDIDAT-9219,Nora Pedersen,"C++, Java, React, AI, Machine Learning, Azure",4,BI,10,7,8
+KANDIDAT-9046,Sofia Johansen,"Kundeservice, React, Machine Learning",10,Ingen utdanning,6,1,9
+KANDIDAT-5790,Lars Andersen,"Ledelse, AI, Java, Excel, HR, AWS",3,Høyskolen Kristiania,9,8,5
+KANDIDAT-4656,Pål Nilsen,"SQL, Machine Learning, Markedsføring, Python, AI",8,NHH,7,7,7
+KANDIDAT-5605,Sofia Hansen,"Jira, Excel, Machine Learning, Python, Salg, Markedsføring",6,NTNU,7,3,1
+KANDIDAT-3708,Ida Haugen,"React, Azure, AWS, C++",12,UiO,10,10,2
+KANDIDAT-8094,Lisa Pedersen,"Python, AI, Machine Learning, Salg, SQL",12,NTNU,6,6,1
+KANDIDAT-9597,Pål Hansen,"HR, Machine Learning, Ledelse, AWS",7,Ingen utdanning,7,3,3
+KANDIDAT-3104,Magnus Johansen,"Python, AWS, PowerPoint",12,BI,4,7,4
+KANDIDAT-4313,Emil Andersen,"HR, Ledelse",0,UiO,5,3,10
+KANDIDAT-4769,Lars Larsen,"HR, C++, Machine Learning, AI",10,UiO,7,1,5
+KANDIDAT-7637,Ola Solberg,"Java, Jira",4,Master i utlandet,8,8,1
+KANDIDAT-6472,Ola Hansen,"PowerPoint, Jira",13,UiO,6,3,9
+KANDIDAT-3580,Emil Haugen,"Azure, Salg, C++",12,Master i utlandet,1,3,4
+KANDIDAT-2485,Mohamed Hagen,"Java, SQL, Ledelse",7,UiO,3,2,8
+KANDIDAT-8236,Ingrid Berg,"Salg, Python",12,UiO,9,6,8
+KANDIDAT-9485,Ola Andersen,"HR, AWS, PowerPoint, C++",9,Ingen utdanning,2,8,8
+KANDIDAT-1497,Erik Hansen,"Java, AWS, Kundeservice, Python, Machine Learning",14,BI,4,8,5
+KANDIDAT-7092,Emil Olsen,"C++, HR, Python, Excel, Java, Jira",10,UiO,10,8,10
+KANDIDAT-4396,Ali Haugen,"Ledelse, AI, PowerPoint",2,UiO,5,2,3
+KANDIDAT-6137,Ingrid Nilsen,"Java, React, Python, Markedsføring, Excel",1,NTNU,9,3,4
+KANDIDAT-6926,Ingrid Pedersen,"Machine Learning, AI, Python, C++, React, Ledelse",13,NHH,9,8,7
+KANDIDAT-3556,Pål Haugen,"Excel, Markedsføring, Java, Python",5,Ingen utdanning,5,2,4
+KANDIDAT-7608,Magnus Vik,"Jira, HR, Python, PowerPoint, SQL",10,Master i utlandet,10,6,4
+KANDIDAT-3524,Erik Vik,"SQL, C++",4,Høyskolen Kristiania,5,8,10
+KANDIDAT-4507,Sara Haugen,"Python, SQL, C++, React, Java",1,BI,1,3,6
+KANDIDAT-6136,Sara Pedersen,"Jira, Excel, Markedsføring, SQL, AI",9,Ingen utdanning,6,5,4
+KANDIDAT-5943,Magnus Vik,"Java, Python, Machine Learning, Azure",15,Ingen utdanning,1,3,2
+KANDIDAT-6608,Nora Haugen,"Azure, Kundeservice, Java, Ledelse, Excel, Machine Learning",15,BI,2,5,9
+KANDIDAT-3438,Sofia Haugen,"Azure, Ledelse, Python",7,Ingen utdanning,6,2,3
+KANDIDAT-9965,Ida Nilsen,"PowerPoint, Ledelse, Markedsføring, Java",1,Ingen utdanning,9,2,3
+KANDIDAT-8876,Kari Olsen,"Java, Excel, PowerPoint",2,Master i utlandet,9,3,6
+KANDIDAT-3266,Kari Vik,"AWS, React, PowerPoint, Ledelse, SQL",6,NHH,1,8,5
+KANDIDAT-6558,Mohamed Johansen,"Jira, PowerPoint, Salg, Azure, Python",6,Høyskolen Kristiania,3,1,10
+KANDIDAT-4021,Ingrid Johansen,"Excel, Salg, HR, AI, Machine Learning, C++",5,NHH,5,1,3
+KANDIDAT-6411,Ingrid Olsen,"HR, AWS",2,Høyskolen Kristiania,9,2,3
+KANDIDAT-3082,Ali Vik,"React, PowerPoint",15,UiO,8,1,7
+KANDIDAT-6184,Ida Nilsen,"C++, Python",6,Høyskolen Kristiania,8,9,1
+KANDIDAT-8162,Ingrid Larsen,"Kundeservice, C++, SQL, AI, HR, Python",7,NHH,2,2,3
+KANDIDAT-3012,Mohamed Olsen,"Jira, Salg, AWS, React, Markedsføring, Kundeservice",13,BI,1,8,5
+KANDIDAT-2264,Sara Andersen,"Jira, AI",4,Høyskolen Kristiania,8,4,10
+KANDIDAT-4426,Erik Hansen,"Machine Learning, Markedsføring, Ledelse",1,NTNU,1,10,9
+KANDIDAT-3360,Magnus Johansen,"React, PowerPoint, Ledelse, AWS, Azure, Salg",6,Høyskolen Kristiania,7,8,2
+KANDIDAT-3024,Ola Olsen,"Excel, Machine Learning, Jira, AI, PowerPoint, Azure",14,Ingen utdanning,10,8,7
+KANDIDAT-3017,Nora Hagen,"Excel, AWS",6,Høyskolen Kristiania,3,8,5
+KANDIDAT-4921,Emil Nilsen,"AWS, AI, HR, Markedsføring, Machine Learning, PowerPoint",5,NTNU,6,8,7
+KANDIDAT-3106,Nora Pedersen,"Python, Ledelse, Azure, Excel, Java, Jira",15,UiO,9,8,8
+KANDIDAT-9925,Ola Berg,"SQL, Salg, Jira, Java, React",2,BI,6,1,5
+KANDIDAT-6375,Emil Berg,"Ledelse, Kundeservice, Java, HR, C++, Azure",8,Høyskolen Kristiania,2,2,5
+KANDIDAT-5119,Sara Solberg,"Azure, Jira",8,UiO,4,9,3
+KANDIDAT-5972,Ola Vik,"Python, Java, Ledelse, Azure",13,BI,6,6,1
+KANDIDAT-9927,Pål Johansen,"PowerPoint, React, HR",2,BI,1,1,6
+KANDIDAT-9463,Sofia Haugen,"Salg, HR, Jira, Excel",10,Master i utlandet,2,6,9
+KANDIDAT-6052,Mohamed Larsen,"SQL, Excel, HR, PowerPoint",9,Ingen utdanning,7,7,2
+KANDIDAT-1658,Sara Vik,"C++, AI, Machine Learning, Markedsføring, Python, Excel",0,NTNU,4,1,9
+KANDIDAT-6217,Lars Hansen,"Kundeservice, Azure",1,Ingen utdanning,9,9,2
+KANDIDAT-5766,Nora Berg,"Python, C++, SQL",3,BI,8,10,7
+KANDIDAT-3873,Nora Johansen,"HR, SQL, Kundeservice, AI, Salg, C++",2,Master i utlandet,8,8,4
+KANDIDAT-2936,Jakob Nilsen,"React, AWS, HR, AI",9,Ingen utdanning,1,3,4
+KANDIDAT-9513,Lars Hansen,"PowerPoint, Java, SQL, AI, HR",10,BI,3,1,4
+KANDIDAT-2510,Emil Andersen,"Machine Learning, SQL",14,Høyskolen Kristiania,9,1,4
+KANDIDAT-2258,Mohamed Pedersen,"Machine Learning, AI",13,NTNU,8,3,1
+KANDIDAT-2594,Sofia Solberg,"Machine Learning, AI, Java, React, C++",12,UiO,9,5,9
+KANDIDAT-3357,Emil Hagen,"Kundeservice, PowerPoint",2,NTNU,6,10,1
+KANDIDAT-3794,Mohamed Johansen,"Machine Learning, Salg, Azure, HR, React",14,UiO,3,7,4
+KANDIDAT-9794,Sofia Olsen,"C++, Python, React, Salg, PowerPoint",2,Master i utlandet,3,3,5
+KANDIDAT-8794,Ingrid Hagen,"React, HR, C++, Markedsføring, Salg",11,NHH,10,1,3
+KANDIDAT-4519,Lisa Pedersen,"SQL, PowerPoint, Jira, AI, Ledelse",6,Høyskolen Kristiania,3,7,8
+KANDIDAT-2283,Erik Johansen,"HR, Ledelse",5,Høyskolen Kristiania,9,5,7
+KANDIDAT-9310,Sofia Haugen,"C++, Ledelse, Markedsføring",14,Master i utlandet,7,2,6
+KANDIDAT-6230,Sara Pedersen,"SQL, Excel, HR",9,NHH,10,4,5
+KANDIDAT-6929,Ingrid Haugen,"AI, AWS, Machine Learning, Java, SQL",12,Ingen utdanning,2,5,4
+KANDIDAT-8564,Sofia Solberg,"HR, Java",13,NHH,2,5,10
+KANDIDAT-2715,Sara Hagen,"Machine Learning, C++, Jira",12,Høyskolen Kristiania,9,5,7
+KANDIDAT-3693,Nora Solberg,"Python, AWS, React, Kundeservice, PowerPoint, Salg",10,Ingen utdanning,4,9,8
+KANDIDAT-6676,Erik Berg,"Jira, HR, AI, Azure, React, C++",4,Høyskolen Kristiania,7,2,4
+KANDIDAT-8562,Ingrid Haugen,"Markedsføring, Jira, Azure, Excel, HR, AWS",9,Master i utlandet,9,2,1
+KANDIDAT-1061,Ida Berg,"Kundeservice, Salg, C++, SQL, AWS",5,Ingen utdanning,5,7,8
+KANDIDAT-2332,Mohamed Hagen,"PowerPoint, Kundeservice, React",13,NHH,8,2,1
+KANDIDAT-2568,Kari Johansen,"Kundeservice, AWS, HR, Markedsføring, Excel, SQL",10,Ingen utdanning,9,9,5
+KANDIDAT-3376,Nora Olsen,"Jira, Kundeservice, Excel, Azure",1,NHH,9,2,8
+KANDIDAT-9643,Ali Nilsen,"React, Jira",5,NHH,4,1,3
+KANDIDAT-4255,Ida Haugen,"SQL, Excel, Azure, AI, Java, Jira",10,BI,2,2,3
+KANDIDAT-7654,Emil Vik,"HR, PowerPoint",12,NHH,2,8,7
+KANDIDAT-5593,Magnus Haugen,"Azure, Markedsføring, AWS, Kundeservice, Machine Learning",6,BI,7,8,6
+KANDIDAT-1114,Jakob Vik,"Excel, PowerPoint, Ledelse",15,Ingen utdanning,9,3,3
+KANDIDAT-9799,Lars Larsen,"SQL, C++",10,BI,3,6,10
+KANDIDAT-7751,Lars Vik,"Ledelse, Jira, Excel, SQL",0,NHH,10,8,2
+KANDIDAT-9650,Kari Olsen,"Excel, AI",7,Høyskolen Kristiania,1,9,5
+KANDIDAT-3186,Lisa Pedersen,"Excel, Ledelse, Machine Learning, Kundeservice, SQL",2,Ingen utdanning,5,9,8
+KANDIDAT-4994,Lars Olsen,"Machine Learning, React, Excel, Kundeservice, C++",8,NHH,4,1,4
+KANDIDAT-6790,Erik Haugen,"React, Ledelse, Salg, Markedsføring",4,Ingen utdanning,9,9,5
+KANDIDAT-6428,Pål Andersen,"Python, Jira, Ledelse, Kundeservice",6,Master i utlandet,5,1,3
+KANDIDAT-6419,Magnus Andersen,"Python, React",9,NTNU,1,3,4
+KANDIDAT-7135,Mohamed Solberg,"HR, PowerPoint, Java, Ledelse",8,UiO,9,1,7
+KANDIDAT-1810,Nora Haugen,"Ledelse, Jira, Excel",6,UiO,2,10,3
+KANDIDAT-5569,Erik Berg,"Excel, Java",10,Master i utlandet,9,3,5
+KANDIDAT-1262,Erik Haugen,"Salg, HR, AI",12,NHH,1,2,6
+KANDIDAT-7704,Ola Berg,"PowerPoint, Azure, Java",12,NTNU,6,8,3
+KANDIDAT-8337,Jakob Pedersen,"Python, HR, Excel, Machine Learning, PowerPoint, Salg",6,Ingen utdanning,5,9,10
+KANDIDAT-5949,Ali Olsen,"Salg, Excel, Kundeservice",8,BI,8,6,2
+KANDIDAT-4686,Ola Olsen,"Markedsføring, Excel, Python, Jira, AI",1,Ingen utdanning,4,1,6
+KANDIDAT-3886,Nora Larsen,"Salg, Kundeservice",0,UiO,7,6,4
+KANDIDAT-4159,Kari Olsen,"AI, React, Python, Excel, Ledelse, Kundeservice",15,Master i utlandet,9,7,10
+KANDIDAT-6067,Sofia Nilsen,"HR, Jira, Azure, PowerPoint, Ledelse, AWS",6,NTNU,1,8,1
+KANDIDAT-1326,Mohamed Nilsen,"Excel, React, SQL, Azure",0,Ingen utdanning,7,7,6
+KANDIDAT-6294,Kari Hagen,"Azure, Machine Learning, Salg, Python",4,NHH,8,2,4
+KANDIDAT-2198,Nora Nilsen,"PowerPoint, HR, AI",2,BI,2,5,7
+KANDIDAT-8961,Pål Vik,"AI, Python, Markedsføring",2,NHH,8,10,1
+KANDIDAT-4624,Kari Olsen,"Ledelse, Kundeservice",11,NTNU,1,4,3
+KANDIDAT-2574,Ingrid Olsen,"Java, Machine Learning, HR",3,UiO,1,3,7
+KANDIDAT-3520,Lisa Haugen,"SQL, Salg, React, C++",1,UiO,4,7,7
+KANDIDAT-2358,Kari Vik,"HR, Ledelse",6,UiO,8,9,4
+KANDIDAT-7429,Ida Olsen,"Machine Learning, Ledelse, SQL",5,BI,5,10,2
+KANDIDAT-5589,Pål Nilsen,"Excel, Python",4,NHH,5,10,4
+KANDIDAT-4283,Emil Haugen,"HR, Azure, AI",3,Høyskolen Kristiania,2,5,4
+KANDIDAT-7084,Ida Hansen,"HR, AI",8,NTNU,8,2,7
+KANDIDAT-6113,Magnus Johansen,"AWS, Markedsføring, C++, SQL, HR",3,Ingen utdanning,7,2,8
+KANDIDAT-9051,Sofia Hagen,"Salg, Excel, Kundeservice, Azure, HR, AI",1,NHH,10,1,5
+KANDIDAT-3459,Ingrid Hansen,"Excel, Markedsføring, AWS, Kundeservice",10,Ingen utdanning,9,2,1
+KANDIDAT-1120,Mohamed Solberg,"Markedsføring, Salg, HR, Excel, Python",12,Ingen utdanning,7,1,4
+KANDIDAT-5883,Ali Andersen,"Jira, HR",9,Master i utlandet,8,9,6
+KANDIDAT-3781,Erik Berg,"Machine Learning, SQL, AWS",1,UiO,4,10,7
+KANDIDAT-8773,Mohamed Solberg,"Salg, Jira, Python, PowerPoint, HR",0,UiO,3,4,8
+KANDIDAT-3294,Jakob Larsen,"React, HR, Python, Machine Learning",7,UiO,1,7,9
+KANDIDAT-9335,Emil Andersen,"Kundeservice, HR",11,Ingen utdanning,8,1,10
+KANDIDAT-4930,Lars Johansen,"PowerPoint, Salg, Jira, HR",8,UiO,9,8,6
+KANDIDAT-6540,Lisa Solberg,"SQL, React, Ledelse, Java, C++, Kundeservice",3,NTNU,6,2,9
+KANDIDAT-7504,Nora Larsen,"Markedsføring, C++",11,BI,7,1,2
+KANDIDAT-8208,Ingrid Solberg,"Azure, AWS, Java, PowerPoint",15,Master i utlandet,4,4,7
+KANDIDAT-9014,Sara Hagen,"Java, React, PowerPoint, Salg, HR, AI",11,UiO,8,10,5
+KANDIDAT-8738,Lars Berg,"Excel, PowerPoint, Machine Learning, Salg, Markedsføring, Python",0,BI,4,10,7
+KANDIDAT-6596,Jakob Johansen,"PowerPoint, Java, Python",2,NHH,6,10,6
+KANDIDAT-1150,Ola Berg,"AI, Markedsføring",11,Høyskolen Kristiania,9,8,1
+KANDIDAT-3270,Ali Solberg,"Markedsføring, HR, Python, Azure",9,Ingen utdanning,2,8,10
+KANDIDAT-2661,Ali Hansen,"Azure, AI, HR, Excel",0,NTNU,6,5,8
+KANDIDAT-6618,Ida Vik,"SQL, AWS, HR",11,BI,1,6,3
+KANDIDAT-7639,Erik Larsen,"Salg, C++, HR, React, Excel, Java",4,BI,2,7,10
+KANDIDAT-4210,Ingrid Pedersen,"HR, AI",8,NHH,8,10,10
+KANDIDAT-8093,Sara Hagen,"C++, Excel, Azure, SQL, Ledelse, AWS",10,Høyskolen Kristiania,5,8,3
