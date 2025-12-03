@@ -1,251 +1,501 @@
-ID,Faktisk_Navn,Ferdigheter,Erfaring,Utdanning,Struktur,Driv,Samarbeid
-KANDIDAT-7750,Sofia Berg,"AWS, Jira, Machine Learning, AI",11,Høyskolen Kristiania,9,5,8
-KANDIDAT-8524,Magnus Pedersen,"HR, Excel, Kundeservice",5,Master i utlandet,7,2,6
-KANDIDAT-3309,Mohamed Berg,"Azure, Markedsføring, Java, HR, C++",7,BI,4,3,6
-KANDIDAT-3340,Pål Solberg,"C++, Salg, Ledelse, Excel, Markedsføring",2,UiO,2,6,1
-KANDIDAT-1338,Ola Olsen,"Markedsføring, Excel, Java, Salg, C++, Python",9,Master i utlandet,1,1,7
-KANDIDAT-3437,Sara Pedersen,"Excel, AWS, PowerPoint",15,UiO,1,2,4
-KANDIDAT-7164,Emil Johansen,"AI, Excel, React, Ledelse, SQL",9,UiO,4,2,10
-KANDIDAT-3561,Ola Larsen,"Machine Learning, PowerPoint, Jira, HR",7,BI,5,6,2
-KANDIDAT-3511,Emil Pedersen,"Markedsføring, Ledelse",9,NHH,9,5,10
-KANDIDAT-6391,Lars Pedersen,"Markedsføring, React, Salg, Azure, Jira",14,UiO,9,3,9
-KANDIDAT-6156,Ida Hagen,"Machine Learning, C++, Salg, Python, Java",10,NHH,7,1,5
-KANDIDAT-9959,Ali Haugen,"Python, Java, AWS, AI, Markedsføring",0,NHH,4,8,7
-KANDIDAT-1322,Lars Hansen,"Excel, AI",10,Master i utlandet,8,8,8
-KANDIDAT-5122,Pål Vik,"Ledelse, Markedsføring",3,Høyskolen Kristiania,4,1,1
-KANDIDAT-5782,Sofia Berg,"Jira, Azure, Markedsføring",12,UiO,10,1,10
-KANDIDAT-3459,Ingrid Andersen,"Excel, Kundeservice, SQL, Azure, PowerPoint, Markedsføring",12,Master i utlandet,2,2,4
-KANDIDAT-1850,Magnus Pedersen,"Salg, AI, PowerPoint, Kundeservice, SQL, Jira",3,Ingen utdanning,3,1,9
-KANDIDAT-9340,Sofia Berg,"Kundeservice, Azure",11,Master i utlandet,8,4,10
-KANDIDAT-4324,Ola Pedersen,"Markedsføring, AI",12,NHH,3,6,5
-KANDIDAT-8217,Nora Vik,"AWS, Azure, Java, C++, PowerPoint",2,Master i utlandet,10,4,5
-KANDIDAT-5911,Kari Johansen,"Excel, SQL, Salg, Markedsføring, Kundeservice, AWS",1,NTNU,5,6,6
-KANDIDAT-7703,Ingrid Vik,"Markedsføring, Machine Learning",0,BI,8,7,2
-KANDIDAT-5585,Sara Hagen,"Markedsføring, Jira, AI",9,BI,4,3,10
-KANDIDAT-9095,Pål Vik,"Salg, Jira, Azure, AWS, AI, Excel",9,NHH,8,8,6
-KANDIDAT-9698,Nora Berg,"Azure, Jira, HR, Salg",8,NHH,3,5,10
-KANDIDAT-3127,Emil Johansen,"React, Excel, Kundeservice, AI, Jira",6,UiO,4,7,10
-KANDIDAT-9080,Pål Haugen,"Markedsføring, Machine Learning",6,NTNU,4,1,10
-KANDIDAT-3787,Kari Pedersen,"PowerPoint, AI, HR, Machine Learning, Ledelse",14,Ingen utdanning,7,4,8
-KANDIDAT-9631,Magnus Hagen,"Jira, Ledelse, C++, Kundeservice",0,UiO,5,2,6
-KANDIDAT-4863,Jakob Nilsen,"C++, Machine Learning, AI, AWS, Ledelse",12,Master i utlandet,1,5,10
-KANDIDAT-2123,Ali Andersen,"C++, PowerPoint, React",0,Ingen utdanning,6,1,5
-KANDIDAT-7682,Nora Solberg,"Azure, AWS",11,Høyskolen Kristiania,6,6,10
-KANDIDAT-2255,Sofia Nilsen,"AI, Java, Ledelse",15,BI,6,10,2
-KANDIDAT-1413,Ingrid Andersen,"Ledelse, Jira, Markedsføring, AWS, PowerPoint, Python",11,NHH,1,6,6
-KANDIDAT-4479,Sofia Johansen,"PowerPoint, Kundeservice, Machine Learning, Python, Java, AWS",2,NHH,7,6,3
-KANDIDAT-9881,Lisa Vik,"Excel, C++, Python, Markedsføring",10,BI,7,10,7
-KANDIDAT-8783,Kari Olsen,"AWS, C++, Azure, React, Jira, Excel",11,BI,7,10,1
-KANDIDAT-6491,Sara Nilsen,"Python, AI, Markedsføring",5,NTNU,8,9,10
-KANDIDAT-3932,Nora Hagen,"AI, Kundeservice",8,Høyskolen Kristiania,5,3,6
-KANDIDAT-9697,Erik Nilsen,"AWS, C++, Markedsføring",14,UiO,4,10,8
-KANDIDAT-7238,Ola Olsen,"React, Jira, Java, Machine Learning, Kundeservice",9,NTNU,5,1,4
-KANDIDAT-6714,Sara Vik,"Java, Excel, Markedsføring, React",4,BI,2,6,1
-KANDIDAT-2164,Mohamed Andersen,"SQL, React, Jira, PowerPoint",12,UiO,7,8,6
-KANDIDAT-9884,Ola Andersen,"React, Jira, Salg, PowerPoint",15,UiO,10,2,2
-KANDIDAT-9282,Ali Nilsen,"Machine Learning, Azure, Excel, HR, Salg",8,UiO,9,7,7
-KANDIDAT-7905,Jakob Nilsen,"AWS, SQL, AI",0,UiO,4,4,8
-KANDIDAT-7451,Sofia Solberg,"React, Python, SQL, PowerPoint, AI, Java",2,UiO,6,9,10
-KANDIDAT-5873,Ali Haugen,"Salg, PowerPoint, Java, C++",4,Ingen utdanning,7,5,3
-KANDIDAT-9832,Ola Solberg,"Salg, Kundeservice, Markedsføring, React, C++, Java",9,UiO,4,1,1
-KANDIDAT-2720,Kari Solberg,"AWS, HR, C++",14,Høyskolen Kristiania,6,9,9
-KANDIDAT-1304,Emil Haugen,"Excel, HR",12,Høyskolen Kristiania,8,6,7
-KANDIDAT-9392,Emil Larsen,"Python, C++, AI",9,BI,1,3,2
-KANDIDAT-2697,Ingrid Berg,"Jira, Excel, React, Markedsføring, Machine Learning",9,NTNU,3,8,3
-KANDIDAT-1494,Jakob Berg,"Ledelse, SQL, Azure, Python",5,NTNU,1,9,2
-KANDIDAT-3609,Jakob Hansen,"HR, Kundeservice, C++",2,NHH,3,2,7
-KANDIDAT-1612,Ola Berg,"Java, Python",7,UiO,8,1,6
-KANDIDAT-2033,Emil Hagen,"Azure, Salg, AI, React, C++, Machine Learning",7,Ingen utdanning,10,8,7
-KANDIDAT-6578,Erik Haugen,"Azure, SQL, C++, React",5,Høyskolen Kristiania,10,10,3
-KANDIDAT-8528,Sofia Larsen,"React, HR, Kundeservice, Azure",4,Master i utlandet,6,9,5
-KANDIDAT-8752,Nora Hansen,"C++, HR",6,Master i utlandet,3,9,10
-KANDIDAT-6292,Lisa Pedersen,"HR, Java, AWS",10,NHH,9,6,6
-KANDIDAT-7826,Ida Andersen,"Azure, Salg, Machine Learning, Ledelse, PowerPoint, C++",15,BI,7,8,8
-KANDIDAT-1358,Erik Larsen,"SQL, Python, AWS, Salg",7,UiO,10,3,4
-KANDIDAT-2860,Jakob Hansen,"Azure, Python, Java, Salg, HR, AI",13,Høyskolen Kristiania,5,6,9
-KANDIDAT-7072,Lars Hagen,"Markedsføring, Machine Learning, PowerPoint",6,NHH,9,9,4
-KANDIDAT-5270,Pål Andersen,"AI, HR, Ledelse",1,Ingen utdanning,10,7,7
-KANDIDAT-9138,Nora Vik,"AI, Excel, Salg",5,NTNU,9,6,4
-KANDIDAT-7995,Ida Hagen,"React, Salg, Azure",0,NHH,1,7,8
-KANDIDAT-7858,Pål Vik,"Python, PowerPoint, Jira, Ledelse, AI, Java",2,Master i utlandet,10,2,5
-KANDIDAT-7002,Ola Solberg,"Kundeservice, Jira, Machine Learning, C++",8,Ingen utdanning,4,7,1
-KANDIDAT-4488,Lars Nilsen,"Excel, Jira",2,Master i utlandet,2,10,5
-KANDIDAT-7263,Sara Larsen,"Kundeservice, Ledelse, React, Salg",7,Høyskolen Kristiania,1,2,6
-KANDIDAT-2045,Erik Larsen,"HR, AI",11,Høyskolen Kristiania,7,6,10
-KANDIDAT-5406,Erik Berg,"Java, React, Excel",1,BI,2,7,2
-KANDIDAT-7389,Ingrid Johansen,"Java, Kundeservice",7,NTNU,2,8,1
-KANDIDAT-5798,Ingrid Larsen,"Azure, HR, Markedsføring, PowerPoint, Python",15,NHH,1,9,5
-KANDIDAT-5227,Jakob Solberg,"AI, AWS",6,UiO,10,3,9
-KANDIDAT-3732,Ali Hansen,"HR, Kundeservice, Java, Ledelse, AWS, Jira",3,NTNU,10,5,8
-KANDIDAT-2587,Jakob Olsen,"AWS, Machine Learning, Salg, Kundeservice, React",10,UiO,4,5,7
-KANDIDAT-6094,Jakob Vik,"Jira, React, Java, Salg, AI, Python",3,UiO,8,4,1
-KANDIDAT-3568,Sara Nilsen,"C++, Machine Learning, Markedsføring, HR, Python",6,Ingen utdanning,7,3,8
-KANDIDAT-2703,Sara Haugen,"Jira, Machine Learning, Ledelse",14,Master i utlandet,3,10,4
-KANDIDAT-2109,Ali Olsen,"SQL, Jira, Excel, Azure",4,Master i utlandet,4,3,1
-KANDIDAT-2812,Emil Olsen,"HR, Jira, React",14,Ingen utdanning,9,10,10
-KANDIDAT-8377,Erik Vik,"Azure, Excel, Markedsføring, Python",10,BI,9,10,5
-KANDIDAT-7007,Ali Vik,"Kundeservice, Azure, Salg, AI",3,NHH,4,3,7
-KANDIDAT-6264,Magnus Hagen,"AI, Python, Markedsføring, C++",7,NTNU,7,4,6
-KANDIDAT-6531,Ola Pedersen,"Salg, HR, Machine Learning",6,NHH,8,6,10
-KANDIDAT-5748,Jakob Pedersen,"Ledelse, React, Kundeservice, C++, Python",4,Master i utlandet,8,1,5
-KANDIDAT-9455,Ola Haugen,"Salg, Python",13,BI,9,5,10
-KANDIDAT-2826,Lars Johansen,"Machine Learning, AWS, C++, Azure",0,Master i utlandet,6,10,1
-KANDIDAT-6597,Lisa Nilsen,"C++, Java",10,NHH,6,1,3
-KANDIDAT-9665,Magnus Hansen,"Kundeservice, Ledelse, Python, PowerPoint",14,Ingen utdanning,6,2,3
-KANDIDAT-2666,Erik Vik,"Python, Jira, PowerPoint, Excel, C++",15,NHH,9,8,4
-KANDIDAT-9583,Ingrid Berg,"Salg, Azure",6,NTNU,5,4,7
-KANDIDAT-9418,Erik Pedersen,"AI, HR, Salg, Azure",0,Høyskolen Kristiania,10,8,2
-KANDIDAT-4488,Ida Pedersen,"HR, Jira, AI, Machine Learning, AWS, C++",3,Master i utlandet,8,5,6
-KANDIDAT-1229,Jakob Pedersen,"Azure, React",13,Høyskolen Kristiania,7,6,1
-KANDIDAT-1976,Magnus Vik,"Java, Python, Markedsføring, C++, Machine Learning",5,Ingen utdanning,10,9,7
-KANDIDAT-1271,Lars Berg,"Jira, Excel, Azure",15,NHH,9,2,9
-KANDIDAT-5303,Pål Hansen,"Excel, Kundeservice, AI, Jira, Python, Salg",8,Ingen utdanning,3,3,9
-KANDIDAT-5863,Lars Larsen,"AI, Kundeservice",6,UiO,4,10,4
-KANDIDAT-7185,Erik Berg,"Jira, Salg, Java",4,BI,10,8,3
-KANDIDAT-4418,Kari Haugen,"Python, Azure, Jira, Java, HR",1,BI,6,5,9
-KANDIDAT-6061,Kari Hagen,"AWS, Markedsføring, PowerPoint",11,NTNU,2,2,7
-KANDIDAT-2931,Erik Berg,"Markedsføring, PowerPoint, Kundeservice, C++, SQL",12,Master i utlandet,9,3,4
-KANDIDAT-9503,Nora Vik,"Kundeservice, Ledelse, Java, Machine Learning, Salg",1,Høyskolen Kristiania,2,4,5
-KANDIDAT-8504,Erik Larsen,"Kundeservice, Salg",0,NHH,5,5,2
-KANDIDAT-1756,Kari Nilsen,"Markedsføring, PowerPoint, AI, Ledelse",15,Ingen utdanning,2,6,10
-KANDIDAT-1714,Ida Berg,"React, PowerPoint, AWS",2,Master i utlandet,7,6,2
-KANDIDAT-6625,Sofia Berg,"Jira, Kundeservice, Machine Learning, Markedsføring",15,Master i utlandet,9,6,8
-KANDIDAT-6150,Pål Johansen,"Kundeservice, HR, Markedsføring",8,BI,1,1,5
-KANDIDAT-6750,Sara Berg,"SQL, PowerPoint, Java, Salg, HR",2,BI,9,8,6
-KANDIDAT-4794,Ola Berg,"AI, AWS, SQL, Azure",12,Master i utlandet,7,9,8
-KANDIDAT-8559,Ida Andersen,"Python, Jira, Markedsføring, Azure",6,NHH,3,7,3
-KANDIDAT-3347,Mohamed Haugen,"Excel, AI, Java, C++",0,Ingen utdanning,10,8,2
-KANDIDAT-9394,Lisa Hagen,"Excel, PowerPoint, Azure",10,BI,5,6,6
-KANDIDAT-1242,Sara Vik,"Jira, C++",12,NTNU,9,10,9
-KANDIDAT-8409,Lars Andersen,"Markedsføring, Jira, C++",12,NTNU,1,10,4
-KANDIDAT-4311,Mohamed Hagen,"C++, Markedsføring, Kundeservice, Machine Learning",0,Høyskolen Kristiania,2,1,1
-KANDIDAT-7803,Lisa Larsen,"Markedsføring, Salg, Kundeservice",2,BI,5,6,1
-KANDIDAT-8020,Sofia Vik,"Salg, React, Markedsføring, Machine Learning",13,UiO,2,1,6
-KANDIDAT-9032,Lars Hagen,"Azure, Salg",14,UiO,2,3,8
-KANDIDAT-5107,Ingrid Hagen,"Kundeservice, Ledelse, Machine Learning",6,NHH,7,8,4
-KANDIDAT-6113,Jakob Pedersen,"HR, AI, Kundeservice, PowerPoint",0,BI,10,4,7
-KANDIDAT-7510,Mohamed Andersen,"SQL, Salg, AI, HR, Jira",12,Ingen utdanning,7,8,9
-KANDIDAT-4713,Ali Johansen,"PowerPoint, Excel, Markedsføring",15,Høyskolen Kristiania,6,4,8
-KANDIDAT-8931,Emil Johansen,"Java, Ledelse, PowerPoint, Azure, Machine Learning",5,BI,1,10,4
-KANDIDAT-6687,Lars Hagen,"Markedsføring, Kundeservice, AI, Salg, SQL, Java",9,BI,4,2,3
-KANDIDAT-2703,Sofia Hansen,"Java, Python, Kundeservice, React, Salg, AWS",8,BI,8,5,9
-KANDIDAT-7558,Ingrid Haugen,"AI, Machine Learning, Python, Excel, HR, Kundeservice",12,Master i utlandet,7,8,8
-KANDIDAT-4091,Ali Berg,"React, SQL, Salg, Ledelse, PowerPoint, Java",14,NTNU,9,4,2
-KANDIDAT-8366,Ida Johansen,"Java, SQL, Salg, PowerPoint, AWS",2,Ingen utdanning,10,1,5
-KANDIDAT-6299,Nora Hansen,"HR, Python, Ledelse, Jira",10,NTNU,8,10,8
-KANDIDAT-1007,Ola Pedersen,"Markedsføring, Machine Learning, AI",0,Høyskolen Kristiania,8,9,4
-KANDIDAT-5819,Sofia Haugen,"Jira, Azure, SQL, Markedsføring",13,Høyskolen Kristiania,5,10,2
-KANDIDAT-8794,Pål Nilsen,"AWS, Markedsføring, Azure, Python",5,NTNU,9,8,6
-KANDIDAT-1462,Ida Johansen,"Kundeservice, HR, Jira, AWS, Java",2,Ingen utdanning,2,9,9
-KANDIDAT-9186,Lars Andersen,"PowerPoint, Excel",15,BI,2,7,1
-KANDIDAT-7507,Lisa Hansen,"AI, HR, Excel, Salg, Kundeservice, SQL",13,UiO,9,7,1
-KANDIDAT-7893,Pål Solberg,"Excel, PowerPoint",0,NTNU,2,4,3
-KANDIDAT-6049,Nora Vik,"Jira, AI, Python, Markedsføring, C++, Excel",2,Master i utlandet,3,2,1
-KANDIDAT-5263,Ali Hagen,"C++, Java, Markedsføring, SQL, PowerPoint",4,Master i utlandet,3,9,2
-KANDIDAT-9246,Lars Johansen,"Java, Kundeservice",13,Ingen utdanning,2,8,1
-KANDIDAT-4169,Emil Larsen,"Ledelse, C++, AWS, PowerPoint, Markedsføring, Kundeservice",6,NTNU,6,5,10
-KANDIDAT-6051,Emil Johansen,"Azure, SQL",15,BI,6,2,1
-KANDIDAT-4706,Ingrid Johansen,"Java, Salg, AI, Kundeservice, Ledelse",3,BI,10,6,2
-KANDIDAT-4057,Emil Solberg,"HR, Ledelse, AI, Jira",8,BI,9,8,5
-KANDIDAT-2291,Kari Andersen,"Ledelse, Salg, Azure",6,BI,3,5,3
-KANDIDAT-4542,Kari Hansen,"Ledelse, Java, PowerPoint, AWS, Kundeservice, React",3,Master i utlandet,1,10,1
-KANDIDAT-8153,Ali Olsen,"Salg, C++, Ledelse",11,Høyskolen Kristiania,10,4,6
-KANDIDAT-4996,Ida Vik,"Kundeservice, Machine Learning, Jira, React",6,NHH,7,4,2
-KANDIDAT-4954,Ali Johansen,"AWS, PowerPoint, HR, React, AI, C++",4,UiO,7,1,3
-KANDIDAT-6867,Ali Larsen,"AI, C++, React",5,BI,10,9,7
-KANDIDAT-9432,Magnus Vik,"Markedsføring, Kundeservice, AI",9,BI,3,8,2
-KANDIDAT-2648,Sara Solberg,"Salg, Ledelse, PowerPoint, HR, AWS, AI",5,Høyskolen Kristiania,9,1,1
-KANDIDAT-3394,Emil Solberg,"Ledelse, HR, Java, Azure, C++",7,Master i utlandet,10,4,1
-KANDIDAT-1037,Ida Haugen,"React, SQL, Java, C++, Excel, Ledelse",5,BI,3,3,1
-KANDIDAT-1608,Emil Solberg,"Jira, Ledelse, Excel, React, SQL, Azure",14,NTNU,2,7,1
-KANDIDAT-6462,Ida Larsen,"Jira, SQL, Ledelse, HR, C++",7,NHH,1,6,7
-KANDIDAT-8203,Kari Solberg,"Java, Jira, SQL, Azure, AI, Kundeservice",8,BI,8,1,1
-KANDIDAT-1993,Kari Larsen,"React, Markedsføring, Java",8,NHH,9,8,7
-KANDIDAT-4050,Ali Nilsen,"AI, AWS, React, Machine Learning, Java",6,UiO,5,8,6
-KANDIDAT-9874,Kari Vik,"PowerPoint, Markedsføring, Java, Excel, Salg",8,Ingen utdanning,3,1,4
-KANDIDAT-6051,Jakob Andersen,"HR, Machine Learning, C++, PowerPoint, Jira",14,NHH,6,10,3
-KANDIDAT-9235,Sofia Vik,"Excel, Ledelse, C++, SQL, Machine Learning, Jira",11,NTNU,8,1,10
-KANDIDAT-4154,Sofia Berg,"Machine Learning, React, C++, Kundeservice, AWS",10,Master i utlandet,2,10,10
-KANDIDAT-8862,Lisa Andersen,"HR, Markedsføring",9,NTNU,6,6,2
-KANDIDAT-6256,Nora Hagen,"Kundeservice, SQL",10,UiO,9,2,8
-KANDIDAT-2367,Emil Nilsen,"Ledelse, Jira",12,Master i utlandet,10,8,2
-KANDIDAT-4440,Ingrid Nilsen,"Salg, Jira, Excel, PowerPoint",3,Ingen utdanning,3,3,4
-KANDIDAT-6781,Kari Olsen,"Java, AI, Markedsføring, PowerPoint, Kundeservice",3,Master i utlandet,3,4,7
-KANDIDAT-4337,Nora Pedersen,"Java, PowerPoint, Kundeservice, SQL, Excel",7,Ingen utdanning,8,5,1
-KANDIDAT-2716,Lars Pedersen,"HR, Markedsføring, React, PowerPoint, C++, AI",0,BI,6,10,7
-KANDIDAT-5596,Jakob Olsen,"Jira, Azure, Ledelse, Markedsføring, SQL, AI",15,Høyskolen Kristiania,9,3,5
-KANDIDAT-2497,Lars Larsen,"Markedsføring, Machine Learning, PowerPoint, Java, Python",7,NTNU,9,1,1
-KANDIDAT-1270,Ida Johansen,"SQL, AWS, Salg, Kundeservice",12,NHH,6,10,9
-KANDIDAT-6449,Sara Larsen,"Ledelse, C++, Jira, SQL, Markedsføring, Azure",10,Ingen utdanning,8,2,8
-KANDIDAT-2011,Sara Larsen,"Java, AI, Azure, Python, Salg",12,BI,1,8,3
-KANDIDAT-5459,Erik Haugen,"Jira, C++",3,Master i utlandet,1,5,4
-KANDIDAT-9710,Magnus Solberg,"Salg, AI, Azure",13,UiO,3,2,7
-KANDIDAT-1210,Ali Johansen,"AI, React, Java, Salg, Machine Learning, AWS",15,Master i utlandet,7,10,9
-KANDIDAT-8918,Jakob Vik,"Jira, PowerPoint",9,BI,3,6,8
-KANDIDAT-8049,Ida Johansen,"HR, SQL, Ledelse, C++",9,NHH,7,8,10
-KANDIDAT-2243,Magnus Hagen,"AI, AWS, Salg, SQL",14,Master i utlandet,9,5,9
-KANDIDAT-9524,Erik Nilsen,"Java, AWS",5,Ingen utdanning,5,7,2
-KANDIDAT-8223,Sara Andersen,"Jira, AWS, React, AI, Ledelse",2,NTNU,8,7,2
-KANDIDAT-6152,Kari Andersen,"Jira, Salg, AWS, React, SQL, Markedsføring",15,Ingen utdanning,6,8,4
-KANDIDAT-4964,Sofia Hansen,"Excel, React, Machine Learning, AI, PowerPoint, AWS",4,BI,7,7,1
-KANDIDAT-3402,Sofia Hagen,"Kundeservice, React, Ledelse, Python, Excel",0,UiO,9,6,3
-KANDIDAT-8739,Lars Olsen,"AI, Java, Machine Learning, C++, Markedsføring",15,BI,5,5,2
-KANDIDAT-1566,Pål Larsen,"PowerPoint, AI, Ledelse, Java",14,NTNU,7,2,8
-KANDIDAT-5700,Ola Hansen,"Azure, PowerPoint, Python",11,BI,8,8,6
-KANDIDAT-2655,Pål Solberg,"AWS, Excel, Machine Learning, HR",9,NTNU,6,8,6
-KANDIDAT-1691,Jakob Larsen,"Python, Salg",13,NTNU,2,3,6
-KANDIDAT-1931,Ola Berg,"Kundeservice, AI, Machine Learning, AWS",1,Høyskolen Kristiania,3,5,7
-KANDIDAT-3274,Ola Johansen,"Ledelse, HR, Machine Learning, Jira, Kundeservice, Markedsføring",0,Ingen utdanning,9,3,7
-KANDIDAT-8215,Lisa Johansen,"Azure, Java, AWS, Salg, Machine Learning",14,Master i utlandet,5,10,9
-KANDIDAT-7960,Pål Pedersen,"React, Ledelse, HR, Salg",1,Høyskolen Kristiania,6,8,3
-KANDIDAT-4841,Sofia Berg,"AWS, Kundeservice, HR, Markedsføring",4,BI,10,6,4
-KANDIDAT-1794,Ali Larsen,"PowerPoint, Kundeservice, Machine Learning, SQL, Python, AWS",2,Ingen utdanning,5,1,2
-KANDIDAT-8761,Nora Hagen,"Kundeservice, Java, AWS, Machine Learning",14,Høyskolen Kristiania,4,9,10
-KANDIDAT-7879,Pål Pedersen,"Ledelse, Excel, Markedsføring, SQL",7,UiO,9,8,1
-KANDIDAT-1666,Jakob Pedersen,"Ledelse, Machine Learning, HR",14,BI,3,3,1
-KANDIDAT-7720,Lisa Pedersen,"Excel, Kundeservice, AI, AWS, PowerPoint",8,Ingen utdanning,5,1,10
-KANDIDAT-8757,Erik Hagen,"Jira, C++, Ledelse, Salg",12,NTNU,2,4,8
-KANDIDAT-6513,Nora Berg,"Python, AWS, PowerPoint, AI, C++, Salg",8,NTNU,10,6,10
-KANDIDAT-1235,Erik Andersen,"Python, Markedsføring, SQL, HR, PowerPoint",10,NHH,7,8,10
-KANDIDAT-2729,Ingrid Solberg,"Machine Learning, React",4,NTNU,5,6,5
-KANDIDAT-6288,Sara Hagen,"Java, Markedsføring",4,NHH,10,9,3
-KANDIDAT-7522,Ali Berg,"Markedsføring, Python",15,Ingen utdanning,4,10,2
-KANDIDAT-9752,Sofia Haugen,"Python, AI, Azure, HR",6,Ingen utdanning,5,4,6
-KANDIDAT-8088,Jakob Haugen,"C++, Jira, AI, Markedsføring, Ledelse",12,NTNU,1,6,8
-KANDIDAT-9699,Ingrid Olsen,"Excel, PowerPoint, HR",3,Master i utlandet,7,8,2
-KANDIDAT-5874,Sofia Solberg,"Jira, Python, Java, Kundeservice",3,Høyskolen Kristiania,10,9,2
-KANDIDAT-2468,Sara Johansen,"Machine Learning, Jira, AWS, Excel, Java",7,Ingen utdanning,2,9,9
-KANDIDAT-5561,Erik Pedersen,"Markedsføring, Jira",11,BI,2,8,8
-KANDIDAT-5464,Jakob Solberg,"Excel, Python, SQL, C++, AWS, Java",12,Ingen utdanning,9,7,10
-KANDIDAT-1160,Ola Andersen,"Salg, Kundeservice, Machine Learning",4,Ingen utdanning,9,1,8
-KANDIDAT-9931,Ida Andersen,"Azure, Kundeservice, PowerPoint, HR, Salg",3,Ingen utdanning,2,7,3
-KANDIDAT-9939,Mohamed Andersen,"React, AWS, Machine Learning",14,BI,8,7,4
-KANDIDAT-6587,Magnus Vik,"Machine Learning, React, Markedsføring, SQL, Ledelse, Salg",14,BI,3,9,8
-KANDIDAT-4200,Erik Hagen,"Ledelse, PowerPoint",2,UiO,3,7,4
-KANDIDAT-4048,Ingrid Nilsen,"C++, AI, AWS, HR, Jira",1,NHH,1,8,6
-KANDIDAT-5193,Ingrid Haugen,"Machine Learning, Python, Salg, React, Kundeservice",9,Master i utlandet,1,9,3
-KANDIDAT-6648,Nora Vik,"Machine Learning, Azure",13,Master i utlandet,5,4,5
-KANDIDAT-3371,Lars Olsen,"C++, HR, Jira, AWS, Python, Salg",9,BI,3,6,8
-KANDIDAT-9243,Mohamed Haugen,"C++, AWS",12,Ingen utdanning,4,9,6
-KANDIDAT-3717,Sara Haugen,"Jira, C++, PowerPoint, Java",2,NHH,3,2,1
-KANDIDAT-4043,Ingrid Olsen,"HR, Azure, SQL, AWS, Ledelse",13,Ingen utdanning,8,2,10
-KANDIDAT-7051,Ida Larsen,"Jira, Ledelse, Java, SQL, Machine Learning",6,BI,8,1,4
-KANDIDAT-7845,Sara Haugen,"Ledelse, PowerPoint, AI, Markedsføring, SQL, AWS",12,Master i utlandet,8,6,2
-KANDIDAT-5052,Ida Vik,"Kundeservice, Markedsføring, Jira, Python",3,Høyskolen Kristiania,9,6,7
-KANDIDAT-1043,Nora Hagen,"Python, React, Java, Excel",3,NHH,4,7,3
-KANDIDAT-3934,Ola Pedersen,"C++, Jira",10,NTNU,2,6,6
-KANDIDAT-7078,Pål Johansen,"AWS, Java, React, Salg, Markedsføring",8,Høyskolen Kristiania,4,1,7
-KANDIDAT-1111,Jakob Solberg,"Machine Learning, React, Ledelse",13,Master i utlandet,8,8,1
-KANDIDAT-7786,Nora Pedersen,"PowerPoint, Machine Learning, AI, Python, Markedsføring",2,Ingen utdanning,2,7,5
-KANDIDAT-8466,Sofia Pedersen,"C++, Excel, Python, AWS, Salg",0,UiO,2,2,6
-KANDIDAT-1486,Nora Solberg,"Ledelse, HR, React",14,Høyskolen Kristiania,5,7,7
-KANDIDAT-7301,Ingrid Hagen,"AI, SQL",7,BI,10,3,8
-KANDIDAT-6215,Ali Nilsen,"PowerPoint, AI, C++, Machine Learning, Salg, AWS",6,BI,2,5,3
-KANDIDAT-7293,Ida Berg,"React, Jira, Machine Learning, Markedsføring",8,Master i utlandet,1,5,2
-KANDIDAT-8706,Nora Olsen,"C++, Azure, Ledelse, React",14,Ingen utdanning,8,2,4
-KANDIDAT-6179,Kari Vik,"Machine Learning, AWS",8,Master i utlandet,5,6,1
-KANDIDAT-6120,Mohamed Olsen,"SQL, Python, AI, Java, Kundeservice, HR",4,Master i utlandet,10,1,4
-KANDIDAT-2532,Ali Johansen,"Machine Learning, Excel, AI, C++",8,Master i utlandet,8,8,8
-KANDIDAT-3916,Ingrid Johansen,"Kundeservice, Ledelse, Markedsføring, React",13,UiO,7,6,10
-KANDIDAT-7404,Emil Haugen,"PowerPoint, React",8,UiO,8,7,6
-KANDIDAT-5702,Lisa Berg,"SQL, Jira, Java",8,Master i utlandet,1,9,8
+ID,Faktisk_Navn,Ferdigheter,Erfaring,Struktur,Driv,Samarbeid
+CAND-72579,Ola Pedersen,"Regnskap, Design, Excel, SoMe",10,1,10,9
+CAND-26496,Sofia Pedersen,"Design, SoMe, Figma",12,1,7,1
+CAND-13689,Kari Johansen,"Figma, Analyse, SoMe, Video",20,7,7,4
+CAND-30222,Ali Larsen,"Cloud, React, Java",17,3,7,5
+CAND-33153,Pål Andersen,"Analyse, Excel, Matematikk",16,8,6,4
+CAND-90237,Mohamed Andersen,"Økonomi, AI, Excel, SoMe",4,4,8,6
+CAND-81901,Pål Olsen,"Python, React, Cloud",0,10,10,4
+CAND-78249,Lisa Olsen,"Python, Photoshop, Video, Matematikk",4,8,10,6
+CAND-30474,Erik Berg,"Analyse, Matematikk, Excel",2,7,7,1
+CAND-72122,Ola Johansen,"Figma, Design, Video",9,9,9,9
+CAND-60427,Kari Andersen,"Python, Video, Cloud, Java",2,6,5,3
+CAND-84605,Jakob Olsen,"Figma, Video, Design",11,3,9,3
+CAND-76202,Lars Johansen,"Matematikk, Analyse, Økonomi",15,1,5,1
+CAND-86967,Jakob Berg,"Matematikk, Regnskap, Økonomi",14,2,8,5
+CAND-84697,Lisa Olsen,"Video, Figma, Design",15,10,7,1
+CAND-38102,Jakob Berg,"Photoshop, Design, Figma",10,3,5,7
+CAND-31313,Sara Berg,"Design, Video, Photoshop",13,3,9,5
+CAND-86925,Sofia Andersen,"Økonomi, Analyse, Excel",8,9,7,1
+CAND-52435,Sara Andersen,"Photoshop, Design, SoMe",7,5,1,4
+CAND-13387,Mohamed Olsen,"React, AI, Python",2,1,4,1
+CAND-53376,Sofia Larsen,"Analyse, Regnskap, Photoshop, Python",9,10,1,3
+CAND-72184,Lars Larsen,"Analyse, Excel, Regnskap",9,6,6,5
+CAND-83162,Ali Nilsen,"Regnskap, Excel, Økonomi",6,7,10,6
+CAND-32310,Mohamed Johansen,"Figma, Excel, Regnskap, React",2,9,10,7
+CAND-89705,Kari Pedersen,"Cloud, React, Python",7,4,4,1
+CAND-91386,Erik Olsen,"Cloud, Java, AI",4,1,3,7
+CAND-97609,Ingrid Larsen,"Analyse, Økonomi, Cloud, Excel",16,7,7,10
+CAND-88211,Lars Larsen,"Økonomi, Excel, Analyse",12,6,1,2
+CAND-58166,Jakob Nilsen,"Matematikk, Økonomi, Regnskap",2,10,8,4
+CAND-21720,Sara Pedersen,"Cloud, AI, React",13,9,10,6
+CAND-21250,Mohamed Nilsen,"Photoshop, Video, Analyse, SQL",1,2,5,10
+CAND-82386,Kari Nilsen,"Excel, Regnskap, Økonomi",13,6,7,7
+CAND-60961,Kari Andersen,"Design, Video, Photoshop",2,4,9,7
+CAND-85990,Jakob Olsen,"Excel, Regnskap, Analyse",4,8,10,6
+CAND-52517,Pål Nilsen,"Excel, Økonomi, Matematikk",10,10,1,9
+CAND-98233,Sara Andersen,"AI, Java, Python",3,5,7,8
+CAND-65468,Kari Andersen,"Photoshop, Video, Figma",15,5,6,10
+CAND-10780,Pål Larsen,"Cloud, React, SQL",17,8,1,9
+CAND-57712,Ingrid Berg,"Video, SoMe, Photoshop",10,5,2,7
+CAND-97785,Jakob Johansen,"Video, Cloud, Photoshop, Design",14,3,8,8
+CAND-18267,Erik Andersen,"Video, SoMe, Python, Photoshop",12,9,7,10
+CAND-21513,Ingrid Nilsen,"Analyse, Matematikk, Excel, Photoshop",1,10,6,3
+CAND-95950,Jakob Johansen,"AI, React, Java",4,3,2,1
+CAND-49235,Ali Andersen,"SQL, Python, Cloud",20,5,6,3
+CAND-58778,Lisa Nilsen,"Photoshop, Figma, SoMe",2,1,10,10
+CAND-93513,Ali Andersen,"SQL, Design, Analyse, Excel",19,8,2,9
+CAND-13979,Sofia Johansen,"Økonomi, Matematikk, Analyse",0,5,2,9
+CAND-38188,Pål Berg,"Java, SQL, AI",1,3,2,5
+CAND-26433,Sofia Andersen,"Video, Design, Figma",14,6,8,5
+CAND-22077,Jakob Pedersen,"Java, Python, React",15,4,2,2
+CAND-26917,Erik Nilsen,"Cloud, SQL, React",10,3,5,8
+CAND-53504,Mohamed Berg,"Regnskap, Analyse, Økonomi",6,1,10,3
+CAND-98966,Lisa Pedersen,"Photoshop, SoMe, React, SQL",2,2,9,8
+CAND-47751,Sara Johansen,"Cloud, SQL, Python",19,1,5,7
+CAND-55625,Sofia Andersen,"Design, React, SoMe, Video",8,4,1,10
+CAND-62705,Jakob Larsen,"Matematikk, Økonomi, Regnskap",2,8,6,7
+CAND-84894,Ingrid Pedersen,"Matematikk, Regnskap, Økonomi",19,6,4,6
+CAND-74064,Pål Berg,"React, Java, SQL",10,3,3,1
+CAND-92791,Ingrid Johansen,"Photoshop, Design, SoMe",8,10,1,3
+CAND-44805,Ingrid Olsen,"Analyse, Økonomi, Matematikk",1,5,6,2
+CAND-49418,Sara Berg,"Analyse, Regnskap, Excel",16,7,8,5
+CAND-91126,Erik Berg,"Regnskap, Økonomi, Excel",12,6,4,3
+CAND-14985,Sara Hansen,"Python, Java, Cloud",16,3,10,8
+CAND-46230,Lars Hansen,"SQL, AI, React",9,6,9,10
+CAND-51739,Ali Pedersen,"Økonomi, Python, Excel, SoMe",5,9,5,7
+CAND-63841,Ola Berg,"Figma, SoMe, Video",13,5,10,8
+CAND-64000,Mohamed Nilsen,"Excel, Økonomi, Regnskap",6,4,9,10
+CAND-59348,Lisa Andersen,"Photoshop, Design, Figma",10,2,3,9
+CAND-94579,Ingrid Nilsen,"React, AI, Cloud",8,7,6,7
+CAND-28513,Ola Nilsen,"Photoshop, Økonomi, SoMe, Regnskap",17,4,3,10
+CAND-61242,Kari Nilsen,"SoMe, Design, Figma",6,1,9,9
+CAND-74542,Pål Larsen,"Matematikk, Analyse, Excel",8,8,4,6
+CAND-89376,Ola Larsen,"AI, Cloud, Java",15,4,1,8
+CAND-68990,Ali Larsen,"AI, SQL, React",13,9,8,5
+CAND-19099,Ali Johansen,"Matematikk, Økonomi, Analyse",15,10,5,1
+CAND-51408,Ola Nilsen,"Design, Photoshop, Figma",15,3,2,4
+CAND-62609,Ingrid Olsen,"Økonomi, Analyse, Excel",15,5,7,1
+CAND-12538,Sofia Nilsen,"Design, SoMe, Video",16,2,4,8
+CAND-32145,Pål Olsen,"Video, SoMe, Design",20,4,5,2
+CAND-27538,Lars Pedersen,"Python, React, Cloud, Økonomi",5,4,1,4
+CAND-35486,Sara Andersen,"Design, Figma, SoMe, SQL",0,6,4,4
+CAND-26705,Lisa Hansen,"React, Python, Java",7,2,6,3
+CAND-20193,Lisa Andersen,"Regnskap, Matematikk, Excel",14,6,2,10
+CAND-48022,Erik Hansen,"AI, SQL, Python",11,1,8,6
+CAND-49297,Jakob Nilsen,"Python, Design, Photoshop, Java",0,7,1,7
+CAND-68059,Lisa Andersen,"Matematikk, Excel, Analyse",19,3,1,2
+CAND-11570,Ola Olsen,"Python, Cloud, React",12,5,4,6
+CAND-88298,Ingrid Andersen,"AI, Python, Java",14,8,3,2
+CAND-13210,Lisa Olsen,"Regnskap, Excel, Analyse",19,5,6,10
+CAND-40409,Pål Berg,"Økonomi, Analyse, Excel",2,5,3,10
+CAND-93480,Lisa Johansen,"Photoshop, Økonomi, AI, Analyse",19,9,9,10
+CAND-64236,Pål Olsen,"Analyse, Økonomi, Regnskap",11,5,3,7
+CAND-42814,Lisa Berg,"Java, SQL, AI",4,9,8,6
+CAND-88420,Lars Johansen,"Økonomi, AI, Regnskap, Matematikk",16,2,5,9
+CAND-24059,Pål Johansen,"Design, Photoshop, SoMe",1,6,9,9
+CAND-85006,Lars Olsen,"Matematikk, SoMe, Figma, Økonomi",17,7,3,3
+CAND-55535,Ali Johansen,"Matematikk, Regnskap, Excel",15,4,9,6
+CAND-29503,Ola Hansen,"Økonomi, AI, Photoshop, Python",6,7,8,3
+CAND-32810,Jakob Johansen,"Video, React, Matematikk, Java",15,3,4,5
+CAND-89091,Ingrid Hansen,"Excel, Analyse, Økonomi",13,10,7,9
+CAND-77525,Pål Johansen,"Excel, Regnskap, Matematikk",15,1,1,1
+CAND-60388,Sofia Olsen,"SQL, AI, Cloud",18,2,6,4
+CAND-57594,Lars Pedersen,"Python, React, AI",7,1,2,5
+CAND-73966,Lars Olsen,"Økonomi, Analyse, Excel",16,5,6,3
+CAND-24027,Ingrid Hansen,"React, Java, Cloud",18,10,8,1
+CAND-80430,Lisa Berg,"Excel, Økonomi, Matematikk",5,3,7,1
+CAND-13205,Pål Olsen,"Matematikk, Analyse, Python, Photoshop",3,10,1,10
+CAND-59494,Ola Hansen,"Økonomi, Regnskap, Matematikk",8,1,5,1
+CAND-58013,Ingrid Nilsen,"Analyse, React, Photoshop, Video",7,6,9,10
+CAND-25708,Jakob Nilsen,"Regnskap, Analyse, Matematikk",1,10,3,5
+CAND-26396,Erik Olsen,"Matematikk, Excel, Analyse",9,3,4,5
+CAND-44002,Sofia Johansen,"SQL, React, Python",20,10,1,8
+CAND-57403,Sara Larsen,"SoMe, Økonomi, SQL, Figma",0,5,1,3
+CAND-81273,Erik Larsen,"Video, Figma, Design",12,3,4,5
+CAND-68601,Sara Larsen,"Design, SoMe, Figma",7,7,8,4
+CAND-62813,Pål Olsen,"Matematikk, Regnskap, Analyse",1,7,8,5
+CAND-65447,Lars Johansen,"Excel, React, Regnskap, Photoshop",9,7,6,3
+CAND-98633,Ola Andersen,"Analyse, Matematikk, SQL, Cloud",12,1,3,4
+CAND-51806,Pål Johansen,"Python, React, Cloud",4,5,5,4
+CAND-28007,Kari Larsen,"Python, Cloud, React",12,3,2,7
+CAND-31113,Ola Nilsen,"Java, React, AI",13,9,6,3
+CAND-97051,Ola Nilsen,"React, Python, Java",1,6,8,8
+CAND-50769,Kari Olsen,"Excel, Regnskap, Matematikk",11,2,4,10
+CAND-80122,Pål Nilsen,"Python, Design, Java, Cloud",18,8,8,4
+CAND-11136,Mohamed Larsen,"Video, Figma, Photoshop",7,5,1,2
+CAND-65000,Sara Olsen,"React, Cloud, Matematikk, Excel",15,7,4,6
+CAND-58461,Mohamed Johansen,"Excel, Matematikk, Økonomi",19,8,5,9
+CAND-43943,Erik Andersen,"Matematikk, Excel, Økonomi",17,10,7,6
+CAND-64606,Jakob Pedersen,"AI, Python, React",8,10,4,3
+CAND-72557,Mohamed Nilsen,"Økonomi, Analyse, Matematikk",20,3,9,6
+CAND-44753,Lars Nilsen,"Regnskap, Økonomi, Analyse",7,7,3,3
+CAND-76650,Sara Larsen,"Økonomi, Matematikk, Regnskap",9,4,5,1
+CAND-62896,Sara Pedersen,"AI, Java, Cloud",7,3,1,3
+CAND-38189,Mohamed Nilsen,"SoMe, Design, Photoshop",19,2,8,2
+CAND-75786,Pål Olsen,"Photoshop, Video, Design",11,1,6,10
+CAND-23120,Kari Hansen,"Photoshop, Design, Figma",4,10,6,6
+CAND-49809,Lars Pedersen,"Regnskap, Matematikk, Økonomi",3,4,2,7
+CAND-56015,Lisa Berg,"Java, Excel, Python, Analyse",16,1,8,7
+CAND-37293,Sofia Hansen,"Design, Figma, Photoshop",11,6,7,7
+CAND-59083,Pål Andersen,"React, Design, Photoshop, Figma",20,10,3,2
+CAND-97978,Jakob Olsen,"React, SQL, Java",14,8,6,9
+CAND-53731,Sofia Nilsen,"Økonomi, Analyse, Excel",8,5,10,2
+CAND-46188,Kari Johansen,"SQL, Cloud, Java",13,5,5,8
+CAND-24625,Jakob Larsen,"Regnskap, Økonomi, Matematikk",19,7,4,4
+CAND-53134,Mohamed Pedersen,"Excel, Matematikk, Økonomi",18,5,4,7
+CAND-33897,Jakob Pedersen,"Excel, Matematikk, Analyse",9,10,2,8
+CAND-28557,Pål Johansen,"SoMe, Python, Analyse, Photoshop",9,9,6,6
+CAND-36131,Sofia Berg,"Matematikk, Regnskap, Analyse",3,3,10,7
+CAND-63296,Pål Nilsen,"Java, SQL, Cloud",5,7,9,10
+CAND-88194,Lars Pedersen,"Photoshop, Figma, SoMe",11,8,3,1
+CAND-80693,Erik Johansen,"Økonomi, Regnskap, Excel",5,1,10,10
+CAND-87836,Kari Nilsen,"Python, SQL, React",18,10,8,5
+CAND-94461,Pål Johansen,"Matematikk, SoMe, Video, Java",9,3,9,2
+CAND-51841,Mohamed Nilsen,"SoMe, Video, Figma",19,4,4,8
+CAND-29579,Ali Olsen,"SoMe, Photoshop, Design",17,1,4,9
+CAND-85581,Ali Larsen,"Cloud, AI, Python",19,5,3,9
+CAND-64007,Mohamed Olsen,"Python, Java, SQL",10,9,8,6
+CAND-51318,Erik Johansen,"Analyse, Økonomi, Matematikk",18,7,8,3
+CAND-34651,Ingrid Nilsen,"Analyse, SoMe, Python, Cloud",19,2,10,10
+CAND-34650,Jakob Pedersen,"Cloud, Design, AI, Figma",10,1,8,10
+CAND-36386,Pål Berg,"Design, Video, SoMe",16,2,6,5
+CAND-39192,Jakob Johansen,"Photoshop, Figma, Video",12,1,3,2
+CAND-16115,Ola Olsen,"Matematikk, Excel, Analyse",1,10,8,7
+CAND-75574,Ingrid Pedersen,"Python, React, Cloud",3,7,6,2
+CAND-12934,Erik Olsen,"Video, SoMe, Matematikk, Python",2,5,10,10
+CAND-85942,Jakob Hansen,"AI, Python, Java",1,5,5,7
+CAND-39991,Mohamed Nilsen,"Analyse, AI, SoMe, Økonomi",6,1,5,8
+CAND-52411,Ali Olsen,"Regnskap, Excel, Analyse",4,5,1,1
+CAND-44183,Pål Nilsen,"React, Cloud, SQL",4,1,4,9
+CAND-78374,Lisa Andersen,"Python, AI, Cloud",12,6,1,7
+CAND-26352,Mohamed Olsen,"Figma, Design, AI, Økonomi",8,10,4,4
+CAND-72049,Lisa Nilsen,"Regnskap, Excel, Analyse",3,2,9,1
+CAND-45515,Ola Hansen,"SQL, Python, Cloud",12,8,7,5
+CAND-84762,Mohamed Olsen,"SQL, Python, Java",20,3,8,10
+CAND-20584,Erik Andersen,"Python, Java, React",4,3,7,1
+CAND-22596,Pål Olsen,"Video, Photoshop, Økonomi, Python",7,10,9,1
+CAND-76380,Erik Andersen,"Analyse, Regnskap, Excel",10,8,8,1
+CAND-85625,Sara Johansen,"Matematikk, Design, Excel, Analyse",8,10,3,8
+CAND-68804,Mohamed Olsen,"Matematikk, Cloud, Figma, Photoshop",6,8,8,1
+CAND-73361,Mohamed Johansen,"Excel, Matematikk, Regnskap",16,9,1,3
+CAND-39341,Lars Larsen,"Python, React, AI",0,4,2,9
+CAND-24001,Ali Olsen,"Java, React, Python",7,6,4,4
+CAND-71060,Ingrid Pedersen,"Excel, Matematikk, Java, SoMe",20,10,1,4
+CAND-94835,Sofia Pedersen,"AI, Java, Python",17,3,5,8
+CAND-77548,Pål Berg,"Figma, Video, Photoshop",9,5,10,7
+CAND-52197,Ali Berg,"Python, Økonomi, Figma, Excel",5,7,8,5
+CAND-93441,Sofia Berg,"Photoshop, Figma, SoMe",13,6,1,5
+CAND-18377,Kari Hansen,"SoMe, Photoshop, Video, React",5,10,2,2
+CAND-17842,Lars Johansen,"Excel, Matematikk, Regnskap",7,5,9,9
+CAND-40487,Lisa Pedersen,"Design, Video, Figma",2,3,6,6
+CAND-35649,Sofia Pedersen,"Matematikk, Analyse, Regnskap",18,9,5,4
+CAND-91255,Sara Larsen,"Økonomi, Analyse, Matematikk",10,9,7,6
+CAND-42328,Mohamed Andersen,"React, Cloud, Python",19,3,7,4
+CAND-71611,Ola Berg,"Python, Cloud, SQL",3,1,6,3
+CAND-73516,Lisa Johansen,"Figma, Design, Video",4,9,5,5
+CAND-67172,Kari Larsen,"Regnskap, Økonomi, Matematikk",11,5,5,5
+CAND-19608,Lisa Hansen,"AI, Java, React",1,9,7,6
+CAND-67650,Kari Andersen,"AI, SQL, Java",6,3,9,10
+CAND-19074,Sofia Johansen,"Excel, Analyse, Regnskap",10,5,2,9
+CAND-47867,Pål Larsen,"SQL, AI, Java",13,1,4,4
+CAND-56123,Ali Andersen,"Regnskap, Analyse, Matematikk",7,10,2,5
+CAND-10326,Ali Olsen,"Cloud, SQL, React",7,3,2,6
+CAND-53417,Jakob Johansen,"Matematikk, Excel, Analyse",16,1,3,6
+CAND-18750,Kari Nilsen,"Figma, Design, SoMe",13,2,9,4
+CAND-74833,Ingrid Hansen,"Matematikk, Excel, Regnskap",14,2,2,4
+CAND-70026,Pål Nilsen,"SoMe, Figma, Design",7,2,2,2
+CAND-96794,Sara Olsen,"Video, React, Økonomi, Photoshop",7,9,10,7
+CAND-49351,Lars Pedersen,"Matematikk, Design, Figma, Regnskap",18,2,10,8
+CAND-68508,Pål Johansen,"Design, Figma, SoMe",18,3,6,7
+CAND-81628,Lars Larsen,"Photoshop, SoMe, Figma",14,10,7,1
+CAND-39583,Kari Hansen,"Python, AI, SQL",12,5,3,10
+CAND-14982,Ola Johansen,"Cloud, AI, Python",6,8,1,5
+CAND-35632,Lisa Olsen,"Figma, Photoshop, Video",8,1,7,6
+CAND-37732,Lisa Larsen,"Java, Cloud, SQL",18,9,4,8
+CAND-74343,Sofia Andersen,"Design, Video, Photoshop",16,7,10,9
+CAND-89814,Sara Johansen,"Python, SQL, Cloud",12,4,8,10
+CAND-95416,Pål Larsen,"Excel, Matematikk, Analyse",9,10,7,7
+CAND-10070,Lars Larsen,"Video, Figma, SoMe",0,10,7,5
+CAND-33415,Lars Pedersen,"Design, Excel, Photoshop, Analyse",16,5,1,5
+CAND-73944,Lisa Hansen,"Matematikk, Økonomi, Excel",8,6,9,9
+CAND-78622,Kari Olsen,"Photoshop, Figma, Design",13,2,10,3
+CAND-35933,Ingrid Andersen,"Excel, Økonomi, Analyse",7,6,10,5
+CAND-55270,Erik Andersen,"AI, Video, Økonomi, Excel",3,7,2,7
+CAND-23941,Kari Hansen,"Matematikk, Regnskap, Økonomi",8,10,8,4
+CAND-24013,Ali Pedersen,"Regnskap, Figma, Video, SQL",4,5,4,1
+CAND-51082,Ingrid Olsen,"AI, SQL, Java",7,2,2,4
+CAND-69238,Kari Nilsen,"Excel, Regnskap, Økonomi",16,9,7,6
+CAND-76138,Jakob Johansen,"Python, Regnskap, Cloud, Analyse",15,3,8,5
+CAND-97571,Kari Hansen,"SoMe, Figma, Photoshop",6,3,8,1
+CAND-16421,Ingrid Andersen,"Regnskap, Excel, Økonomi",19,8,7,6
+CAND-44733,Lisa Pedersen,"SoMe, Design, Figma",20,2,7,2
+CAND-21485,Mohamed Berg,"React, Java, SQL, Regnskap",18,7,6,3
+CAND-58085,Lars Olsen,"Figma, SoMe, Photoshop",13,6,9,9
+CAND-24605,Erik Johansen,"Regnskap, Excel, Matematikk",4,10,3,3
+CAND-68097,Ali Pedersen,"Figma, Regnskap, Video, SoMe",2,1,4,8
+CAND-37799,Ali Larsen,"SoMe, AI, React, Python",9,2,8,2
+CAND-32094,Lisa Nilsen,"Photoshop, SoMe, Video",18,9,8,2
+CAND-37924,Kari Pedersen,"Cloud, SoMe, Økonomi, Figma",10,8,10,6
+CAND-11491,Mohamed Larsen,"Regnskap, Matematikk, Excel",13,4,9,10
+CAND-14449,Sofia Olsen,"Design, Photoshop, SoMe",16,8,9,3
+CAND-80103,Ola Hansen,"Design, SoMe, Figma",13,9,4,6
+CAND-21621,Ingrid Johansen,"Matematikk, Video, Photoshop, Python",17,6,2,1
+CAND-15980,Ali Nilsen,"React, Python, AI",6,4,7,3
+CAND-10548,Ola Andersen,"Video, Figma, SoMe",3,3,4,3
+CAND-88034,Lisa Hansen,"React, SQL, Python",16,7,8,1
+CAND-44725,Kari Nilsen,"Økonomi, Excel, Cloud, Matematikk",18,10,8,1
+CAND-74068,Ola Pedersen,"Video, Figma, Design",5,9,9,3
+CAND-72147,Lisa Larsen,"Python, SQL, Java",14,4,5,8
+CAND-90328,Lars Berg,"React, AI, Cloud",8,5,10,9
+CAND-46011,Ali Johansen,"Design, Video, SoMe",7,5,3,1
+CAND-47502,Ali Pedersen,"Java, AI, SQL",9,2,1,5
+CAND-89979,Ola Andersen,"Regnskap, Matematikk, Økonomi",2,2,8,7
+CAND-26462,Lars Pedersen,"Cloud, AI, SQL",4,6,4,8
+CAND-12293,Pål Larsen,"Excel, React, Photoshop, SQL",11,5,8,6
+CAND-47001,Ola Hansen,"Excel, Matematikk, Økonomi",14,4,4,5
+CAND-18145,Erik Nilsen,"SQL, Java, AI",14,9,5,5
+CAND-17695,Mohamed Berg,"Cloud, Matematikk, SoMe, Økonomi",16,10,9,7
+CAND-10734,Ingrid Pedersen,"AI, Java, SQL",14,4,7,9
+CAND-39486,Sofia Nilsen,"Java, Cloud, SQL",3,8,5,2
+CAND-96884,Ola Nilsen,"Design, Video, Photoshop",12,1,1,2
+CAND-15192,Lisa Pedersen,"React, SQL, Java",0,1,9,10
+CAND-33326,Kari Olsen,"Video, Photoshop, Design",18,6,4,10
+CAND-39529,Lars Johansen,"Matematikk, Økonomi, Analyse",2,8,10,10
+CAND-32378,Ali Pedersen,"React, Python, Cloud",2,3,5,4
+CAND-28286,Pål Nilsen,"Video, Figma, Design",13,6,8,3
+CAND-30321,Erik Andersen,"SQL, Video, Matematikk, AI",7,6,4,3
+CAND-33184,Sara Andersen,"React, SQL, AI",13,2,5,1
+CAND-74588,Mohamed Hansen,"Cloud, Java, React",15,10,8,4
+CAND-43872,Erik Hansen,"Figma, Video, SoMe",0,5,8,4
+CAND-92325,Ola Pedersen,"Design, Regnskap, React, Video",2,3,9,8
+CAND-56936,Jakob Olsen,"React, AI, Cloud",16,9,8,6
+CAND-59979,Kari Andersen,"SoMe, Video, Design",20,6,5,4
+CAND-13909,Sara Johansen,"Python, SQL, Cloud",2,6,6,2
+CAND-50704,Sofia Pedersen,"Figma, SoMe, Video",2,7,1,6
+CAND-48174,Ingrid Hansen,"Python, Cloud, SQL",11,8,3,3
+CAND-25566,Ola Hansen,"Video, Figma, Design",6,5,9,4
+CAND-86639,Erik Larsen,"Excel, Matematikk, Økonomi",10,1,9,6
+CAND-24456,Ingrid Hansen,"Excel, Regnskap, Analyse",16,4,8,1
+CAND-35853,Pål Pedersen,"Regnskap, SQL, React, Design",15,2,6,6
+CAND-44948,Ola Andersen,"Økonomi, Figma, Regnskap, Excel",13,1,5,3
+CAND-31209,Erik Berg,"Java, Regnskap, Design, SoMe",17,4,7,3
+CAND-97176,Sara Larsen,"Cloud, React, AI",3,8,8,3
+CAND-65708,Ali Olsen,"AI, Cloud, SQL",5,4,6,7
+CAND-39915,Lisa Nilsen,"Java, Cloud, Python",13,9,6,10
+CAND-27585,Lars Hansen,"Photoshop, Økonomi, Excel, Design",0,1,1,3
+CAND-73488,Lars Hansen,"Java, Python, Cloud",11,4,4,7
+CAND-99581,Sara Berg,"Photoshop, Design, SoMe",10,9,6,4
+CAND-93323,Sofia Olsen,"Video, SoMe, Photoshop",18,2,7,1
+CAND-46130,Kari Andersen,"Excel, Python, Analyse, Java",6,8,2,5
+CAND-31621,Ali Johansen,"Regnskap, Økonomi, Matematikk",1,4,5,10
+CAND-42520,Pål Olsen,"Excel, Økonomi, Regnskap",14,1,7,1
+CAND-14390,Kari Berg,"Java, AI, Cloud",18,6,8,5
+CAND-90366,Lisa Hansen,"SQL, Økonomi, SoMe, Video",8,10,10,6
+CAND-88650,Ali Olsen,"Analyse, Økonomi, Excel",19,6,7,6
+CAND-87269,Lisa Andersen,"SoMe, Design, Video",14,5,10,7
+CAND-78248,Lisa Nilsen,"Java, React, AI",2,10,7,9
+CAND-75895,Sara Andersen,"Python, Cloud, Java",12,4,7,1
+CAND-90557,Lisa Nilsen,"Video, Figma, Photoshop",17,3,4,4
+CAND-71812,Lars Pedersen,"React, Video, Analyse, Regnskap",19,1,8,5
+CAND-86253,Lars Andersen,"Video, Photoshop, Design",8,8,4,3
+CAND-65619,Sara Pedersen,"Regnskap, Økonomi, Excel",3,7,5,4
+CAND-21316,Ali Larsen,"AI, Python, React",3,6,10,3
+CAND-94463,Pål Pedersen,"Regnskap, Analyse, Økonomi",14,2,1,8
+CAND-22649,Mohamed Larsen,"Regnskap, Cloud, SQL, Design",18,6,7,5
+CAND-68178,Mohamed Nilsen,"Figma, SoMe, Video",20,4,6,4
+CAND-71597,Pål Johansen,"Python, Java, React",13,2,6,2
+CAND-54790,Pål Berg,"SQL, Java, Python, Excel",5,10,6,7
+CAND-73442,Kari Johansen,"Python, SQL, Java",12,3,5,3
+CAND-77961,Pål Hansen,"Regnskap, Design, Python, Økonomi",0,6,4,10
+CAND-19313,Pål Berg,"Økonomi, Regnskap, Matematikk",13,6,9,10
+CAND-56474,Ola Andersen,"Matematikk, Regnskap, Økonomi",11,9,2,6
+CAND-76049,Ali Larsen,"Analyse, Regnskap, Excel",17,7,2,5
+CAND-72082,Kari Andersen,"React, Java, AI",5,10,9,6
+CAND-68549,Sara Pedersen,"Photoshop, Figma, Design",19,1,6,5
+CAND-25394,Sara Hansen,"SQL, React, Python",3,5,5,1
+CAND-70811,Lars Berg,"Økonomi, Regnskap, Excel",7,3,3,7
+CAND-88074,Pål Andersen,"Java, Python, Cloud",17,2,6,8
+CAND-50852,Erik Olsen,"Analyse, Photoshop, Design, Cloud",1,4,10,10
+CAND-59317,Erik Andersen,"Cloud, AI, React",12,4,2,5
+CAND-95918,Mohamed Pedersen,"Cloud, Java, AI",9,7,2,8
+CAND-39041,Ali Nilsen,"Java, SQL, Python",12,1,4,7
+CAND-35426,Ola Larsen,"Excel, Regnskap, Økonomi",0,4,8,8
+CAND-94235,Ali Berg,"Figma, Photoshop, SoMe",7,9,8,7
+CAND-69029,Ingrid Hansen,"Excel, Økonomi, Regnskap",2,4,7,10
+CAND-79105,Sofia Johansen,"Design, Figma, Photoshop",15,9,5,10
+CAND-60562,Pål Pedersen,"Regnskap, Økonomi, Excel",16,10,10,6
+CAND-94207,Ali Hansen,"Økonomi, Excel, Matematikk",4,5,3,7
+CAND-52875,Erik Nilsen,"React, Cloud, AI",3,9,4,3
+CAND-49466,Kari Pedersen,"Figma, Excel, SoMe, Python",4,6,10,2
+CAND-15515,Lars Berg,"Cloud, Python, Java",15,8,8,5
+CAND-38499,Ingrid Andersen,"Matematikk, Analyse, Excel",10,5,5,7
+CAND-82261,Ola Berg,"Excel, Matematikk, Regnskap",17,8,5,4
+CAND-66103,Lars Olsen,"SoMe, Figma, Video",19,6,5,10
+CAND-16301,Ali Larsen,"Python, AI, SQL",2,5,1,4
+CAND-83754,Ali Olsen,"SoMe, Design, Video",8,8,9,1
+CAND-50350,Ali Nilsen,"Excel, Økonomi, Design, AI",17,10,3,6
+CAND-74200,Lisa Larsen,"Java, Video, Excel, SQL",12,7,10,10
+CAND-67410,Erik Johansen,"Matematikk, Excel, Regnskap",13,3,10,1
+CAND-39699,Sofia Berg,"Figma, SoMe, Video",17,8,10,10
+CAND-13362,Kari Olsen,"Matematikk, Excel, Analyse",18,4,8,4
+CAND-70697,Erik Hansen,"Økonomi, Analyse, Regnskap",16,3,10,2
+CAND-24250,Ali Nilsen,"Figma, Video, Design",14,4,9,2
+CAND-78686,Sofia Berg,"Matematikk, Analyse, Økonomi",17,2,5,1
+CAND-84251,Mohamed Hansen,"Excel, Regnskap, Matematikk",20,8,4,7
+CAND-70547,Sara Olsen,"SQL, Python, React",15,7,6,2
+CAND-74194,Pål Nilsen,"Excel, Matematikk, Analyse",11,1,4,9
+CAND-86896,Pål Andersen,"AI, Cloud, Design, React",9,2,5,5
+CAND-92809,Ali Pedersen,"Regnskap, Analyse, Excel",14,7,2,5
+CAND-22761,Pål Andersen,"SoMe, Photoshop, Design",4,5,5,2
+CAND-97361,Lisa Larsen,"Video, Figma, Photoshop",12,10,3,7
+CAND-72677,Kari Pedersen,"Java, SQL, AI",10,4,5,8
+CAND-82118,Pål Johansen,"React, AI, Java",10,5,4,2
+CAND-87100,Lisa Johansen,"SoMe, Design, Figma",6,6,3,10
+CAND-74860,Lars Larsen,"Figma, SoMe, Design",6,4,1,1
+CAND-46999,Sofia Olsen,"React, SQL, Java",11,9,6,6
+CAND-10050,Ali Andersen,"Design, Video, SoMe",16,7,9,1
+CAND-42144,Erik Hansen,"AI, SQL, SoMe, Excel",16,2,10,5
+CAND-71279,Erik Johansen,"Regnskap, Photoshop, Økonomi, SQL",0,1,4,3
+CAND-61975,Jakob Andersen,"SoMe, Design, Photoshop",19,4,8,2
+CAND-81520,Mohamed Hansen,"React, SQL, AI",11,2,7,9
+CAND-23665,Mohamed Johansen,"Video, Photoshop, SoMe",3,4,10,4
+CAND-27315,Kari Andersen,"Java, React, SQL",6,8,8,2
+CAND-60833,Lars Hansen,"Økonomi, Analyse, Matematikk",2,3,4,3
+CAND-77400,Lisa Andersen,"Analyse, Regnskap, Matematikk",18,1,8,8
+CAND-99875,Pål Larsen,"Analyse, Økonomi, Excel",11,7,4,1
+CAND-17352,Lisa Hansen,"Excel, Regnskap, Analyse",1,4,1,5
+CAND-70150,Erik Hansen,"Analyse, Excel, Matematikk",15,2,1,1
+CAND-30367,Ali Larsen,"Cloud, Analyse, Java, Regnskap",8,9,4,1
+CAND-79838,Ali Pedersen,"Design, Photoshop, Figma",18,8,7,7
+CAND-18907,Erik Andersen,"Cloud, SQL, AI, Økonomi",4,4,3,1
+CAND-92975,Pål Larsen,"SQL, AI, Python",3,9,3,8
+CAND-87627,Lars Hansen,"Java, Økonomi, Analyse, SQL",0,4,10,9
+CAND-56619,Jakob Nilsen,"Cloud, AI, Java",17,6,8,10
+CAND-17173,Lisa Berg,"React, Python, Cloud",3,6,5,4
+CAND-22536,Pål Berg,"Matematikk, Excel, Analyse",20,5,10,4
+CAND-97323,Mohamed Berg,"Video, Design, SoMe",16,9,6,7
+CAND-98600,Sofia Pedersen,"Matematikk, Excel, Økonomi",19,5,4,9
+CAND-55952,Sara Larsen,"Regnskap, Økonomi, Analyse",6,2,8,6
+CAND-15647,Erik Larsen,"Python, SQL, Cloud",9,6,9,8
+CAND-59249,Sofia Larsen,"Regnskap, Analyse, Økonomi",2,1,1,6
+CAND-46140,Ali Pedersen,"Video, Figma, Photoshop",10,8,4,3
+CAND-69799,Kari Pedersen,"SQL, Cloud, AI",1,9,4,8
+CAND-53976,Mohamed Larsen,"Regnskap, Analyse, Matematikk",15,7,2,2
+CAND-42544,Jakob Hansen,"Analyse, Photoshop, Matematikk, SoMe",18,8,7,3
+CAND-14805,Mohamed Olsen,"Video, SoMe, Photoshop",7,1,5,6
+CAND-76620,Erik Olsen,"Regnskap, Python, Økonomi, Photoshop",10,5,3,9
+CAND-61936,Mohamed Andersen,"Regnskap, Analyse, Excel",16,5,8,10
+CAND-57126,Ola Pedersen,"Analyse, Excel, Matematikk",5,4,5,4
+CAND-70328,Jakob Andersen,"Figma, Photoshop, Video",15,3,2,10
+CAND-39115,Ingrid Larsen,"Analyse, Regnskap, Økonomi",0,1,8,8
+CAND-44093,Sara Hansen,"SoMe, Python, SQL, Excel",7,3,7,2
+CAND-24086,Lisa Larsen,"Cloud, React, AI",3,7,1,3
+CAND-48315,Sara Olsen,"Analyse, Matematikk, Økonomi",0,3,1,6
+CAND-90593,Mohamed Johansen,"AI, Figma, Økonomi, Excel",14,8,9,1
+CAND-49217,Jakob Hansen,"Python, Analyse, Regnskap, Java",6,2,5,4
+CAND-23787,Ola Johansen,"Matematikk, AI, Økonomi, React",3,4,1,8
+CAND-10661,Erik Pedersen,"Regnskap, Figma, Excel, Photoshop",5,8,3,2
+CAND-38220,Jakob Larsen,"Analyse, Matematikk, Økonomi",6,2,5,5
+CAND-77987,Mohamed Nilsen,"Figma, Photoshop, Video",7,8,3,8
+CAND-46425,Ingrid Olsen,"Excel, Analyse, Regnskap",17,5,10,9
+CAND-64828,Lars Nilsen,"Matematikk, Regnskap, Excel",6,7,8,10
+CAND-58801,Lisa Andersen,"SQL, Python, AI",15,4,10,7
+CAND-25372,Pål Hansen,"Cloud, React, Java",9,4,3,6
+CAND-10571,Mohamed Nilsen,"Excel, Analyse, Regnskap",17,8,7,9
+CAND-95747,Lars Larsen,"Python, AI, Video, Analyse",20,5,9,4
+CAND-15668,Jakob Pedersen,"Design, Figma, Photoshop",12,4,9,3
+CAND-31271,Kari Berg,"Økonomi, Excel, AI, Design",9,1,10,10
+CAND-68457,Pål Olsen,"AI, SQL, Python, Økonomi",18,8,3,4
+CAND-47342,Kari Andersen,"AI, Cloud, Python",4,5,7,5
+CAND-56553,Ali Berg,"Video, SoMe, Photoshop",15,2,2,2
+CAND-38793,Sofia Olsen,"Photoshop, Design, Video",9,5,3,6
+CAND-26897,Lisa Johansen,"Regnskap, Java, Cloud, Python",8,6,4,10
+CAND-69366,Kari Nilsen,"SoMe, Figma, Video",8,1,4,2
+CAND-81011,Pål Andersen,"Analyse, Excel, Matematikk",3,8,10,7
+CAND-27260,Jakob Larsen,"Figma, SoMe, Design",1,1,10,4
+CAND-50795,Erik Johansen,"React, Cloud, SQL",0,8,9,9
+CAND-67121,Sofia Nilsen,"Regnskap, Excel, Økonomi",1,3,6,3
+CAND-56052,Lars Andersen,"Video, Photoshop, Design",4,6,2,9
+CAND-60060,Ingrid Berg,"Design, SoMe, Figma",1,4,6,10
+CAND-37555,Lisa Olsen,"Matematikk, Analyse, Excel",0,7,1,10
+CAND-85535,Sofia Olsen,"Design, Video, Photoshop",9,3,8,4
+CAND-15676,Ali Andersen,"Excel, Økonomi, Matematikk",18,7,4,2
+CAND-50535,Erik Olsen,"Excel, Analyse, Regnskap",9,9,7,6
+CAND-44324,Lisa Larsen,"Video, Figma, Design",19,7,9,2
+CAND-12983,Mohamed Pedersen,"Økonomi, Excel, SQL, Regnskap",17,7,3,6
+CAND-27556,Lisa Pedersen,"Cloud, SQL, Python",8,9,5,9
+CAND-19437,Sofia Johansen,"Analyse, Økonomi, Matematikk",7,5,2,3
+CAND-83813,Erik Larsen,"Figma, Video, Photoshop",8,9,10,3
+CAND-10067,Erik Johansen,"Regnskap, Video, Design, SQL",4,8,8,3
+CAND-30948,Erik Johansen,"Python, React, Java",1,10,10,2
+CAND-25468,Lisa Larsen,"Matematikk, Økonomi, Analyse",8,5,9,6
+CAND-18293,Pål Olsen,"SoMe, Design, Figma, Analyse",20,5,8,6
+CAND-94135,Ingrid Hansen,"Design, Java, Økonomi, Figma",1,4,10,7
+CAND-94976,Jakob Berg,"React, SQL, AI",0,4,7,10
+CAND-39141,Mohamed Berg,"SQL, React, AI",13,7,7,9
+CAND-21044,Sara Pedersen,"AI, Java, Python",4,1,7,10
+CAND-98230,Sofia Nilsen,"React, SQL, SoMe, Matematikk",11,1,6,8
+CAND-19251,Lisa Hansen,"Excel, Regnskap, Økonomi",8,3,9,1
+CAND-47144,Kari Pedersen,"Excel, Matematikk, Analyse",14,5,6,10
+CAND-90303,Sofia Hansen,"Design, Photoshop, Figma",8,8,7,10
+CAND-25421,Kari Johansen,"Matematikk, Regnskap, Økonomi",4,7,2,6
+CAND-22116,Lars Olsen,"AI, Cloud, SQL",20,9,8,4
+CAND-31052,Sara Berg,"Python, SoMe, Analyse, Photoshop",13,9,1,5
+CAND-21555,Mohamed Andersen,"React, AI, Cloud",6,6,3,9
+CAND-48565,Erik Nilsen,"React, AI, Java",16,6,6,9
+CAND-81048,Mohamed Olsen,"Regnskap, Matematikk, Excel",17,5,1,4
+CAND-23753,Pål Johansen,"Photoshop, SoMe, Video",20,5,6,6
+CAND-81069,Sofia Pedersen,"SQL, AI, Python",6,8,5,1
+CAND-31324,Lars Olsen,"Design, AI, Video, Java",20,6,9,3
+CAND-70829,Ingrid Andersen,"AI, SQL, Python",20,7,9,3
+CAND-92148,Ingrid Hansen,"Photoshop, Video, React, Analyse",10,4,4,8
+CAND-84975,Pål Hansen,"Excel, Matematikk, Python, SoMe",18,2,6,6
+CAND-73777,Mohamed Nilsen,"SQL, Regnskap, SoMe, Cloud",13,10,6,3
+CAND-38616,Jakob Nilsen,"Python, Java, SQL",13,10,7,1
+CAND-17830,Kari Olsen,"React, Python, Cloud",7,7,5,9
+CAND-85614,Pål Johansen,"Figma, Photoshop, Design",20,4,7,8
+CAND-31509,Lisa Nilsen,"React, Cloud, Økonomi, SoMe",1,6,1,5
+CAND-88744,Ola Johansen,"Cloud, Python, React",5,5,4,2
+CAND-73566,Kari Olsen,"SQL, Java, AI",14,7,10,3
+CAND-51784,Lars Hansen,"Analyse, Regnskap, Matematikk",10,6,7,10
+CAND-96607,Mohamed Hansen,"Analyse, Excel, Regnskap",1,5,1,3
+CAND-73084,Ingrid Andersen,"Figma, Matematikk, Design, SoMe",8,6,2,10
+CAND-72446,Ingrid Hansen,"Design, Figma, Photoshop",3,1,4,4
+CAND-53375,Pål Olsen,"Java, Cloud, AI",16,6,8,5
+CAND-95460,Sofia Olsen,"AI, SQL, React",18,10,1,1
+CAND-84620,Pål Andersen,"SQL, Java, Cloud",15,2,9,7
+CAND-94497,Ola Hansen,"Cloud, AI, Matematikk, Python",5,4,2,6
+CAND-93541,Kari Olsen,"Økonomi, Matematikk, Excel",8,6,10,7
+CAND-97014,Lisa Olsen,"Matematikk, Analyse, Regnskap",11,1,4,5
+CAND-10950,Sofia Andersen,"Design, Photoshop, Figma",7,6,3,4
+CAND-63538,Erik Olsen,"AI, SQL, Cloud",0,5,7,1
+CAND-59954,Sara Pedersen,"Matematikk, Økonomi, Python, Cloud",9,1,1,5
+CAND-68999,Erik Hansen,"Analyse, Regnskap, Excel",2,3,1,1
+CAND-42457,Lars Hansen,"Matematikk, Økonomi, Analyse",2,9,6,9
+CAND-97840,Lisa Larsen,"Økonomi, Regnskap, Analyse",1,3,2,10
+CAND-54444,Mohamed Andersen,"SQL, Video, Økonomi, Figma",4,4,8,8
+CAND-87869,Ola Andersen,"Excel, Matematikk, Analyse",20,5,4,10
+CAND-61605,Sofia Pedersen,"Photoshop, Video, Design",9,4,7,2
+CAND-49192,Ingrid Berg,"Figma, Design, SoMe",14,7,9,5
+CAND-18239,Jakob Olsen,"SQL, Python, Java",13,8,6,6
+CAND-60385,Ali Pedersen,"Figma, Video, Design",19,3,2,9
+CAND-90671,Jakob Johansen,"SoMe, Video, Design",14,7,4,5
+CAND-12884,Pål Larsen,"SoMe, Design, Video",20,10,6,9
+CAND-94575,Ali Pedersen,"AI, Økonomi, Python, Java",1,3,2,5
+CAND-34235,Sara Andersen,"Design, SoMe, Photoshop",13,1,7,1
+CAND-55730,Sara Larsen,"SoMe, Cloud, Design, Video",18,3,6,4
+CAND-91896,Ola Berg,"Økonomi, Regnskap, Matematikk",6,6,4,10
+CAND-76639,Ola Johansen,"SoMe, Design, Figma",15,3,2,5
+CAND-90162,Sofia Johansen,"AI, Cloud, Java",18,2,6,7
+CAND-62249,Erik Olsen,"Excel, Figma, Video, Photoshop",17,1,2,4
+CAND-99719,Jakob Olsen,"Cloud, SoMe, React, Figma",19,10,3,4
+CAND-53138,Mohamed Hansen,"React, Java, SQL, Matematikk",13,8,9,2
+CAND-72849,Lars Nilsen,"Video, Design, Photoshop",8,8,4,6
+CAND-40769,Erik Hansen,"Økonomi, Matematikk, Excel",8,2,3,3
+CAND-33918,Erik Johansen,"SoMe, Design, Photoshop",9,6,8,6
+CAND-19900,Ali Johansen,"Design, SoMe, Excel, Photoshop",14,2,2,9
+CAND-78421,Erik Hansen,"React, SQL, AI",18,6,6,4
+CAND-38296,Sara Nilsen,"Analyse, Matematikk, Excel",19,5,7,3
+CAND-82312,Mohamed Andersen,"Matematikk, Analyse, Regnskap, Photoshop",20,5,7,6
+CAND-84085,Mohamed Nilsen,"Regnskap, Cloud, Matematikk, Photoshop",19,9,1,4

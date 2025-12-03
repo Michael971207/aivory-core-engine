@@ -1,149 +1,147 @@
 ﻿import pandas as pd
 import json
 import os
-import random
-import time
 
-CONFIG_FILE = "ai_memory_weights.json"
+# --- KLIENT-DATABASE (Våre kunder) ---
+CLIENTS = [
+    {
+        "name": "TechNova AS",
+        "industry": "IT",
+        "looking_for": ["Python", "AI", "Cloud", "Java"],
+        "min_exp": 2,
+        "ideal_personality": {"Struktur": 7, "Driv": 8, "Samarbeid": 6}
+    },
+    {
+        "name": "Nordic Bank",
+        "industry": "Finans",
+        "looking_for": ["Excel", "Økonomi", "Analyse", "Regnskap"],
+        "min_exp": 5,
+        "ideal_personality": {"Struktur": 10, "Driv": 5, "Samarbeid": 5}
+    },
+    {
+        "name": "Creative Minds",
+        "industry": "Design",
+        "looking_for": ["Figma", "Photoshop", "Design", "SoMe"],
+        "min_exp": 1,
+        "ideal_personality": {"Struktur": 4, "Driv": 8, "Samarbeid": 9}
+    }
+]
 
-# --- KUNNSKAPSDATABASE ---
-INTERVIEW_QUESTIONS = {
-    "Struktur": ["Hvordan sikrer du kvalitet under tidspress?", "Fortell om en gang du mistet oversikten."],
-    "Driv": ["Hva gjør du når oppgavene blir kjedelige?", "Fortell om et mål du ikke nådde."],
-    "Samarbeid": ["Beskriv en konflikt med en kollega.", "Jobber du best alene eller i team?"],
-    "Erfaring": ["Hvordan lærer du deg nye teknologier raskt?", "Hva er det vanskeligste problemet du har løst?"]
-}
-
-DEFAULT_PROFILE = {
-    "title": "Senior AI Utvikler",
-    "must_have": ["Python", "AI"],
-    "min_experience": 3,
-    "ideal_personality": { "Struktur": 8, "Driv": 7, "Samarbeid": 6 },
-    "weights": { "skills": 0.4, "experience": 0.2, "personality": 0.4 }
-}
-
-def load_profile():
-    if os.path.exists(CONFIG_FILE):
-        with open(CONFIG_FILE, "r") as f:
-            return json.load(f)
-    return DEFAULT_PROFILE
-
-class AivoryRecruiter:
+class AivoryMatchmaker:
     def __init__(self):
-        self.profile = load_profile()
         self.candidates = pd.DataFrame()
-        self.results_df = pd.DataFrame()
+        self.matches = [] # Her lagrer vi hvem som passer hvor
 
     def load_candidates(self, filepath):
-        if not os.path.exists(filepath):
-            print(f"Feil: Finner ikke {filepath}")
-            return
         self.candidates = pd.read_csv(filepath)
+        print(f"[SYSTEM] Lastet {len(self.candidates)} kandidater. Starter matching mot {len(CLIENTS)} klienter...")
 
-    def calculate_logic_match(self):
-        results = []
-        weights = self.profile['weights']
-        ideal = self.profile['ideal_personality']
-
-        print(f"\n[MOTOR] Analyserer {len(self.candidates)} kandidater...")
-
+    def run_multi_client_matching(self):
+        """Sjekker hver kandidat mot alle klienter"""
+        
         for index, row in self.candidates.iterrows():
             cand_skills = str(row['Ferdigheter']).lower()
-            matching_skills = [s for s in self.profile['must_have'] if s.lower() in cand_skills]
             
-            if not matching_skills: continue 
+            best_score = 0
+            best_client = None
+            
+            # Sjekk mot hver kunde
+            for client in CLIENTS:
+                # 1. Ferdighetssjekk
+                client_skills = [s.lower() for s in client['looking_for']]
+                matches = [s for s in client_skills if s in cand_skills]
                 
-            skill_score = 100 
-            exp_score = min(row['Erfaring'] * 10, 100)
-            if row['Erfaring'] < self.profile['min_experience']: exp_score = 0
-            
-            diff = abs(row['Struktur'] - ideal['Struktur']) + abs(row['Driv'] - ideal['Driv']) + abs(row['Samarbeid'] - ideal['Samarbeid'])
-            personality_score = max(100 - (diff * 5), 0)
-            
-            final_score = (skill_score * weights['skills']) + \
-                          (exp_score * weights['experience']) + \
-                          (personality_score * weights['personality'])
+                if not matches:
+                    continue # Ingen match her
+                
+                match_percent = len(matches) / len(client_skills)
+                skill_points = match_percent * 50 # Max 50 poeng for skills
+                
+                # 2. Erfaringssjekk
+                exp_points = 0
+                if row['Erfaring'] >= client['min_exp']:
+                    exp_points = 20
+                
+                # 3. Personlighetssjekk (Kulturmatch)
+                ideal = client['ideal_personality']
+                diff = abs(row['Struktur'] - ideal['Struktur']) + \
+                       abs(row['Driv'] - ideal['Driv']) + \
+                       abs(row['Samarbeid'] - ideal['Samarbeid'])
+                cult_points = max(30 - diff, 0) # Max 30 poeng for kultur
+                
+                total_score = skill_points + exp_points + cult_points
+                
+                # Vi lagrer bare hvis det er en GOD match (> 60 poeng)
+                if total_score > 60 and total_score > best_score:
+                    best_score = total_score
+                    best_client = client['name']
 
-            weaknesses = {"Struktur": row['Struktur'], "Driv": row['Driv'], "Samarbeid": row['Samarbeid'], "Erfaring": row['Erfaring']}
-            weakest_link = min(weaknesses, key=weaknesses.get)
-            tips = random.choice(INTERVIEW_QUESTIONS.get(weakest_link, ["Generelt spørsmål"]))
+            # Hvis kandidaten passet hos noen, legg dem i listen
+            if best_client:
+                self.matches.append({
+                    "Kandidat_ID": row['ID'],
+                    "Navn": row['Faktisk_Navn'], # Ville vært skjult i ekte prod
+                    "Matchet_Med": best_client,
+                    "Score": round(best_score, 1),
+                    "Ferdigheter": row['Ferdigheter']
+                })
 
-            results.append({
-                "ID": row['ID'],
-                "Hidden_Name": row['Faktisk_Navn'],
-                "Total_Score": round(final_score, 1),
-                "Ferdigheter": row['Ferdigheter'],
-                "Svakhet": weakest_link,
-                "Intervju_Tips": tips,
-                "Struktur": row['Struktur'],
-                "Driv": row['Driv'],
-                "Samarbeid": row['Samarbeid'],
-                "Erfaring": row['Erfaring']
-            })
-            
-        self.results_df = pd.DataFrame(results).sort_values(by='Total_Score', ascending=False)
-        self.top_10 = self.results_df.head(10).reset_index(drop=True)
-
-    def generate_html_dashboard(self):
-        # (Forenklet for å spare plass i koden, men funksjonaliteten er her)
-        with open("dashboard_rapport.html", "w", encoding="utf-8") as f:
-            f.write(f"<h1>Aivory Analyse ferdig</h1><p>Fant {len(self.results_df)} matcher.</p>")
-        print("[RAPPORT] HTML oppdatert.")
-
-    def chat_interface(self):
-        print("\n" + "="*60)
-        print("  AIVORY ASSISTANT - INTERAKTIV MODUS")
-        print("  Still spørsmål som: 'Hvem vant?', 'Sammenlign topp 2', 'Vis svakhet [ID]', 'avslutt'")
-        print("="*60)
+    def generate_master_dashboard(self):
+        """Lager en HTML-oversikt for hele Aivory-systemet"""
+        df = pd.DataFrame(self.matches)
         
-        while True:
-            command = input("\nDu: ").lower().strip()
-            
-            if command in ["avslutt", "exit", "quit", "nei"]:
-                print("Aivory: Avslutter systemet. Ha en fin dag!")
-                break
-                
-            elif "vant" in command or "best" in command or "vinner" in command:
-                winner = self.top_10.iloc[0]
-                print(f"Aivory: Vinneren er {winner['ID']} (Navn: {winner['Hidden_Name']}) med {winner['Total_Score']} poeng.")
-            
-            elif "sammenlign" in command or "duell" in command:
-                c1 = self.top_10.iloc[0]
-                c2 = self.top_10.iloc[1]
-                print(f"\n--- DUELL: {c1['ID']} vs {c2['ID']} ---")
-                print(f"{'EGENSKAP':<15} | {c1['ID']:<15} | {c2['ID']:<15}")
-                print("-" * 50)
-                print(f"{'Total Score':<15} | {str(c1['Total_Score']):<15} | {str(c2['Total_Score']):<15}")
-                print(f"{'Struktur':<15} | {str(c1['Struktur']):<15} | {str(c2['Struktur']):<15}")
-                print(f"{'Driv':<15} | {str(c1['Driv']):<15} | {str(c2['Driv']):<15}")
-                print(f"{'Erfaring':<15} | {str(c1['Erfaring']):<15} | {str(c2['Erfaring']):<15}")
-                
-                diff = c1['Total_Score'] - c2['Total_Score']
-                print(f"\nKONKLUSJON: {c1['ID']} vinner med {diff:.1f} poeng.")
+        if df.empty:
+            print("Ingen matcher funnet.")
+            return
 
-            elif "svakhet" in command:
-                # Prøver å finne ID i setningen
-                found = False
-                for index, row in self.top_10.iterrows():
-                    if row['ID'].lower() in command:
-                        print(f"Aivory: {row['ID']} sin største svakhet er '{row['Svakhet']}'.")
-                        print(f"Tips til intervju: \"{row['Intervju_Tips']}\"")
-                        found = True
-                        break
-                if not found:
-                    print("Aivory: Jeg trenger en ID for å svare (f.eks 'Vis svakhet KANDIDAT-1234'). Se listen over.")
+        # Sorter etter selskap og score
+        df = df.sort_values(by=['Matchet_Med', 'Score'], ascending=[True, False])
+        
+        html = """
+        <html>
+        <head>
+            <title>Aivory Global Dashboard</title>
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #222; color: #fff; padding: 20px; }
+                .card { background: #333; margin-bottom: 20px; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+                h1 { text-align: center; color: #00d2ff; }
+                h2 { border-bottom: 2px solid #555; padding-bottom: 10px; color: #ffd700; }
+                table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+                th, td { padding: 10px; text-align: left; border-bottom: 1px solid #444; }
+                th { color: #aaa; }
+                .score { font-weight: bold; color: #00ff9d; }
+            </style>
+        </head>
+        <body>
+            <h1>AIVORY MULTI-CLIENT DASHBOARD</h1>
+            <p style="text-align:center;">Sanntidsoversikt over plasseringer</p>
+        """
+        
+        # Lag en seksjon per kunde
+        for client in CLIENTS:
+            client_name = client['name']
+            matches = df[df['Matchet_Med'] == client_name].head(5) # Topp 5 per kunde
             
-            elif "liste" in command or "vis alle" in command:
-                 print(self.top_10[['ID', 'Total_Score', 'Svakhet']])
-
+            html += f"<div class='card'><h2>🏢 {client_name} ({client['industry']})</h2>"
+            
+            if matches.empty:
+                html += "<p>Ingen kvalifiserte kandidater funnet i dag.</p>"
             else:
-                print("Aivory: Jeg forsto ikke den. Prøv 'Hvem vant?' eller 'Sammenlign'.")
+                html += "<table><tr><th>ID</th><th>Score</th><th>Ferdigheter</th></tr>"
+                for _, row in matches.iterrows():
+                    html += f"<tr><td>{row['Kandidat_ID']}</td><td class='score'>{row['Score']}</td><td>{row['Ferdigheter']}</td></tr>"
+                html += "</table>"
+            
+            html += "</div>"
+
+        html += "</body></html>"
+        
+        with open("global_dashboard.html", "w", encoding="utf-8") as f:
+            f.write(html)
+        print("\n[DASHBOARD] 'global_dashboard.html' er generert! Åpne den for å se oversikten.")
 
 if __name__ == "__main__":
-    engine = AivoryRecruiter()
+    engine = AivoryMatchmaker()
     engine.load_candidates("bulk_applicants.csv")
-    engine.calculate_logic_match()
-    engine.generate_html_dashboard()
-    
-    # Start chatten til slutt
-    engine.chat_interface()
+    engine.run_multi_client_matching()
+    engine.generate_master_dashboard()
