@@ -1,0 +1,6 @@
+﻿KONFIDENSIELT - TECHNOVA STRATEGI 2025
+
+1. Vår nye tech-stack er basert på "Serverless" og "Rust".
+2. Vi verdsetter "Radikal Åpenhet" - det er lov å gjøre feil hvis man sier ifra.
+3. Salgsavdelingen skal fokusere utelukkende på "Inbound Marketing" og slutte med kaldringing.
+4. Alle ansatte må ha kjennskap til "GDPR Del 2".
