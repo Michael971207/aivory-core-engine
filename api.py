@@ -1,73 +1,58 @@
-﻿from fastapi import FastAPI
+﻿from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pickle
 import pandas as pd
 import sqlite3
 import datetime
-import re # Bibliotek for tekstanalyse (Regular Expressions)
+# Vi pakker importen i en try/except for å fange installasjonsfeil
+try:
+    from sentence_transformers import SentenceTransformer, util
+    semantic_available = True
+except ImportError:
+    semantic_available = False
+    print("⚠️ ADVARSEL: Sentence-transformers mangler. Kjører uten tekstforståelse.")
 
-app = FastAPI(title="Aivory Hybrid Engine", description="ML + NLP (Tekstanalyse)")
+app = FastAPI(title="Aivory Robust Engine")
 
+# --- DATABASE ---
 def init_db():
     conn = sqlite3.connect('aivory_logs.db')
     c = conn.cursor()
-    # Vi legger til en kolonne for 'tekst_score' i databasen
     try:
-        c.execute("ALTER TABLE logs ADD COLUMN tekst_score REAL")
+        c.execute("ALTER TABLE logs ADD COLUMN semantisk_match REAL")
     except sqlite3.OperationalError:
-        pass # Kolonnen finnes kanskje fra før, det går bra
+        pass
     conn.commit()
     conn.close()
-
 init_db()
 
-# Last inn ML-modellen
+# --- MODELLER ---
 model = None
 scaler = None
-model_type = "Ukjent"
+semantic_model = None
 
+# Last ML
 try:
     with open("aivory_model.pkl", "rb") as f:
         package = pickle.load(f)
         if isinstance(package, dict):
             model = package["model"]
             scaler = package["scaler"]
-            model_type = package["type"]
         else:
             model = package
-    print(f"✅ AI-Hjernen ({model_type}) er lastet inn.")
-except FileNotFoundError:
-    print("❌ Fant ikke modellen.")
+    print("✅ ML-Hjerne lastet.")
+except Exception as e:
+    print(f"❌ Kunne ikke laste ML-modell: {e}")
 
-# --- NLP MODUL (Tekstanalyseren) ---
-POWER_WORDS = [
-    "ledet", "suksess", "ekspert", "ansvar", "innovasjon", "effektivisert", 
-    "resultater", "motivert", "selvgående", "python", "ai", "utviklet", "team"
-]
+# Last NLP
+if semantic_available:
+    try:
+        print("⏳ Laster språkmodell (Vent litt)...")
+        semantic_model = SentenceTransformer('all-MiniLM-L6-v2')
+        print("✅ Språkmodell lastet.")
+    except Exception as e:
+        print(f"❌ Feil med språkmodell: {e}")
 
-def analyze_text_quality(text):
-    if not text:
-        return 0
-    
-    text = text.lower()
-    score = 0
-    matches = []
-    
-    # 1. Sjekk lengde (for kort = dårlig, for lang = kjedelig?)
-    word_count = len(text.split())
-    if word_count > 20: score += 10
-    if word_count > 50: score += 10
-    
-    # 2. Let etter Power Words
-    for word in POWER_WORDS:
-        if word in text:
-            score += 5 # 5 poeng per gull-ord
-            matches.append(word)
-            
-    # Max score er 100
-    return min(score, 100), matches
-
-# Input-modellen inkluderer nå 'Soknadstekst'
 class CandidateInput(BaseModel):
     Navn: str
     Erfaring: int
@@ -75,11 +60,15 @@ class CandidateInput(BaseModel):
     Driv: int
     Samarbeid: int
     Skill_Match: int
-    Soknadstekst: str = "" # Valgfri tekst
+    Soknadstekst: str = ""
 
 @app.post("/predict_hiring")
 def predict_candidate(candidate: CandidateInput):
-    # 1. Kjør ML-analyse på tallene
+    # SIKKERHETSSJEKK: Har vi en hjerne?
+    if model is None:
+        raise HTTPException(status_code=500, detail="Serverfeil: ML-modellen er ikke lastet inn. Kjør train_brain.py!")
+
+    # 1. ML Analyse
     input_data = pd.DataFrame([{
         "Erfaring": candidate.Erfaring,
         "Struktur": candidate.Struktur,
@@ -93,34 +82,39 @@ def predict_candidate(candidate: CandidateInput):
     else:
         final_input = input_data
 
-    ml_probability = model.predict_proba(final_input)[0][1] * 100 # 0-100 score
+    ml_probability = model.predict_proba(final_input)[0][1] * 100
+
+    # 2. Semantisk Analyse
+    semantic_score = 0
+    if semantic_model and candidate.Soknadstekst:
+        # Enkel fasit for demo
+        JOB_DESC = "Python AI Machine Learning ansvar selvstendig lede prosjekter team"
+        emb1 = semantic_model.encode(JOB_DESC, convert_to_tensor=True)
+        emb2 = semantic_model.encode(candidate.Soknadstekst, convert_to_tensor=True)
+        # Beregn likhet
+        sim = util.pytorch_cos_sim(emb1, emb2)
+        semantic_score = float(sim[0][0]) * 100
+        if len(candidate.Soknadstekst.split()) < 5: semantic_score *= 0.5
     
-    # 2. Kjør NLP-analyse på teksten
-    nlp_score, found_words = analyze_text_quality(candidate.Soknadstekst)
-    
-    # 3. HYBRID SCORE (Vekting: 70% tall, 30% tekst)
-    final_score = (ml_probability * 0.7) + (nlp_score * 0.3)
-    
+    # 3. Total
+    final_score = (ml_probability * 0.6) + (semantic_score * 0.4)
     beslutning = "ANSETT" if final_score > 60 else "AVVIS"
-    
-    # 4. Logg til database
-    conn = sqlite3.connect('aivory_logs.db')
-    c = conn.cursor()
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
-    # Vi logger litt forenklet her for å unngå SQL-feil hvis skjemaet ikke matcher perfekt
-    c.execute("INSERT INTO logs (tidspunkt, navn, score, beslutning) VALUES (?, ?, ?, ?)", 
-              (timestamp, candidate.Navn, round(final_score, 1), beslutning))
-    conn.commit()
-    conn.close()
+
+    # 4. Logg
+    try:
+        conn = sqlite3.connect('aivory_logs.db')
+        c = conn.cursor()
+        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        c.execute("INSERT INTO logs (tidspunkt, navn, score, beslutning) VALUES (?, ?, ?, ?)", 
+                  (now, candidate.Navn, round(final_score, 1), beslutning))
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        print(f"Logg-feil: {e}")
 
     return {
         "anbefaling": beslutning,
         "total_score": round(final_score, 1),
-        "detaljer": {
-            "ml_score": round(ml_probability, 1),
-            "tekst_score": nlp_score,
-            "nøkkelord_funnet": found_words
-        },
-        "melding": f"Basert på {model_type} og tekstanalyse."
+        "analyse": {"semantisk_match": round(semantic_score, 1)},
+        "melding": "Hybrid analyse fullført."
     }
