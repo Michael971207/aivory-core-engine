@@ -1,158 +1,120 @@
-﻿from fastapi import FastAPI
+﻿from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import pickle
-import pandas as pd
 import sqlite3
 import datetime
-import os
-import glob
+import json
+import pickle
+import pandas as pd
 
-try:
-    from sentence_transformers import SentenceTransformer, util
-    semantic_available = True
-except: semantic_available = False
+app = FastAPI(title="Aivory Soolv Backend")
 
-app = FastAPI(title="Aivory Corporate Brain 13.0")
-
-# --- DATABASE ---
 def init_db():
     conn = sqlite3.connect('aivory_logs.db')
     c = conn.cursor()
-    try: c.execute("ALTER TABLE logs ADD COLUMN strategy_score INTEGER")
-    except: pass
-    conn.commit()
-    conn.close()
+    
+    # 1. JOBBER
+    c.execute('''CREATE TABLE IF NOT EXISTS jobs 
+                 (id INTEGER PRIMARY KEY, tittel TEXT, beskrivelse TEXT, active INTEGER DEFAULT 1)''')
+    
+    # 2. BRUKERE/LOGS (Kandidater)
+    # Vi samler alt i 'logs' for enkelhet i denne demoen
+    cols = [
+        "candidate_email TEXT", "candidate_password TEXT", 
+        "company_consent INTEGER DEFAULT 0", "candidate_consent INTEGER DEFAULT 0", 
+        "chat_history TEXT DEFAULT '[]'", "stilling TEXT", "soknadstekst TEXT", 
+        "score REAL", "swot_analysis TEXT", "flight_risk TEXT", "status TEXT DEFAULT 'NEW'",
+        "navn TEXT", "tidspunkt TEXT", "beslutning TEXT"
+    ]
+    
+    c.execute('''CREATE TABLE IF NOT EXISTS logs (id INTEGER PRIMARY KEY)''')
+    for col in cols:
+        try: c.execute(f"ALTER TABLE logs ADD COLUMN {col}")
+        except: pass
+        
+    conn.commit(); conn.close()
 init_db()
 
 # --- MODELLER ---
+# (Laster dummy-modeller hvis pkl mangler for stabilitet)
 model = None
-hire_model = None
-scaler = None
-semantic_model = None
-
 try:
-    with open("aivory_model.pkl", "rb") as f:
-        pkg = pickle.load(f)
-        if isinstance(pkg, dict) and "hire_model" in pkg:
-            hire_model = pkg["hire_model"]
-            scaler = pkg["scaler"]
-        else: model = pkg
+    with open("aivory_model.pkl", "rb") as f: model = pickle.load(f)
 except: pass
 
-if semantic_available: 
-    print("⏳ Laster språkmodell...")
-    semantic_model = SentenceTransformer('all-MiniLM-L6-v2')
-
-# --- KUNNSKAPS-LASTING (RAG) ---
-CORPORATE_KNOWLEDGE = []
-KNOWLEDGE_EMBEDDINGS = None
-
-def load_corporate_knowledge():
-    global KNOWLEDGE_EMBEDDINGS
-    knowledge_texts = []
-    
-    # Les alle .txt filer i knowledge_base mappen
-    files = glob.glob("knowledge_base/*.txt")
-    print(f"📚 Fant {len(files)} dokumenter i kunnskapsbasen.")
-    
-    for f in files:
-        with open(f, "r", encoding="utf-8") as file:
-            text = file.read()
-            knowledge_texts.append(text)
-            print(f"   - Leste: {f}")
-            
-    if knowledge_texts and semantic_model:
-        # Kod om hele biblioteket til vektorer
-        KNOWLEDGE_EMBEDDINGS = semantic_model.encode(knowledge_texts, convert_to_tensor=True)
-        return knowledge_texts
-    return []
-
-# Last kunnskap ved oppstart
-if semantic_available:
-    CORPORATE_KNOWLEDGE = load_corporate_knowledge()
-
-# --- ANALYSE MOT INTERN KUNNSKAP ---
-def check_strategy_fit(candidate_text):
-    if KNOWLEDGE_EMBEDDINGS is None or not candidate_text: return 0, []
-    
-    cand_emb = semantic_model.encode(candidate_text, convert_to_tensor=True)
-    
-    # Sjekk likhet mot alle interne dokumenter
-    hits = util.semantic_search(cand_emb, KNOWLEDGE_EMBEDDINGS, top_k=1)
-    best_score = hits[0][0]['score'] * 100
-    
-    # Finn nøkkelord fra strategien som kandidaten traff på
-    # (Forenklet match for demo)
-    strategy_keywords = ["rust", "serverless", "inbound", "åpenhet", "gdpr"]
-    found_keywords = [w for w in strategy_keywords if w in candidate_text.lower()]
-    
-    return int(best_score), found_keywords
+# --- ENDEPUNKTER ---
 
 class CandidateInput(BaseModel):
-    Navn: str = "Ukjent"
-    Erfaring: int = 0
-    Struktur: int = 5
-    Driv: int = 5
-    Samarbeid: int = 5
-    Skill_Match: int = 50
-    Jobb_Hopping: int = 1
-    Soknadstekst: str = ""
-    StillingTittel: str = "Generell"
-    JobbBeskrivelse: str = ""
-    Lonnskrav: int = 0
-    TestSvar: str = ""
+    Navn: str; Email: str; Password: str; Soknadstekst: str; StillingTittel: str; JobbBeskrivelse: str
 
-@app.post("/predict_hiring")
-def predict_candidate(candidate: CandidateInput):
-    # 1. ML Score
-    ml_score = 50.0
-    input_df = pd.DataFrame([{
-        "Erfaring": candidate.Erfaring, "Struktur": candidate.Struktur, "Driv": candidate.Driv,
-        "Samarbeid": candidate.Samarbeid, "Skill_Match": candidate.Skill_Match, "Jobb_Hopping": candidate.Jobb_Hopping
-    }])
-    if hire_model and scaler:
-        ml_score = hire_model.predict_proba(scaler.transform(input_df))[0][1] * 100
-
-    # 2. Semantisk Jobb-Match
-    sem_score = 0
-    if semantic_model:
-        e1 = semantic_model.encode(candidate.JobbBeskrivelse, convert_to_tensor=True)
-        e2 = semantic_model.encode(candidate.Soknadstekst, convert_to_tensor=True)
-        sem_score = float(util.pytorch_cos_sim(e1, e2)[0][0]) * 100
-
-    # 3. KUNNSKAPS-MATCH (Nytt!)
-    strat_score, strat_hits = check_strategy_fit(candidate.Soknadstekst)
+@app.post("/register_candidate")
+def register(cand: CandidateInput):
+    conn = sqlite3.connect('aivory_logs.db'); c = conn.cursor()
     
-    # Vekting: Strategi teller nå 20%
-    final_score = (ml_score * 0.4) + (sem_score * 0.4) + (strat_score * 0.2)
-    beslutning = "ANSETT" if final_score > 60 else "AVVIS"
+    # Sjekk duplikat
+    c.execute("SELECT rowid FROM logs WHERE candidate_email = ?", (cand.Email,))
+    if c.fetchone(): return {"status": "error", "msg": "Email already exists."}
+    
+    # Beregn Score (Simulert)
+    score = 82
+    if len(cand.Soknadstekst) < 20: score = 40
+    
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    c.execute("""INSERT INTO logs (
+        tidspunkt, navn, candidate_email, candidate_password, soknadstekst, stilling, 
+        score, status, company_consent, candidate_consent, chat_history
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, 'NEW', 0, 0, '[]')""", 
+    (now, cand.Navn, cand.Email, cand.Password, cand.Soknadstekst, cand.StillingTittel, score))
+    
+    conn.commit(); conn.close()
+    return {"status": "success", "total_score": score}
 
-    # Logg
-    try:
-        conn = sqlite3.connect('aivory_logs.db')
-        c = conn.cursor()
-        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        c.execute("INSERT INTO logs (tidspunkt, navn, score, beslutning, stilling, soknadstekst, strategy_score) VALUES (?, ?, ?, ?, ?, ?, ?)", 
-                  (now, candidate.Navn, round(final_score, 1), beslutning, candidate.StillingTittel, candidate.Soknadstekst, strat_score))
+class LoginInput(BaseModel): email: str; password: str
+@app.post("/candidate_login")
+def login(d: LoginInput):
+    conn = sqlite3.connect('aivory_logs.db'); conn.row_factory = sqlite3.Row; c = conn.cursor()
+    c.execute("SELECT * FROM logs WHERE candidate_email = ? AND candidate_password = ? ORDER BY tidspunkt DESC LIMIT 1", (d.email, d.password))
+    row = c.fetchone(); conn.close()
+    if row:
+        return {
+            "status": "success",
+            "navn": row['navn'],
+            "stilling": row['stilling'],
+            "company_consent": bool(row['company_consent']),
+            "candidate_consent": bool(row['candidate_consent']),
+            "chat": json.loads(row['chat_history']) if row['chat_history'] else []
+        }
+    return {"status": "fail"}
+
+# Chat & Consent
+class ConsentUpdate(BaseModel): navn: str; who: str; action: bool
+@app.post("/update_consent")
+def uc(d: ConsentUpdate):
+    conn = sqlite3.connect('aivory_logs.db'); c = conn.cursor()
+    col = "company_consent" if d.who == "company" else "candidate_consent"
+    c.execute(f"UPDATE logs SET {col} = 1 WHERE navn = ?", (d.navn,))
+    conn.commit(); conn.close(); return {"status": "ok"}
+
+class ChatMsg(BaseModel): navn: str; sender: str; message: str
+@app.post("/send_chat")
+def sc(d: ChatMsg):
+    conn = sqlite3.connect('aivory_logs.db'); c = conn.cursor()
+    c.execute("SELECT chat_history FROM logs WHERE navn = ?", (d.navn,)); r = c.fetchone()
+    if r:
+        h = json.loads(r[0]) if r[0] else []
+        h.append({"sender": d.sender, "msg": d.message})
+        c.execute("UPDATE logs SET chat_history = ? WHERE navn = ?", (json.dumps(h), d.navn))
         conn.commit()
-        conn.close()
-    except: pass
+    conn.close(); return {"status": "ok"}
 
-    return {
-        "anbefaling": beslutning,
-        "total_score": round(final_score, 1),
-        "analyse": {
-            "ml_score": round(ml_score, 1),
-            "strategi_match": strat_score
-        },
-        "kunnskap": {
-            "treff": strat_hits,
-            "melding": "Kandidaten matcher intern strategi" if strat_score > 40 else "Kandidaten kjenner ikke vår strategi"
-        },
-        "melding": f"Strategi-score: {strat_score}/100"
-    }
+@app.post("/get_status")
+def gs(d: dict):
+    conn = sqlite3.connect('aivory_logs.db'); conn.row_factory = sqlite3.Row; c = conn.cursor()
+    c.execute("SELECT * FROM logs WHERE navn = ?", (d.get("navn"),)); row = c.fetchone(); conn.close()
+    if row: return {"company_consent": bool(row['company_consent']), "candidate_consent": bool(row['candidate_consent']), "chat": json.loads(row['chat_history']) if row['chat_history'] else []}
+    return {"error": "not found"}
 
-@app.post("/get_challenge")
-def get_challenge(d: dict): return {"sporsmal": "Hvorfor oss?", "fasit": "Strategi", "niva": "Generell"}
-@app.post("/search_candidates")
-def search(d: dict): return {"results": []}
+# Jobber
+@app.get("/get_jobs")
+def gj(): conn = sqlite3.connect('aivory_logs.db'); df = pd.read_sql_query("SELECT * FROM jobs WHERE active=1", conn); conn.close(); return df.to_dict(orient="records")
+@app.post("/create_job")
+def cj(d: dict): conn = sqlite3.connect('aivory_logs.db'); c=conn.cursor(); c.execute("INSERT INTO jobs (tittel, beskrivelse) VALUES (?, ?)", (d['tittel'], d['beskrivelse'])); conn.commit(); conn.close(); return {"status": "ok"}

@@ -1,0 +1,77 @@
+﻿/* Container for hele skjemaet */
+.application-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0E1117; /* Hovedbakgrunn */
+    padding: 20px;
+}
+
+/* Selve skjema-kortet */
+.application-card {
+    background-color: #161B22; /* Bakgrunn for kortet */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 650px;
+    border: 1px solid #30363D;
+    color: #FAFAFA;
+}
+
+/* Overskrifter inne i skjemaet */
+.application-card h2 {
+    color: #58A6FF; /* Accentfarge */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #30363D;
+    padding-bottom: 10px;
+}
+
+/* Stil for inndatafelt (Input, Textarea) */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #C9D1D9;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #30363D;
+    border-radius: 6px;
+    background-color: #0D1117; /* Mørkere fyll på input */
+    color: #FAFAFA;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; 
+}
+
+/* Fokus-effekt på input */
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #58A6FF;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+    outline: none;
+}
+
+/* Knapp for innsending (Submit Button) */
+.submit-button {
+    background: linear-gradient(90deg, #2EA043 0%, #3FB950 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    width: 100%;
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
