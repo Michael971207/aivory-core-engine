@@ -1,65 +1,205 @@
 ﻿import streamlit as st
-import sqlite3
 import pandas as pd
-import requests
-import hashlib
+import time
+import random
 
-st.set_page_config(page_title="Aivory Admin", page_icon="🪐", layout="wide")
-API_URL = "http://127.0.0.1:8000"
+# --- 1. CONFIG ---
+st.set_page_config(
+    page_title="Aivory Enterprise", 
+    page_icon="🏢", 
+    layout="wide", 
+    initial_sidebar_state="expanded"
+)
 
+# --- 2. DESIGN SYSTEM (Violet/Black High-End) ---
 st.markdown("""
 <style>
-    .stApp { background-color: #030014; color: #E2E8F0; }
-    div[data-testid="stContainer"], .stDataFrame {
-        background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 20px;
+    .stApp { background-color: #FFFFFF; color: #000000; font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { color: #000000 !important; font-weight: 800; letter-spacing: -0.5px; }
+    
+    /* Login Box */
+    .auth-box {
+        max-width: 450px; margin: 0 auto; padding: 40px;
+        background: white; border: 1px solid #E5E7EB; border-radius: 16px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.08); text-align: center;
     }
-    div.stButton > button { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); color: white; border: none; border-radius: 8px; }
+
+    /* Candidate Card */
+    .cand-card {
+        background: white; border: 1px solid #E5E7EB; padding: 20px;
+        border-radius: 12px; margin-bottom: 10px; transition: 0.2s;
+        cursor: pointer;
+    }
+    .cand-card:hover {
+        border-color: #7c3aed; transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(124, 58, 237, 0.1);
+    }
+
+    /* Insight Panel (Right) */
+    .insight-panel {
+        background: #F9FAFB; padding: 25px; border-radius: 12px;
+        border: 1px solid #E5E7EB; height: 100%;
+    }
+
+    /* SWOT Box */
+    .swot-box {
+        background: #000000; color: white; padding: 20px;
+        border-radius: 10px; margin-top: 20px; border-left: 5px solid #7c3aed;
+    }
+    .swot-item { margin-bottom: 8px; font-size: 0.9rem; }
+    
+    /* Tags */
+    .tag { background: #F3F4F6; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; }
+    .match-badge { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 0.8rem; }
+
+    /* Buttons */
+    div.stButton > button {
+        background-color: #7c3aed; color: white; border: none;
+        padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 700; width: 100%;
+    }
+    div.stButton > button:hover { background-color: #6d28d9; }
 </style>
 """, unsafe_allow_html=True)
 
-def get_data():
-    conn = sqlite3.connect('aivory_logs.db')
-    try: df = pd.read_sql_query("SELECT * FROM logs ORDER BY tidspunkt DESC", conn)
-    except: df = pd.DataFrame()
-    conn.close()
-    return df
+# --- 3. MOCK DATA ---
+if 'candidates' not in st.session_state:
+    st.session_state.candidates = [
+        {"id": 1, "navn": "Erik Solberg", "rolle": "Senior Python Dev", "bedrift": "TechNova", "match": 98, "skills": ["Python", "AWS", "Django"], "swot": {"S": "Eksepsjonell kodekvalitet", "W": "Lite ledererfaring", "O": "Kan ta Tech Lead rolle", "T": "Høy lønnsforventning"}},
+        {"id": 2, "navn": "Lisa Hansen", "rolle": "Sales Manager", "bedrift": "Bank 1", "match": 92, "skills": ["B2B", "CRM", "Closing"], "swot": {"S": "Top performer 2024", "W": "Utdatert CRM-kunnskap", "O": "Nye markeder", "T": "Vurderer konkurrent"}},
+        {"id": 3, "navn": "Ahmed Khan", "rolle": "CFO", "bedrift": "Startup X", "match": 85, "skills": ["Finance", "Strategy", "IPO"], "swot": {"S": "IPO-erfaring", "W": "Kort fartstid i tech", "O": "Skalere økonomiavdeling", "T": "Krever opsjoner"}},
+    ]
 
-st.title("🪐 Aivory Command Center")
+if 'jobs' not in st.session_state:
+    st.session_state.jobs = [{"Tittel": "Tech Lead", "Status": "Aktiv"}, {"Tittel": "Key Account Manager", "Status": "Aktiv"}]
 
-tab1, tab2 = st.tabs(["📥 Innboks", "🏗️ Jobb Admin"])
+if 'logged_in' not in st.session_state: st.session_state.logged_in = False
+if 'active_candidate' not in st.session_state: st.session_state.active_candidate = None
 
-with tab1:
-    df = get_data()
-    if df.empty:
-        st.warning("No candidates yet.")
-    else:
-        for i, row in df.iterrows():
-            with st.container():
-                c1, c2, c3, c4 = st.columns([2, 1, 2, 2])
-                name_disp = row['navn'] if row['candidate_consent'] and row['company_consent'] else f"Kandidat-{row['id']}"
+# --- 4. VIEWS ---
+
+def render_login():
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    c1, c2, c3 = st.columns([1, 1.2, 1])
+    with c2:
+        st.markdown("""
+        <div class="auth-box">
+            <h1 style="font-size: 3rem; margin-bottom: 0;">Aivory.</h1>
+            <p style="color: #6B7280; margin-bottom: 20px;">Enterprise Headhunting Suite</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        tab1, tab2 = st.tabs(["Logg Inn", "Registrer Bedrift"])
+        with tab1:
+            st.text_input("E-post", key="l_user")
+            st.text_input("Passord", type="password", key="l_pass")
+            if st.button("Logg inn"):
+                st.session_state.logged_in = True
+                st.rerun()
+        with tab2:
+            st.text_input("Bedriftsnavn")
+            st.text_input("Admin E-post")
+            if st.button("Opprett Konto"):
+                st.session_state.logged_in = True
+                st.rerun()
+
+def render_dashboard():
+    # --- SIDEBAR ---
+    with st.sidebar:
+        st.title("🏢 Aivory")
+        st.caption("Enterprise Edition")
+        menu = st.radio("Meny", ["Oversikt", "Headhunter Søk (Active)", "Legg ut stilling"])
+        st.markdown("---")
+        if st.button("Logg ut"):
+            st.session_state.logged_in = False
+            st.rerun()
+
+    # --- CONTENT ---
+    if menu == "Oversikt":
+        st.title("Dashbord")
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Kandidater i base", "1,240", "+12")
+        c2.metric("AI-intervjuer", "14", "Denne uken")
+        c3.metric("Åpne stillinger", str(len(st.session_state.jobs)), "Active")
+        c4.metric("Avg. Match", "88%", "+2%")
+        
+        st.markdown("### 📋 Dine Aktive Stillinger")
+        st.dataframe(pd.DataFrame(st.session_state.jobs), use_container_width=True, hide_index=True)
+
+    elif menu == "Legg ut stilling":
+        st.title("Ny Stilling")
+        with st.form("job_form"):
+            t = st.text_input("Stillingstittel")
+            st.text_area("Beskrivelse")
+            if st.form_submit_button("Publiser"):
+                st.session_state.jobs.append({"Tittel": t, "Status": "Aktiv"})
+                st.success("Publisert!")
+
+    elif menu == "Headhunter Søk (Active)":
+        st.title("🔍 Active Sourcing")
+        
+        col_list, col_detail = st.columns([1.5, 2])
+        
+        # LISTE (Venstre)
+        with col_list:
+            st.text_input("Søk i talentbasen...", placeholder="F.eks. Python, Oslo...")
+            st.markdown(f"**Fant {len(st.session_state.candidates)} top matches:**")
+            
+            for c in st.session_state.candidates:
+                # Kandidatkort
+                st.markdown(f"""
+                <div class="cand-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <b>{c['navn']}</b>
+                        <span class="match-badge">{c['match']}%</span>
+                    </div>
+                    <p style="color:#6B7280; font-size:0.9rem; margin:0;">{c['rolle']} @ {c['bedrift']}</p>
+                    <div style="margin-top:10px;">
+                        {' '.join([f'<span class="tag">{s}</span>' for s in c['skills']])}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button(f"Velg {c['navn']} ➡️", key=f"btn_{c['id']}"):
+                    st.session_state.active_candidate = c
+
+        # DETALJER (Høyre - The "Cool Stuff")
+        with col_detail:
+            if st.session_state.active_candidate:
+                cand = st.session_state.active_candidate
+                swot = cand['swot']
                 
-                c1.markdown(f"### {name_disp}")
-                c1.caption(row['stilling'])
-                c2.metric("Score", f"{row['score']}%")
+                st.markdown(f"""
+                <div class="insight-panel">
+                    <h2 style="margin-top:0;">{cand['navn']}</h2>
+                    <p style="font-size:1.1rem; color:#7c3aed;">{cand['rolle']}</p>
+                    
+                    <div class="swot-box">
+                        <h4 style="color:white !important; margin-top:0;">🤖 AI SWOT ANALYSE</h4>
+                        <div class="swot-item">✅ <b>Strengths:</b> {swot['S']}</div>
+                        <div class="swot-item">⚠️ <b>Weaknesses:</b> {swot['W']}</div>
+                        <div class="swot-item">🚀 <b>Opportunities:</b> {swot['O']}</div>
+                        <div class="swot-item">🛡️ <b>Threats:</b> {swot['T']}</div>
+                    </div>
+                    
+                    <br>
+                </div>
+                """, unsafe_allow_html=True)
                 
-                # Status Actions
-                if not row['company_consent']:
-                    if c3.button("Request Contact", key=f"req_{i}"):
-                        requests.post(f"{API_URL}/update_consent", json={"navn": row['navn'], "who": "company", "action": True}); st.rerun()
-                elif not row['candidate_consent']:
-                    c3.info("Waiting for candidate...")
-                else:
-                    c3.success("Connected")
-                    msg = c4.text_input("Chat", key=f"chat_{i}")
-                    if c4.button("Send", key=f"snd_{i}"):
-                        requests.post(f"{API_URL}/send_chat", json={"navn": row['navn'], "sender": "Bedrift", "message": msg})
+                # DE KULE KNAPPENE
+                c_btn1, c_btn2 = st.columns(2)
+                with c_btn1:
+                    if st.button("✨ Generer Melding"):
+                        st.info(f"Hei {cand['navn']}, basert på din profil som {cand['rolle']}...")
+                with c_btn2:
+                    if st.button("🔓 Lås opp Kontaktinfo"):
+                        st.success("E-post: skjult@talent.no (Ulåst!)")
+                        
+                st.button("📌 Lagre til Shortlist", type="primary")
+                
+            else:
+                st.info("👈 Velg en kandidat fra listen for å se AI-analysen.")
 
-with tab2:
-    st.subheader("Create Job")
-    with st.form("new"):
-        t = st.text_input("Title")
-        b = st.text_area("Desc")
-        if st.form_submit_button("Publish"):
-            requests.post(f"{API_URL}/create_job", json={"tittel": t, "beskrivelse": b})
-            st.success("Published!")
+# --- 5. MAIN ---
+if st.session_state.logged_in:
+    render_dashboard()
+else:
+    render_login()
