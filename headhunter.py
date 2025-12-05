@@ -48,8 +48,8 @@ st.markdown("""
     }
     .swot-item { margin-bottom: 8px; font-size: 0.9rem; }
     
-    /* Tags */
-    .tag { background: #F3F4F6; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; }
+    /* Tags & Badges */
+    .tag { background: #F3F4F6; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; color: #333; }
     .match-badge { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 0.8rem; }
 
     /* Buttons */
@@ -61,19 +61,41 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --- 3. MOCK DATA ---
+# --- 3. STATE & DATA INITIALIZATION (CRITICAL FIX) ---
+if 'logged_in' not in st.session_state: 
+    st.session_state.logged_in = False
+
+if 'active_candidate' not in st.session_state: 
+    st.session_state.active_candidate = None
+
+if 'company_name' not in st.session_state:
+    st.session_state.company_name = "Ukjent Bedrift"
+
+# Mock Data - Lastes kun én gang
 if 'candidates' not in st.session_state:
     st.session_state.candidates = [
-        {"id": 1, "navn": "Erik Solberg", "rolle": "Senior Python Dev", "bedrift": "TechNova", "match": 98, "skills": ["Python", "AWS", "Django"], "swot": {"S": "Eksepsjonell kodekvalitet", "W": "Lite ledererfaring", "O": "Kan ta Tech Lead rolle", "T": "Høy lønnsforventning"}},
-        {"id": 2, "navn": "Lisa Hansen", "rolle": "Sales Manager", "bedrift": "Bank 1", "match": 92, "skills": ["B2B", "CRM", "Closing"], "swot": {"S": "Top performer 2024", "W": "Utdatert CRM-kunnskap", "O": "Nye markeder", "T": "Vurderer konkurrent"}},
-        {"id": 3, "navn": "Ahmed Khan", "rolle": "CFO", "bedrift": "Startup X", "match": 85, "skills": ["Finance", "Strategy", "IPO"], "swot": {"S": "IPO-erfaring", "W": "Kort fartstid i tech", "O": "Skalere økonomiavdeling", "T": "Krever opsjoner"}},
+        {
+            "id": 1, "navn": "Erik Solberg", "rolle": "Senior Python Dev", "bedrift": "TechNova", 
+            "match": 98, "skills": ["Python", "AWS", "Django"], 
+            "swot": {"S": "Eksepsjonell kodekvalitet", "W": "Lite ledererfaring", "O": "Kan ta Tech Lead rolle", "T": "Høy lønnsforventning"}
+        },
+        {
+            "id": 2, "navn": "Lisa Hansen", "rolle": "Sales Manager", "bedrift": "Bank 1", 
+            "match": 92, "skills": ["B2B", "CRM", "Closing"], 
+            "swot": {"S": "Top performer 2024", "W": "Utdatert CRM-kunnskap", "O": "Nye markeder", "T": "Vurderer konkurrent"}
+        },
+        {
+            "id": 3, "navn": "Ahmed Khan", "rolle": "CFO", "bedrift": "Startup X", 
+            "match": 85, "skills": ["Finance", "Strategy", "IPO"], 
+            "swot": {"S": "IPO-erfaring", "W": "Kort fartstid i tech", "O": "Skalere økonomiavdeling", "T": "Krever opsjoner"}
+        }
     ]
 
 if 'jobs' not in st.session_state:
-    st.session_state.jobs = [{"Tittel": "Tech Lead", "Status": "Aktiv"}, {"Tittel": "Key Account Manager", "Status": "Aktiv"}]
-
-if 'logged_in' not in st.session_state: st.session_state.logged_in = False
-if 'active_candidate' not in st.session_state: st.session_state.active_candidate = None
+    st.session_state.jobs = [
+        {"Tittel": "Tech Lead", "Status": "Aktiv", "Søkere": 12}, 
+        {"Tittel": "Key Account Manager", "Status": "Aktiv", "Søkere": 4}
+    ]
 
 # --- 4. VIEWS ---
 
@@ -89,33 +111,41 @@ def render_login():
         """, unsafe_allow_html=True)
         
         tab1, tab2 = st.tabs(["Logg Inn", "Registrer Bedrift"])
+        
         with tab1:
-            st.text_input("E-post", key="l_user")
-            st.text_input("Passord", type="password", key="l_pass")
+            st.text_input("E-post", key="l_user", value="admin@aivory.no")
+            st.text_input("Passord", type="password", key="l_pass", value="1234")
             if st.button("Logg inn"):
                 st.session_state.logged_in = True
+                st.session_state.company_name = "TechNova AS"
                 st.rerun()
+                
         with tab2:
-            st.text_input("Bedriftsnavn")
+            bedrift_navn = st.text_input("Bedriftsnavn")
             st.text_input("Admin E-post")
-            if st.button("Opprett Konto"):
+            st.text_input("Passord", type="password")
+            if st.button("Opprett Bedriftsprofil"):
                 st.session_state.logged_in = True
+                st.session_state.company_name = bedrift_navn
                 st.rerun()
 
 def render_dashboard():
     # --- SIDEBAR ---
     with st.sidebar:
         st.title("🏢 Aivory")
-        st.caption("Enterprise Edition")
-        menu = st.radio("Meny", ["Oversikt", "Headhunter Søk (Active)", "Legg ut stilling"])
+        st.caption(f"Logget inn: {st.session_state.company_name}")
+        st.markdown("---")
+        menu = st.radio("Navigasjon", ["Oversikt", "Headhunter Søk (Active)", "Legg ut stilling"])
         st.markdown("---")
         if st.button("Logg ut"):
             st.session_state.logged_in = False
+            st.session_state.active_candidate = None
             st.rerun()
 
     # --- CONTENT ---
     if menu == "Oversikt":
-        st.title("Dashbord")
+        st.title(f"Hei, {st.session_state.company_name} 👋")
+        
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Kandidater i base", "1,240", "+12")
         c2.metric("AI-intervjuer", "14", "Denne uken")
@@ -127,12 +157,17 @@ def render_dashboard():
 
     elif menu == "Legg ut stilling":
         st.title("Ny Stilling")
+        st.info("AI analyserer jobbeskrivelsen automatisk.")
         with st.form("job_form"):
             t = st.text_input("Stillingstittel")
-            st.text_area("Beskrivelse")
+            st.selectbox("Avdeling", ["Tech", "Salg", "Ledelse"])
+            st.text_area("Beskrivelse", height=150)
+            
             if st.form_submit_button("Publiser"):
-                st.session_state.jobs.append({"Tittel": t, "Status": "Aktiv"})
-                st.success("Publisert!")
+                st.session_state.jobs.append({"Tittel": t, "Status": "Aktiv", "Søkere": 0})
+                st.success(f"Stillingen '{t}' er publisert!")
+                time.sleep(1)
+                st.rerun()
 
     elif menu == "Headhunter Søk (Active)":
         st.title("🔍 Active Sourcing")
@@ -150,7 +185,7 @@ def render_dashboard():
                 <div class="cand-card">
                     <div style="display:flex; justify-content:space-between;">
                         <b>{c['navn']}</b>
-                        <span class="match-badge">{c['match']}%</span>
+                        <span class="match-badge">{c['match']}% Match</span>
                     </div>
                     <p style="color:#6B7280; font-size:0.9rem; margin:0;">{c['rolle']} @ {c['bedrift']}</p>
                     <div style="margin-top:10px;">
@@ -158,7 +193,9 @@ def render_dashboard():
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
-                if st.button(f"Velg {c['navn']} ➡️", key=f"btn_{c['id']}"):
+                
+                # Unik nøkkel for hver knapp for å unngå DuplicateWidgetID error
+                if st.button(f"Velg {c['navn']} ➡️", key=f"btn_select_{c['id']}"):
                     st.session_state.active_candidate = c
 
         # DETALJER (Høyre - The "Cool Stuff")
@@ -179,7 +216,6 @@ def render_dashboard():
                         <div class="swot-item">🚀 <b>Opportunities:</b> {swot['O']}</div>
                         <div class="swot-item">🛡️ <b>Threats:</b> {swot['T']}</div>
                     </div>
-                    
                     <br>
                 </div>
                 """, unsafe_allow_html=True)
@@ -188,7 +224,7 @@ def render_dashboard():
                 c_btn1, c_btn2 = st.columns(2)
                 with c_btn1:
                     if st.button("✨ Generer Melding"):
-                        st.info(f"Hei {cand['navn']}, basert på din profil som {cand['rolle']}...")
+                        st.info(f"Hei {cand['navn']}, basert på din profil hos {cand['bedrift']}...")
                 with c_btn2:
                     if st.button("🔓 Lås opp Kontaktinfo"):
                         st.success("E-post: skjult@talent.no (Ulåst!)")
@@ -196,7 +232,7 @@ def render_dashboard():
                 st.button("📌 Lagre til Shortlist", type="primary")
                 
             else:
-                st.info("👈 Velg en kandidat fra listen for å se AI-analysen.")
+                st.info("👈 Velg en kandidat fra listen til venstre.")
 
 # --- 5. MAIN ---
 if st.session_state.logged_in:
