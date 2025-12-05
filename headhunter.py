@@ -2,6 +2,7 @@
 import pandas as pd
 import time
 import random
+import string
 
 # --- 1. CONFIG ---
 st.set_page_config(
@@ -41,7 +42,7 @@ st.markdown("""
         border: 1px solid #E5E7EB; height: 100%;
     }
 
-    /* Chat Bubbles */
+    /* Chat Elements */
     .chat-bubble-me {
         background-color: #7c3aed; color: white; padding: 10px 15px;
         border-radius: 15px 15px 0 15px; margin: 5px 0 5px auto;
@@ -52,23 +53,17 @@ st.markdown("""
         border-radius: 15px 15px 15px 0; margin: 5px 0;
         width: fit-content; max-width: 80%; font-size: 0.9rem;
     }
-    .chat-system {
-        text-align: center; color: #6B7280; font-size: 0.8rem; margin: 10px 0; font-style: italic;
-    }
-
-    /* Video Link Button Style */
-    .video-btn {
-        display: inline-block; background-color: #EF4444; color: white; 
-        padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold;
-    }
-
-    /* SWOT Box */
-    .swot-box {
-        background: #000000; color: white; padding: 20px;
-        border-radius: 10px; margin-top: 20px; border-left: 5px solid #7c3aed;
-    }
-    .swot-item { margin-bottom: 8px; font-size: 0.9rem; }
     
+    /* Booking Card Style */
+    .booking-card {
+        background: white; border: 1px solid #E5E7EB; padding: 15px;
+        border-radius: 12px; margin: 10px 0 10px auto; width: 80%;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #10B981;
+    }
+    .meet-link {
+        color: #2563EB; text-decoration: underline; font-weight: bold;
+    }
+
     /* Buttons */
     div.stButton > button {
         background-color: #7c3aed; color: white; border: none;
@@ -76,7 +71,7 @@ st.markdown("""
     }
     div.stButton > button:hover { background-color: #6d28d9; }
     
-    /* Tags */
+    /* Tags & Badges */
     .tag { background: #F3F4F6; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; color: #333; }
     .match-badge { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 0.8rem; }
 </style>
@@ -88,7 +83,14 @@ if 'active_candidate' not in st.session_state: st.session_state.active_candidate
 if 'top_10_mode' not in st.session_state: st.session_state.top_10_mode = False
 if 'consent_state' not in st.session_state: st.session_state.consent_state = {} 
 if 'chat_history' not in st.session_state: st.session_state.chat_history = {}
-if 'video_ready' not in st.session_state: st.session_state.video_ready = {}
+
+# Hjelpefunksjon for Google Meet Link
+def generate_meet_link():
+    chars = string.ascii_lowercase
+    part1 = ''.join(random.choice(chars) for _ in range(3))
+    part2 = ''.join(random.choice(chars) for _ in range(4))
+    part3 = ''.join(random.choice(chars) for _ in range(3))
+    return f"https://meet.google.com/{part1}-{part2}-{part3}"
 
 if 'candidates' not in st.session_state:
     base_cands = [
@@ -200,8 +202,8 @@ def render_dashboard():
                 cand = st.session_state.active_candidate
                 cid = cand['id']
                 status = st.session_state.consent_state.get(cid, "none")
-                
-                header_name = cand['navn'] if status == "accepted" else "🔒 Anonym Profil"
+                is_unlocked = (status == "accepted")
+                header_name = cand['navn'] if is_unlocked else "🔒 Anonym Profil"
                 
                 st.markdown(f"""
                 <div class="insight-panel">
@@ -209,13 +211,11 @@ def render_dashboard():
                     <p style="font-size:1.1rem; color:#7c3aed;">{cand['rolle']}</p>
                 """, unsafe_allow_html=True)
                 
-                # STATUS LOGIKK
                 if status == "none":
                     st.info("Denne profilen er anonym. Send forespørsel for å låse opp.")
                     st.markdown("### 🤖 AI SWOT")
                     st.write(f"✅ Styrker: {cand['swot']['S']}")
                     st.write(f"⚠️ Svakheter: {cand['swot']['W']}")
-                    
                     st.write("")
                     if st.button("📨 Send Kontaktforespørsel"):
                         st.session_state.consent_state[cid] = "requested"
@@ -226,48 +226,70 @@ def render_dashboard():
                     st.markdown("---")
                     if st.button("⚡ Simuler: Kandidat Godkjenner"):
                         st.session_state.consent_state[cid] = "accepted"
-                        st.session_state.chat_history[cid] = [{"role": "other", "msg": "Hei! Takk for interessen."}]
+                        st.session_state.chat_history[cid] = [{"role": "other", "msg": "Hei! Takk for interessen. Jeg tar gjerne en prat."}]
                         st.rerun()
 
                 elif status == "accepted":
                     st.success("✅ Match Bekreftet")
                     
-                    # --- CHAT & VIDEO MODUL ---
+                    # --- CHAT MODUL ---
                     st.markdown("### 💬 Dialog")
                     chat_container = st.container(height=300)
-                    
                     history = st.session_state.chat_history.get(cid, [])
+                    
                     with chat_container:
                         for msg in history:
-                            if msg['role'] == 'system':
-                                st.markdown(f"<div class='chat-system'>{msg['msg']}</div>", unsafe_allow_html=True)
+                            if msg.get('type') == 'booking_card':
+                                # Spesialvisning for Booking
+                                st.markdown(f"""
+                                <div class="booking-card">
+                                    <h4 style="margin:0;">📅 Invitasjon til Videointervju</h4>
+                                    <p>Vennligst velg et tidspunkt som passer deg:</p>
+                                    <ul>
+                                        {''.join([f'<li>{slot}</li>' for slot in msg['slots']])}
+                                    </ul>
+                                    <p>Link: <a href="{msg['link']}" target="_blank" class="meet-link">{msg['link']}</a></p>
+                                </div>
+                                """, unsafe_allow_html=True)
+                            elif msg.get('type') == 'confirmed':
+                                st.markdown(f"""
+                                <div style="text-align:center; color:#166534; font-weight:bold; margin:10px;">
+                                    ✅ Videointervju bekreftet: {msg['time']}
+                                </div>
+                                """, unsafe_allow_html=True)
                             else:
                                 div_class = "chat-bubble-me" if msg['role'] == "me" else "chat-bubble-other"
                                 st.markdown(f"<div class='{div_class}'>{msg['msg']}</div>", unsafe_allow_html=True)
                     
-                    # ACTION BAR (VIDEO)
-                    c_vid1, c_vid2 = st.columns(2)
-                    with c_vid1:
-                        if st.button("📅 Book Videointervju"):
-                            history.append({"role": "system", "msg": "📅 Invitasjon til intervju sendt."})
-                            history.append({"role": "me", "msg": "Jeg har sendt deg en kalenderinvitasjon til videointervju."})
+                    # --- SMART BOOKING ACTION BAR ---
+                    with st.expander("📅 Planlegg Videointervju", expanded=True):
+                        st.caption("Velg hvilke tider som passer for deg (Bedriften):")
+                        slots = st.multiselect("Ledige tider", 
+                                             ["Mandag 10:00 - 10:30", "Tirsdag 14:00 - 14:30", "Onsdag 09:00 - 09:30", "Fredag 11:00 - 11:30"],
+                                             default=["Tirsdag 14:00 - 14:30"])
+                        
+                        if st.button("Send Invitasjon med Google Meet Link"):
+                            meet_link = generate_meet_link()
+                            # Legg til "Kortet" i chatten
+                            history.append({
+                                "role": "me", 
+                                "type": "booking_card",
+                                "msg": "Bookingkort sendt", # Fallback text
+                                "slots": slots,
+                                "link": meet_link
+                            })
+                            st.session_state.chat_history[cid] = history
                             st.rerun()
-                    with c_vid2:
-                        if st.button("🎥 Spør om samtale NÅ"):
-                            history.append({"role": "me", "msg": "Har du tid til en kort 5-minutters video-prat nå?"})
-                            history.append({"role": "other", "msg": "Ja, jeg har tid! Sender du link?"})
-                            st.session_state.video_ready[cid] = True
-                            st.rerun()
+                    
+                    # Simuleringsknapp for kandidatens respons
+                    if len([m for m in history if m.get('type') == 'booking_card']) > 0:
+                         if st.button("⚡ Simuler: Kandidat velger 'Tirsdag 14:00'"):
+                             history.append({"role": "other", "msg": "Tirsdag 14:00 passer fint for meg!"})
+                             history.append({"role": "system", "type": "confirmed", "time": "Tirsdag 14:00 - 14:30"})
+                             st.session_state.chat_history[cid] = history
+                             st.rerun()
 
-                    # VIS LINK HVIS KLAR
-                    if st.session_state.video_ready.get(cid, False):
-                        st.markdown("""
-                        <div style="text-align:center; margin:10px 0;">
-                            <a href="#" class="video-btn">🔴 JOIN LIVE VIDEO ROOM</a>
-                        </div>
-                        """, unsafe_allow_html=True)
-
-                    # INPUT
+                    # Vanlig input
                     new_msg = st.chat_input("Skriv melding...")
                     if new_msg:
                         history.append({"role": "me", "msg": new_msg})
