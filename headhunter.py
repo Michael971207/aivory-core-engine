@@ -41,16 +41,25 @@ st.markdown("""
         border: 1px solid #E5E7EB; height: 100%;
     }
 
-    /* Chat Bobler */
+    /* Chat Bubbles */
     .chat-bubble-me {
         background-color: #7c3aed; color: white; padding: 10px 15px;
         border-radius: 15px 15px 0 15px; margin: 5px 0 5px auto;
-        width: fit-content; max-width: 80%;
+        width: fit-content; max-width: 80%; font-size: 0.9rem;
     }
     .chat-bubble-other {
         background-color: #E5E7EB; color: black; padding: 10px 15px;
         border-radius: 15px 15px 15px 0; margin: 5px 0;
-        width: fit-content; max-width: 80%;
+        width: fit-content; max-width: 80%; font-size: 0.9rem;
+    }
+    .chat-system {
+        text-align: center; color: #6B7280; font-size: 0.8rem; margin: 10px 0; font-style: italic;
+    }
+
+    /* Video Link Button Style */
+    .video-btn {
+        display: inline-block; background-color: #EF4444; color: white; 
+        padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold;
     }
 
     /* SWOT Box */
@@ -67,20 +76,19 @@ st.markdown("""
     }
     div.stButton > button:hover { background-color: #6d28d9; }
     
-    /* Tags & Badges */
+    /* Tags */
     .tag { background: #F3F4F6; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; color: #333; }
     .match-badge { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 0.8rem; }
 </style>
 """, unsafe_allow_html=True)
 
-# --- 3. STATE & MOCK DATA ---
+# --- 3. STATE & DATA ---
 if 'logged_in' not in st.session_state: st.session_state.logged_in = False
 if 'active_candidate' not in st.session_state: st.session_state.active_candidate = None
 if 'top_10_mode' not in st.session_state: st.session_state.top_10_mode = False
-
-# Lagrer tilstand for samtykke og chat per kandidat
 if 'consent_state' not in st.session_state: st.session_state.consent_state = {} 
 if 'chat_history' not in st.session_state: st.session_state.chat_history = {}
+if 'video_ready' not in st.session_state: st.session_state.video_ready = {}
 
 if 'candidates' not in st.session_state:
     base_cands = [
@@ -128,9 +136,8 @@ def render_dashboard():
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Kandidater", "850", "+12")
         c2.metric("Matcher", "24", "Høy")
-        c3.metric("Aktive Chatter", "3", "Nye")
+        c3.metric("Video-intervjuer", "5", "Nye")
         c4.metric("Avg. Score", "88%", "+2%")
-        st.info("Gå til 'Headhunter Søk' for å finne talenter.")
 
     elif menu == "Legg ut stilling":
         st.title("Ny Stilling")
@@ -161,12 +168,9 @@ def render_dashboard():
 
             for c in display_list:
                 cid = c['id']
-                # Sjekk status i vår consent_state dict
-                status = st.session_state.consent_state.get(cid, "none") # none, requested, accepted
-                
+                status = st.session_state.consent_state.get(cid, "none")
                 is_unlocked = (status == "accepted")
                 
-                # Visning
                 name = c['navn'] if is_unlocked else f"Kandidat-{cid} (Anonym)"
                 comp = c['bedrift'] if is_unlocked else "Skjult Selskap"
                 
@@ -190,16 +194,14 @@ def render_dashboard():
                 if st.button(f"Velg ➡️", key=f"btn_{cid}"):
                     st.session_state.active_candidate = c
 
-        # --- DETALJER (CHAT & SAMTYKKE) ---
+        # --- DETALJER ---
         with col_detail:
             if st.session_state.active_candidate:
                 cand = st.session_state.active_candidate
                 cid = cand['id']
                 status = st.session_state.consent_state.get(cid, "none")
                 
-                # Header
-                is_unlocked = (status == "accepted")
-                header_name = cand['navn'] if is_unlocked else "🔒 Anonym Profil"
+                header_name = cand['navn'] if status == "accepted" else "🔒 Anonym Profil"
                 
                 st.markdown(f"""
                 <div class="insight-panel">
@@ -207,58 +209,75 @@ def render_dashboard():
                     <p style="font-size:1.1rem; color:#7c3aed;">{cand['rolle']}</p>
                 """, unsafe_allow_html=True)
                 
-                # --- LOGIKK FOR SAMTYKKE ---
+                # STATUS LOGIKK
                 if status == "none":
-                    st.info("Denne profilen er anonym. Du må sende en forespørsel for å opprette kontakt.")
+                    st.info("Denne profilen er anonym. Send forespørsel for å låse opp.")
                     st.markdown("### 🤖 AI SWOT")
                     st.write(f"✅ Styrker: {cand['swot']['S']}")
                     st.write(f"⚠️ Svakheter: {cand['swot']['W']}")
                     
                     st.write("")
-                    if st.button("📨 Send Kontaktforespørsel (Gi Samtykke)"):
+                    if st.button("📨 Send Kontaktforespørsel"):
                         st.session_state.consent_state[cid] = "requested"
                         st.rerun()
 
                 elif status == "requested":
-                    st.warning("⏳ Venter på samtykke fra kandidat...")
-                    st.markdown(f"**{cand['navn']}** har mottatt din forespørsel. Når de godkjenner, åpnes chatten.")
-                    
+                    st.warning("⏳ Venter på svar fra kandidat...")
                     st.markdown("---")
-                    st.caption("(Demo-funksjon: Simuler at kandidaten svarer)")
                     if st.button("⚡ Simuler: Kandidat Godkjenner"):
                         st.session_state.consent_state[cid] = "accepted"
-                        # Start chat med en melding
-                        st.session_state.chat_history[cid] = [
-                            {"role": "other", "msg": f"Hei! Takk for interessen. Jeg tar gjerne en prat om stillingen hos dere."}
-                        ]
+                        st.session_state.chat_history[cid] = [{"role": "other", "msg": "Hei! Takk for interessen."}]
                         st.rerun()
 
                 elif status == "accepted":
-                    st.success("✅ Match! Begge parter har gitt samtykke.")
+                    st.success("✅ Match Bekreftet")
                     
-                    # CHAT UI
-                    st.markdown("### 💬 Chat")
+                    # --- CHAT & VIDEO MODUL ---
+                    st.markdown("### 💬 Dialog")
                     chat_container = st.container(height=300)
                     
-                    # Hent historikk
                     history = st.session_state.chat_history.get(cid, [])
-                    
                     with chat_container:
                         for msg in history:
-                            div_class = "chat-bubble-me" if msg['role'] == "me" else "chat-bubble-other"
-                            st.markdown(f"<div class='{div_class}'>{msg['msg']}</div>", unsafe_allow_html=True)
+                            if msg['role'] == 'system':
+                                st.markdown(f"<div class='chat-system'>{msg['msg']}</div>", unsafe_allow_html=True)
+                            else:
+                                div_class = "chat-bubble-me" if msg['role'] == "me" else "chat-bubble-other"
+                                st.markdown(f"<div class='{div_class}'>{msg['msg']}</div>", unsafe_allow_html=True)
                     
-                    # Input
-                    new_msg = st.chat_input("Skriv en melding...")
+                    # ACTION BAR (VIDEO)
+                    c_vid1, c_vid2 = st.columns(2)
+                    with c_vid1:
+                        if st.button("📅 Book Videointervju"):
+                            history.append({"role": "system", "msg": "📅 Invitasjon til intervju sendt."})
+                            history.append({"role": "me", "msg": "Jeg har sendt deg en kalenderinvitasjon til videointervju."})
+                            st.rerun()
+                    with c_vid2:
+                        if st.button("🎥 Spør om samtale NÅ"):
+                            history.append({"role": "me", "msg": "Har du tid til en kort 5-minutters video-prat nå?"})
+                            history.append({"role": "other", "msg": "Ja, jeg har tid! Sender du link?"})
+                            st.session_state.video_ready[cid] = True
+                            st.rerun()
+
+                    # VIS LINK HVIS KLAR
+                    if st.session_state.video_ready.get(cid, False):
+                        st.markdown("""
+                        <div style="text-align:center; margin:10px 0;">
+                            <a href="#" class="video-btn">🔴 JOIN LIVE VIDEO ROOM</a>
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                    # INPUT
+                    new_msg = st.chat_input("Skriv melding...")
                     if new_msg:
                         history.append({"role": "me", "msg": new_msg})
                         st.session_state.chat_history[cid] = history
                         st.rerun()
                 
-                st.markdown("</div>", unsafe_allow_html=True) # End insight-panel
+                st.markdown("</div>", unsafe_allow_html=True)
 
             else:
-                st.info("👈 Velg en profil for å starte.")
+                st.info("👈 Velg en profil.")
 
 # --- 5. MAIN ---
 if st.session_state.logged_in:
