@@ -16,9 +16,29 @@ st.set_page_config(
 # --- 2. DESIGN SYSTEM ---
 st.markdown("""
 <style>
-    .stApp { background-color: #FFFFFF; color: #000000; font-family: 'Inter', sans-serif; }
+    .stApp { background-color: #F8FAFC; color: #0f172a; font-family: 'Inter', sans-serif; }
     h1, h2, h3, h4 { color: #000000 !important; font-weight: 800; letter-spacing: -0.5px; }
     
+    /* Dashboard Stat Card */
+    .stat-card {
+        background-color: #FFFFFF;
+        padding: 25px;
+        border-radius: 16px;
+        border: 1px solid #E2E8F0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        transition: 0.2s;
+    }
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-color: #7c3aed;
+    }
+    .stat-value { font-size: 2.5rem; font-weight: 800; color: #0F172A; margin: 10px 0; }
+    .stat-label { color: #64748B; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .stat-delta { font-size: 0.9rem; font-weight: bold; }
+    .delta-up { color: #10B981; background: #ECFDF5; padding: 2px 8px; border-radius: 12px; }
+    .icon-box { float: right; background: #F3F4F6; padding: 10px; border-radius: 12px; font-size: 1.5rem; }
+
     /* Login Box */
     .auth-box {
         max-width: 450px; margin: 0 auto; padding: 40px;
@@ -39,8 +59,8 @@ st.markdown("""
 
     /* Insight Panel */
     .insight-panel {
-        background: #F9FAFB; padding: 25px; border-radius: 12px;
-        border: 1px solid #E5E7EB; height: 100%;
+        background: #FFFFFF; padding: 25px; border-radius: 12px;
+        border: 1px solid #E5E7EB; height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     }
 
     /* Chat Elements */
@@ -50,7 +70,7 @@ st.markdown("""
         width: fit-content; max-width: 80%; font-size: 0.9rem;
     }
     .chat-bubble-other {
-        background-color: #E5E7EB; color: black; padding: 10px 15px;
+        background-color: #F1F5F9; color: black; padding: 10px 15px;
         border-radius: 15px 15px 15px 0; margin: 5px 0;
         width: fit-content; max-width: 80%; font-size: 0.9rem;
     }
@@ -61,11 +81,9 @@ st.markdown("""
         border-radius: 12px; margin: 10px 0 10px auto; width: 80%;
         box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #10B981;
     }
-    .meet-link {
-        color: #2563EB; text-decoration: underline; font-weight: bold;
-    }
+    .meet-link { color: #2563EB; text-decoration: underline; font-weight: bold; }
 
-    /* SWOT Box - Fikset CSS */
+    /* SWOT Box */
     .swot-container {
         background-color: #000000; color: white; padding: 20px;
         border-radius: 10px; margin-top: 20px; border-left: 5px solid #7c3aed;
@@ -78,7 +96,7 @@ st.markdown("""
     }
     div.stButton > button:hover { background-color: #6d28d9; }
     
-    /* Tags */
+    /* Tags & Badges */
     .tag { background: #F3F4F6; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; color: #333; }
     .match-badge { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 0.8rem; }
 </style>
@@ -105,7 +123,8 @@ if 'candidates' not in st.session_state:
 if 'jobs' not in st.session_state:
     st.session_state.jobs = [
         {"Tittel": "Tech Lead", "Sted": "Oslo", "Type": "Hybrid", "Frist": "2025-06-01", "Status": "Aktiv", "Søkere": 12}, 
-        {"Tittel": "Key Account Manager", "Sted": "Bergen", "Type": "On-site", "Frist": "2025-05-20", "Status": "Aktiv", "Søkere": 4}
+        {"Tittel": "Key Account Manager", "Sted": "Bergen", "Type": "On-site", "Frist": "2025-05-20", "Status": "Aktiv", "Søkere": 4},
+        {"Tittel": "UX Designer", "Sted": "Remote", "Type": "Remote", "Frist": "2025-05-15", "Status": "Aktiv", "Søkere": 28},
     ]
 
 def generate_meet_link():
@@ -146,13 +165,76 @@ def render_dashboard():
     # CONTENT
     if menu == "Oversikt":
         st.title("Dashbord")
-        c1, c2, c3, c4 = st.columns(4)
-        c1.metric("Kandidater", "850", "+12")
-        c2.metric("Matcher", "24", "Høy")
-        c3.metric("Video-intervjuer", "5", "Nye")
-        c4.metric("Avg. Score", "88%", "+2%")
-        st.markdown("### 📋 Dine Aktive Stillinger")
-        st.dataframe(pd.DataFrame(st.session_state.jobs), use_container_width=True, hide_index=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # --- PRO KPI CARDS ---
+        k1, k2, k3, k4 = st.columns(4)
+        
+        with k1:
+            st.markdown("""
+            <div class="stat-card">
+                <div class="icon-box">👥</div>
+                <div class="stat-label">Total Talent Pool</div>
+                <div class="stat-value">1,240</div>
+                <span class="stat-delta delta-up">↑ 12% denne uken</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with k2:
+            st.markdown("""
+            <div class="stat-card">
+                <div class="icon-box">🤖</div>
+                <div class="stat-label">AI Matches</div>
+                <div class="stat-value">24</div>
+                <span class="stat-delta delta-up">↑ Høy Relevans</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with k3:
+            st.markdown("""
+            <div class="stat-card">
+                <div class="icon-box">💬</div>
+                <div class="stat-label">Intervjuer</div>
+                <div class="stat-value">8</div>
+                <span class="stat-delta delta-up">2 i dag</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with k4:
+            st.markdown("""
+            <div class="stat-card">
+                <div class="icon-box">⚡</div>
+                <div class="stat-label">Time-to-Hire</div>
+                <div class="stat-value">14d</div>
+                <span class="stat-delta delta-up">↓ 50% Raskere</span>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("<br><br>", unsafe_allow_html=True)
+
+        # --- GRAF & TABELL ---
+        col_main, col_side = st.columns([2, 1])
+        
+        with col_main:
+            st.subheader("📈 Søkervekst per Stilling")
+            # Lager data for grafen
+            chart_data = pd.DataFrame(st.session_state.jobs).set_index("Tittel")[["Søkere"]]
+            st.bar_chart(chart_data, color="#7c3aed")
+            
+            st.markdown("### 📋 Aktive Stillinger")
+            st.dataframe(pd.DataFrame(st.session_state.jobs), use_container_width=True, hide_index=True)
+
+        with col_side:
+            st.subheader("🔔 Siste Hendelser")
+            st.info("Erik S. godtok videointervju (10 min siden)")
+            st.info("Ny kandidat matchet 'Tech Lead' (1t siden)")
+            st.success("Stilling 'UX Designer' publisert.")
+            
+            with st.container(border=True):
+                st.markdown("**AI Tips:**")
+                st.caption("Du har 3 nye kandidater i 'Tech Lead' pipelinen som scorer over 90%. Bør sjekkes i dag.")
+                if st.button("Gå til kandidater"):
+                    pass # Navigasjon logikk her
 
     elif menu == "Legg ut stilling":
         st.title("Ny Stilling")
@@ -233,7 +315,6 @@ def render_dashboard():
                     <p style="font-size:1.1rem; color:#7c3aed;">{cand['rolle']}</p>
                 """, unsafe_allow_html=True)
                 
-                # --- FIX: HTML uten innrykk for å unngå "raw code" bug ---
                 st.markdown(f"""
 <div class="swot-container">
 <h4 style="color:white !important; margin-top:0;">🤖 AI SWOT ANALYSE</h4>
@@ -256,27 +337,19 @@ def render_dashboard():
                         st.rerun()
                 elif status == "accepted":
                     st.success("Match Bekreftet!")
-                    
-                    # CHAT & VIDEO
                     st.markdown("### 💬 Dialog")
                     chat_container = st.container(height=300)
                     history = st.session_state.chat_history.get(cid, [])
-                    
                     with chat_container:
                         for msg in history:
                             if msg.get('type') == 'booking_card':
-                                st.markdown(f"""
-                                <div class="booking-card">
-                                    <h4 style="margin:0;">📅 Invitasjon til Videointervju</h4>
-                                    <p>Link: <a href="{msg['link']}" target="_blank" class="meet-link">{msg['link']}</a></p>
-                                </div>
-                                """, unsafe_allow_html=True)
+                                st.markdown(f"""<div class="booking-card"><h4>📅 Videoinvitasjon</h4><p><a href="{msg['link']}" class="meet-link" target="_blank">Klikk her for å bli med</a></p></div>""", unsafe_allow_html=True)
                             else:
                                 div_class = "chat-bubble-me" if msg['role'] == "me" else "chat-bubble-other"
                                 st.markdown(f"<div class='{div_class}'>{msg['msg']}</div>", unsafe_allow_html=True)
                     
-                    with st.expander("📅 Planlegg Videointervju"):
-                        if st.button("Send Google Meet Link"):
+                    with st.expander("📅 Book Møte"):
+                        if st.button("Send Link"):
                             history.append({"role": "me", "type": "booking_card", "link": generate_meet_link()})
                             st.session_state.chat_history[cid] = history
                             st.rerun()
